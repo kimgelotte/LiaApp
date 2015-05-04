@@ -13,7 +13,7 @@ namespace LiaApp
 
         public void azureconnect()
         {
-        string constr = "Server=tcp:qgtejfd89g.database.windows.net,1433;Database=NewtonApp;User ID=grupp4@qgtejfd89g;Password=Newtong4;Trusted_Connection=False;Encrypt=True;Connection Timeout=5;";
+        string constr = "Server=tcp:qgtejfd89g.database.windows.net,1433;Database=db_newton;User ID=grupp4@qgtejfd89g;Password=Newtong4;Trusted_Connection=False;Encrypt=True;Connection Timeout=5;";
         try { 
             using (SqlConnection conn = new SqlConnection(constr))
             {

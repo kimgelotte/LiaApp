@@ -14,12 +14,9 @@ namespace LiaApp
         [STAThread]
         static void Main()
         {
-            AzureCon blabla = new AzureCon();
-            blabla.azureconnect();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            
         }
     }
 }

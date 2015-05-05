@@ -7,12 +7,17 @@ using System.Data.SqlClient;
 
 namespace LiaApp
 {
-    public class DataAdapter
+     class DataAdapter
     {
-        SqlDataAdapter dA = new SqlDataAdapter
-        ("SELECT * FROM db_newton", AzureCon.ConnectionString);
-		
-    
+        public static SqlDataAdapter dataAd
+        {
+            get
+            {
+                SqlDataAdapter dA = new SqlDataAdapter
+                ("SELECT Namn FROM Student", AzureCon.ConnectionString);
+                return dA;
+            }
+    }
     }
 }
 

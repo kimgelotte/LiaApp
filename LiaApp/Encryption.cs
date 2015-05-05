@@ -9,13 +9,15 @@ namespace LiaApp
 {
     class Encryption
     {
-        public static void ToggleConfigEncryption(string exeConfigName)
+        public static void ToggleConfigEncryption()
         {
+            string Path = Environment.CurrentDirectory;
+            string exePath = Environment.GetCommandLineArgs()[0];
             try
             {
-                Configuration config = ConfigurationManager.OpenExeConfiguration(exeConfigName);
+                Configuration config = ConfigurationManager.OpenExeConfiguration(Path + exePath);
 
-                ConnectionStringsSection section = (ConnectionStringsSection)config.GetSection("connectionStrings");
+                ConnectionStringsSection section = config.GetSection("connectionStrings") as ConnectionStringsSection;
 
                 if (section.SectionInformation.IsProtected)
                 {
@@ -26,6 +28,9 @@ namespace LiaApp
                     section.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
                 }
                 config.Save();
+
+                Console.WriteLine("Protected={0}",
+           section.SectionInformation.IsProtected);
             }
             catch (Exception ex)
             {

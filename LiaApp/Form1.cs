@@ -35,7 +35,7 @@ namespace LiaApp
 
             }
 
-            Encryption.ToggleConfigEncryption(Environment.CurrentDirectory + Environment.GetCommandLineArgs()[0]);
+            Encryption.ToggleConfigEncryption();
 
         }
     }

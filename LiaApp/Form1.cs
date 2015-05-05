@@ -38,5 +38,10 @@ namespace LiaApp
             Encryption.ToggleConfigEncryption();
 
         }
+
+        internal static void show()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -11,11 +11,11 @@ namespace LiaApp
     {
         public static void ToggleConfigEncryption()
         {
-            string Path = Environment.CurrentDirectory;
-            string exePath = Environment.GetCommandLineArgs()[0];
+            
+            string exe = Environment.GetCommandLineArgs()[0];
             try
             {
-                Configuration config = ConfigurationManager.OpenExeConfiguration(Path + exePath);
+                Configuration config = ConfigurationManager.OpenExeConfiguration(exe);
 
                 ConnectionStringsSection section = config.GetSection("connectionStrings") as ConnectionStringsSection;
 
@@ -29,8 +29,7 @@ namespace LiaApp
                 }
                 config.Save();
 
-                Console.WriteLine("Protected={0}",
-           section.SectionInformation.IsProtected);
+                Console.WriteLine("Protected={0}", section.SectionInformation.IsProtected);
             }
             catch (Exception ex)
             {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,8 +18,24 @@ namespace LiaApp
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
+            string connStr = AzureCon.ConnectionString;
+
+            using(SqlConnection conn = new SqlConnection(connStr)){
+                try
+                {
+                    conn.Open();
+                    MessageBox.Show("Your database Connection Works!");
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+
+            Encryption.ToggleConfigEncryption(Environment.CurrentDirectory + Environment.GetCommandLineArgs()[0]);
 
         }
     }

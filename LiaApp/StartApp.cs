@@ -21,8 +21,7 @@ namespace LiaApp
 
         public void button2_Click(object sender, EventArgs e)
         {
-            Form form1 = new Form1();
-            form1.Show();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,6 +29,7 @@ namespace LiaApp
             Form form1 = new Form1();
             this.Hide();
             form1.Show();
+            
         }
     }
 }

@@ -9,7 +9,10 @@ namespace LiaApp
 {
     public class DataAdapter
     {
-        SqlDataAdapter dA = new SqlDataAdapter();
-
+        SqlDataAdapter dA = new SqlDataAdapter
+        ("SELECT * FROM db_newton", AzureCon.ConnectionString);
+		
+    
     }
 }
+

@@ -56,5 +56,27 @@ namespace LiaApp
             DataTable Liatable = AzureCon.LIAtable(ChosenClass);
             dataGridViewLIA.DataSource = Liatable;
         }
+
+        private void Search_Click(object sender, EventArgs e)
+        {
+            string SearchResult = SearchBox.Text;
+
+            DataTable Searchtable = AzureCon.StudentSearchFor(SearchResult);
+
+            if (Searchtable.Rows.Count == 0)
+            {
+                MessageBox.Show(SearchResult + " Finns ingen elev med det personnumret");
+            }
+            else
+            {
+             
+                ResultStudentName.Text = Searchtable.Rows[0].ItemArray[1].ToString();
+                ResultCompanyName.Text = Searchtable.Rows[0].ItemArray[2].ToString();
+                ResultVisitId.Text = Searchtable.Rows[0].ItemArray[3].ToString();
+                ResultDatelabel.Text = Searchtable.Rows[0].ItemArray[4].ToString();
+                ResultPersonalName.Text = Searchtable.Rows[0].ItemArray[5].ToString();
+                ResultPersonaltele.Text = Searchtable.Rows[0].ItemArray[6].ToString();
+            }
+        }
     }
 }

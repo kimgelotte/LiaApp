@@ -49,6 +49,8 @@
             this.ResultDatelabel = new System.Windows.Forms.Label();
             this.ResultPersonalName = new System.Windows.Forms.Label();
             this.ResultPersonaltele = new System.Windows.Forms.Label();
+            this.VisitIdlabel = new System.Windows.Forms.Label();
+            this.ResultVisitId = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLIA)).BeginInit();
@@ -75,6 +77,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ResultVisitId);
+            this.groupBox1.Controls.Add(this.VisitIdlabel);
             this.groupBox1.Controls.Add(this.ResultPersonaltele);
             this.groupBox1.Controls.Add(this.ResultPersonalName);
             this.groupBox1.Controls.Add(this.ResultDatelabel);
@@ -164,13 +168,13 @@
             // 
             // Search
             // 
-            this.Search.Location = new System.Drawing.Point(839, 103);
+            this.Search.Location = new System.Drawing.Point(839, 101);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(69, 22);
+            this.Search.Size = new System.Drawing.Size(69, 28);
             this.Search.TabIndex = 11;
             this.Search.Text = "Search";
-            this.Search.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Search.UseVisualStyleBackColor = true;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
             // label1
             // 
@@ -194,7 +198,7 @@
             // Datelabel
             // 
             this.Datelabel.AutoSize = true;
-            this.Datelabel.Location = new System.Drawing.Point(759, 233);
+            this.Datelabel.Location = new System.Drawing.Point(759, 264);
             this.Datelabel.Name = "Datelabel";
             this.Datelabel.Size = new System.Drawing.Size(42, 17);
             this.Datelabel.TabIndex = 14;
@@ -203,7 +207,7 @@
             // Personallabel
             // 
             this.Personallabel.AutoSize = true;
-            this.Personallabel.Location = new System.Drawing.Point(733, 274);
+            this.Personallabel.Location = new System.Drawing.Point(733, 296);
             this.Personallabel.Name = "Personallabel";
             this.Personallabel.Size = new System.Drawing.Size(68, 17);
             this.Personallabel.TabIndex = 15;
@@ -212,7 +216,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(740, 152);
+            this.label2.Location = new System.Drawing.Point(740, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 16;
@@ -221,16 +225,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(705, 318);
+            this.label4.Location = new System.Drawing.Point(706, 328);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 17);
+            this.label4.Size = new System.Drawing.Size(95, 17);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Personal-tele:";
+            this.label4.Text = "Personal tele:";
             // 
             // ResultStudentName
             // 
             this.ResultStudentName.AutoSize = true;
-            this.ResultStudentName.Location = new System.Drawing.Point(808, 151);
+            this.ResultStudentName.Location = new System.Drawing.Point(808, 163);
             this.ResultStudentName.Name = "ResultStudentName";
             this.ResultStudentName.Size = new System.Drawing.Size(0, 17);
             this.ResultStudentName.TabIndex = 18;
@@ -246,7 +250,7 @@
             // ResultDatelabel
             // 
             this.ResultDatelabel.AutoSize = true;
-            this.ResultDatelabel.Location = new System.Drawing.Point(808, 233);
+            this.ResultDatelabel.Location = new System.Drawing.Point(808, 264);
             this.ResultDatelabel.Name = "ResultDatelabel";
             this.ResultDatelabel.Size = new System.Drawing.Size(0, 17);
             this.ResultDatelabel.TabIndex = 20;
@@ -254,7 +258,7 @@
             // ResultPersonalName
             // 
             this.ResultPersonalName.AutoSize = true;
-            this.ResultPersonalName.Location = new System.Drawing.Point(808, 274);
+            this.ResultPersonalName.Location = new System.Drawing.Point(808, 296);
             this.ResultPersonalName.Name = "ResultPersonalName";
             this.ResultPersonalName.Size = new System.Drawing.Size(0, 17);
             this.ResultPersonalName.TabIndex = 21;
@@ -262,10 +266,27 @@
             // ResultPersonaltele
             // 
             this.ResultPersonaltele.AutoSize = true;
-            this.ResultPersonaltele.Location = new System.Drawing.Point(808, 318);
+            this.ResultPersonaltele.Location = new System.Drawing.Point(808, 328);
             this.ResultPersonaltele.Name = "ResultPersonaltele";
             this.ResultPersonaltele.Size = new System.Drawing.Size(0, 17);
             this.ResultPersonaltele.TabIndex = 22;
+            // 
+            // VisitIdlabel
+            // 
+            this.VisitIdlabel.AutoSize = true;
+            this.VisitIdlabel.Location = new System.Drawing.Point(748, 230);
+            this.VisitIdlabel.Name = "VisitIdlabel";
+            this.VisitIdlabel.Size = new System.Drawing.Size(53, 17);
+            this.VisitIdlabel.TabIndex = 23;
+            this.VisitIdlabel.Text = "Visit Id:";
+            // 
+            // ResultVisitId
+            // 
+            this.ResultVisitId.AutoSize = true;
+            this.ResultVisitId.Location = new System.Drawing.Point(807, 230);
+            this.ResultVisitId.Name = "ResultVisitId";
+            this.ResultVisitId.Size = new System.Drawing.Size(0, 17);
+            this.ResultVisitId.TabIndex = 24;
             // 
             // Form1
             // 
@@ -307,6 +328,8 @@
         private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.Label SocialNumberlabel;
         private System.Windows.Forms.Label ClassInfo;
+        private System.Windows.Forms.Label ResultVisitId;
+        private System.Windows.Forms.Label VisitIdlabel;
 
     }
 }

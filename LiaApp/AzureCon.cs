@@ -59,5 +59,26 @@ namespace LiaApp
                 return table;
             }
         }
+
+        public static DataTable StudentSearchFor(string SocialNumber)
+        {
+            DataTable table = new DataTable("Studentinfo");
+            SqlDataAdapter dataA = null;
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand("SELECT PersonNummer, Student.Namn, Company, LIA.Visit_Id, VisitDate, Personal.Namn, Personal.Telefon " +
+                "FROM Student INNER JOIN LIA ON Student.Id = LIA.Student_Id " +
+                "INNER JOIN Personal_Visits ON LIA.Visit_Id = Personal_Visits.Visit_Id " +
+                "INNER JOIN Personal ON Personal_Visits.P_Id = Personal.P_Id " +
+                "WHERE PersonNummer = @SocialNumber", conn);
+                cmd.Parameters.Add(new SqlParameter("SocialNumber", SqlDbType.VarChar, 12));
+                cmd.Parameters["SocialNumber"].Value = SocialNumber;
+
+                dataA = new SqlDataAdapter(cmd);
+                int res = dataA.Fill(table);
+                return table;
+            }
+        }
     }
 }

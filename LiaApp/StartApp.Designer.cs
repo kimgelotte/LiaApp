@@ -58,8 +58,8 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(180, 24);
             this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.SelectedIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -102,7 +102,7 @@
             this.AcceptButton = this.okbutton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 417);
+            this.ClientSize = new System.Drawing.Size(783, 446);
             this.Controls.Add(this.okbutton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -111,7 +111,7 @@
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StartApp";
-            this.Text = "Elev LIA";
+            this.Text = "LIA Inlogg";
             this.ResumeLayout(false);
             this.PerformLayout();
 

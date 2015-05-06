@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Configuration;
+using System.Data;
 
 namespace LiaApp
 {
@@ -19,21 +20,23 @@ namespace LiaApp
             }
         }
 
-        //public void azureconnect()
-        //{
-        //string constr = "Server=tcp:qgtejfd89g.database.windows.net,1433;Database=db_newton;User ID=grupp4@qgtejfd89g;Password=Newtong4;Trusted_Connection=False;Encrypt=True;Connection Timeout=5;";
-        //try { 
-        //    using (SqlConnection conn = new SqlConnection(constr))
-        //    {
-        //        conn.Open();
-        //        MessageBox.Show("FUNKAR!!!!");
-        //    }
-        //}
-        //catch (SqlException ex)
-        //{
+        public static DataTable klasstable(string klassN)
+        {
+            DataTable table = new DataTable("Klassinfo");
+            SqlDataAdapter dataA = null;
 
-        //    MessageBox.Show(ex.ErrorCode + ex.Message + "funkar INTE!!!");
-        //}
-        //}
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand("SELECT KlassNamn FROM Student WHERE KlassNamn = @KlassN", conn);
+                cmd.Parameters.Add(new SqlParameter("KlassN", SqlDbType.VarChar, 10));
+                cmd.Parameters["KlassN"].Value = klassN;
+
+                dataA = new SqlDataAdapter(cmd);
+
+                int res = dataA.Fill(table);
+
+                return table;
+            }
+        }
     }
 }

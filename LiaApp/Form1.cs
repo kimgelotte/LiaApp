@@ -23,7 +23,7 @@ namespace LiaApp
         {
             string connStr = AzureCon.ConnectionString;
             DataSet ds = new DataSet();
-
+            
             using(SqlConnection conn = new SqlConnection(connStr)){
                 try
                 {
@@ -32,12 +32,17 @@ namespace LiaApp
 
                     comboBox1.DataSource = ds.Tables[0].DefaultView;
 
+
+
+                    comboBox1.DataSource = ds.Tables[0].DefaultView ;
+                        
+                        
+                
                     comboBox1.DisplayMember = "ID";
                     comboBox1.ValueMember = "Namn";
                     comboBox1.SelectedIndex = -1;
-
-                    DataTable klasstable = AzureCon.GetKlasses("JYSG1");
-
+                 
+                    
                     DataGridKlassView.DataSource = klasstable;
                     
                 }
@@ -66,7 +71,7 @@ namespace LiaApp
 
         private void comboBoxKlasser_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+        
         }
     }
 }

@@ -33,9 +33,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBoxKlasser = new System.Windows.Forms.ComboBox();
-            this.DataGridKlassView = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridKlassView)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +58,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(27, 89);
+            this.comboBox1.Location = new System.Drawing.Point(27, 177);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 0;
@@ -70,7 +67,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 45);
+            this.label3.Location = new System.Drawing.Point(24, 141);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 17);
             this.label3.TabIndex = 4;
@@ -78,6 +75,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -88,33 +87,6 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Elever";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 267);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Klass:";
-            // 
-            // comboBoxKlasser
-            // 
-            this.comboBoxKlasser.FormattingEnabled = true;
-            this.comboBoxKlasser.Location = new System.Drawing.Point(56, 287);
-            this.comboBoxKlasser.Name = "comboBoxKlasser";
-            this.comboBoxKlasser.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxKlasser.TabIndex = 9;
-            this.comboBoxKlasser.SelectedIndexChanged += new System.EventHandler(this.comboBoxKlasser_SelectedIndexChanged);
-            // 
-            // DataGridKlassView
-            // 
-            this.DataGridKlassView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridKlassView.Location = new System.Drawing.Point(29, 317);
-            this.DataGridKlassView.Name = "DataGridKlassView";
-            this.DataGridKlassView.RowTemplate.Height = 24;
-            this.DataGridKlassView.Size = new System.Drawing.Size(651, 213);
-            this.DataGridKlassView.TabIndex = 10;
             // 
             // Form1
             // 
@@ -143,9 +115,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBoxKlasser;
-        private System.Windows.Forms.DataGridView DataGridKlassView;
 
     }
 }

@@ -18,9 +18,6 @@ namespace LiaApp
             InitializeComponent();
            
         }
-
-
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -28,14 +25,17 @@ namespace LiaApp
 
         private void okbutton_Click(object sender, EventArgs e)
         {
-
             string var;
+            string comvar;
             var = textBox1.Text;
+            comvar = comboBox1.Text;
             if(var=="")
                 MessageBox.Show("Du måste ange ett lösen");
-            if (var == "student")
-            {
-                Form form1 = new Form1();
+            else if (var == "student"&&comvar=="Student" || var == "personal"&&comvar=="Personal")
+            {               
+                this.Hide();
+                var form1 = new Form1();
+                form1.Closed += (s, args) => this.Close();
                 form1.Show();
             }
             else 

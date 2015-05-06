@@ -27,9 +27,30 @@ namespace LiaApp
 
             using (SqlConnection conn = new SqlConnection(ConnectionString))
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Student WHERE ClassNamn = @KlassN", conn);
+                SqlCommand cmd = new SqlCommand("SELECT Namn, PostAdress, PostNummer, Examen, MejlAdress FROM Student WHERE ClassNamn = @KlassN", conn);
                 cmd.Parameters.Add(new SqlParameter("KlassN", SqlDbType.VarChar, 10));
                 cmd.Parameters["KlassN"].Value = klassN;
+
+                dataA = new SqlDataAdapter(cmd);
+
+                int res = dataA.Fill(table);
+
+                return table;
+            }
+        }
+
+        public static DataTable LIAtable(string klassLIA)
+        {
+            DataTable table = new DataTable("LIAinfo");
+            SqlDataAdapter dataA = null;
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand("SELECT LIA_Period, Student_Id, StartDate, EndDate, Company, Visit_Id " + 
+                "FROM LIA INNER JOIN Student ON LIA.Student_Id = Student.Id " + 
+                "WHERE ClassNamn = @LIAinfo", conn);
+                cmd.Parameters.Add(new SqlParameter("LIAinfo", SqlDbType.VarChar, 10));
+                cmd.Parameters["LIAinfo"].Value = klassLIA;
 
                 dataA = new SqlDataAdapter(cmd);
 

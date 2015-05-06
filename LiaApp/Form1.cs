@@ -49,8 +49,11 @@ namespace LiaApp
         {
             string ChosenClass = comboBox1.Text;
 
-            DataTable table = AzureCon.klasstable(ChosenClass);
-            dataGridViewClass.DataSource = table; 
+            DataTable Classtable = AzureCon.klasstable(ChosenClass);
+            dataGridViewClass.DataSource = Classtable;
+
+            DataTable Liatable = AzureCon.LIAtable(ChosenClass);
+            dataGridViewLIA.DataSource = Liatable;
         }
     }
 }

@@ -47,14 +47,10 @@ namespace LiaApp
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedValue != null)
-            {
+            string ChosenClass = comboBox1.Text;
 
-            }
-            else
-            {
-                
-            }
+            DataTable table = AzureCon.klasstable(ChosenClass);
+            dataGridViewClass.DataSource = table; 
         }
     }
 }

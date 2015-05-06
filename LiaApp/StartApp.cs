@@ -31,7 +31,7 @@ namespace LiaApp
             comvar = comboBox1.Text;
             if(var=="")
                 MessageBox.Show("Du måste ange ett lösen");
-            else if (var == "student"&&comvar=="Student" || var == "personal"&&comvar=="Personal")
+            else if (var == "student"&&comvar=="Elev" || var == "personal"&&comvar=="Personal")
             {               
                 this.Hide();
                 var form1 = new Form1();
@@ -42,6 +42,9 @@ namespace LiaApp
                 MessageBox.Show("Fel lösenord");
         }
 
+   
+
+       
 
     }
 }

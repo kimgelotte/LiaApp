@@ -46,8 +46,8 @@ namespace LiaApp
 
             using (SqlConnection conn = new SqlConnection(ConnectionString))
             {
-                SqlCommand cmd = new SqlCommand("SELECT LIA_Period, Student_Id, StartDate, EndDate, Company, Visit_Id " + 
-                "FROM LIA INNER JOIN Student ON LIA.Student_Id = Student.Id " + 
+                SqlCommand cmd = new SqlCommand("SELECT LIA_Period, Student_Id, StartDate, EndDate, Company, Visit_Id " +
+                "FROM LIA INNER JOIN Student ON LIA.Student_Id = Student.Id " +
                 "WHERE ClassNamn = @LIAinfo", conn);
                 cmd.Parameters.Add(new SqlParameter("LIAinfo", SqlDbType.VarChar, 10));
                 cmd.Parameters["LIAinfo"].Value = klassLIA;

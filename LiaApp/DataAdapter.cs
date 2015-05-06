@@ -17,7 +17,7 @@ namespace LiaApp
                 ("SELECT * FROM Student", AzureCon.ConnectionString);
                 return dA;
             }
-        }
+    }
     }
 }
 

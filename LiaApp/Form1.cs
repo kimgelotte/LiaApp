@@ -37,12 +37,16 @@ namespace LiaApp
 
 
                     comboBox1.DataSource = ds.Tables[0].DefaultView ;
+                    comboBox2.DataSource = ds.Tables[0].DefaultView;
                         
                         
                 
                     comboBox1.DisplayMember = "ID";
                     comboBox1.ValueMember = "Namn";
                     comboBox1.SelectedIndex = -1;
+
+                    comboBox2.DisplayMember = "ClassNamn";
+                    comboBox2.ValueMember = "Namn";
                  
                     
                 }

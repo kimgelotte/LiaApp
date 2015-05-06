@@ -31,11 +31,14 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewClass = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClass)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(147, 26);
             this.comboBox1.Name = "comboBox1";
@@ -54,6 +57,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dataGridViewClass);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -61,6 +65,15 @@
             this.groupBox1.Size = new System.Drawing.Size(682, 552);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
+            // 
+            // dataGridViewClass
+            // 
+            this.dataGridViewClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewClass.Location = new System.Drawing.Point(27, 86);
+            this.dataGridViewClass.Name = "dataGridViewClass";
+            this.dataGridViewClass.RowTemplate.Height = 24;
+            this.dataGridViewClass.Size = new System.Drawing.Size(626, 448);
+            this.dataGridViewClass.TabIndex = 5;
             // 
             // Form1
             // 
@@ -73,6 +86,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -82,6 +96,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dataGridViewClass;
 
     }
 }

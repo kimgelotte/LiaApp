@@ -27,7 +27,7 @@ namespace LiaApp
 
             using (SqlConnection conn = new SqlConnection(ConnectionString))
             {
-                SqlCommand cmd = new SqlCommand("SELECT KlassNamn FROM Student WHERE KlassNamn = @KlassN", conn);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Student WHERE ClassNamn = @KlassN", conn);
                 cmd.Parameters.Add(new SqlParameter("KlassN", SqlDbType.VarChar, 10));
                 cmd.Parameters["KlassN"].Value = klassN;
 

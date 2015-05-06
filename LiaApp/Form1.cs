@@ -40,7 +40,6 @@ namespace LiaApp
                 {
                     MessageBox.Show(ex.Message);
                 }
-
             }
 
             Encryption.ToggleConfigEncryption();

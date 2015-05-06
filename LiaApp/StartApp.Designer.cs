@@ -58,8 +58,8 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(180, 24);
             this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.SelectedIndex = 1;
             // 
             // textBox1
             // 
@@ -67,8 +67,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
             this.textBox1.Size = new System.Drawing.Size(180, 22);
-            this.textBox1.TabIndex = 6;
-         
+            this.textBox1.TabIndex = 0;
             // 
             // label1
             // 
@@ -93,7 +92,7 @@
             this.okbutton.Location = new System.Drawing.Point(357, 262);
             this.okbutton.Name = "okbutton";
             this.okbutton.Size = new System.Drawing.Size(83, 30);
-            this.okbutton.TabIndex = 0;
+            this.okbutton.TabIndex = 6;
             this.okbutton.Text = "Logga in";
             this.okbutton.UseVisualStyleBackColor = true;
             this.okbutton.Click += new System.EventHandler(this.okbutton_Click);
@@ -122,9 +121,9 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button okbutton;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

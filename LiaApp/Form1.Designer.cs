@@ -62,24 +62,28 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(682, 552);
+            this.groupBox1.Size = new System.Drawing.Size(1237, 552);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
             // dataGridViewClass
             // 
+            this.dataGridViewClass.AllowUserToAddRows = false;
+            this.dataGridViewClass.AllowUserToDeleteRows = false;
             this.dataGridViewClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewClass.Location = new System.Drawing.Point(27, 86);
             this.dataGridViewClass.Name = "dataGridViewClass";
+            this.dataGridViewClass.ReadOnly = true;
+            this.dataGridViewClass.RowHeadersVisible = false;
             this.dataGridViewClass.RowTemplate.Height = 24;
-            this.dataGridViewClass.Size = new System.Drawing.Size(626, 448);
+            this.dataGridViewClass.Size = new System.Drawing.Size(1179, 448);
             this.dataGridViewClass.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 576);
+            this.ClientSize = new System.Drawing.Size(1261, 576);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Elev";

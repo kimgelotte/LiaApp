@@ -31,17 +31,12 @@ namespace LiaApp
                     da.Fill(ds);
 
                     comboBox1.DataSource = ds.Tables[0].DefaultView;
-
-
-
-                    comboBox1.DataSource = ds.Tables[0].DefaultView ;
-                        
-                        
                 
                     comboBox1.DisplayMember = "ID";
                     comboBox1.ValueMember = "Namn";
                     comboBox1.SelectedIndex = -1;
-                 
+
+                    DataTable klasstable = AzureCon.GetKlasses("JYSG1");
                     
                     DataGridKlassView.DataSource = klasstable;
                     

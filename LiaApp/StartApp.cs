@@ -26,11 +26,8 @@ namespace LiaApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            Form form1 = new Form1();
-            
+            Form form1 = new Form1();   
             form1.Show();
-            
         }
     }
 }

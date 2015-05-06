@@ -19,6 +19,8 @@ namespace LiaApp
            
         }
 
+
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -26,11 +28,18 @@ namespace LiaApp
 
         private void okbutton_Click(object sender, EventArgs e)
         {
+
             string var;
             var = textBox1.Text;
             if(var=="")
                 MessageBox.Show("Du måste ange ett lösen");
-           
+            if (var == "student")
+            {
+                Form form1 = new Form1();
+                form1.Show();
+            }
+            else 
+                MessageBox.Show("Fel lösenord");
         }
 
 

@@ -42,6 +42,7 @@ namespace LiaApp
             {
                 this.Hide();
                 var PersonalForm = new PersonalForm();
+                PersonalForm.Closed += (s, args) => this.Close();
                 PersonalForm.Show();
             }
             else 

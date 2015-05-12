@@ -31,12 +31,18 @@ namespace LiaApp
             comvar = comboBox1.Text;
             if(var=="")
                 MessageBox.Show("Du måste ange ett lösen");
-            else if (var == "student"&&comvar=="Elev" || var == "personal"&&comvar=="Personal")
+            else if (var == "student"&&comvar=="Elev")
             {               
                 this.Hide();
                 var form1 = new Form1();
                 form1.Closed += (s, args) => this.Close();
                 form1.Show();
+            }
+            else if (var == "personal" && comvar == "Personal")
+            {
+                this.Hide();
+                var PersonalForm = new PersonalForm();
+                PersonalForm.Show();
             }
             else 
                 MessageBox.Show("Fel lösenord");

@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Create = new System.Windows.Forms.TabPage();
+            this.comboBoxCreate = new System.Windows.Forms.ComboBox();
             this.Edit = new System.Windows.Forms.TabPage();
             this.Sickness = new System.Windows.Forms.TabPage();
             this.OrderVisit = new System.Windows.Forms.TabPage();
@@ -54,11 +55,14 @@
             this.EditOKButton = new System.Windows.Forms.Button();
             this.EditSaveButton = new System.Windows.Forms.Button();
             this.EditRevertButton = new System.Windows.Forms.Button();
+            this.dataGridViewCreate = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.Edit.SuspendLayout();
+            this.Create.SuspendLayout();
             this.OrderVisit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderVisit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreate)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -78,12 +82,29 @@
             // 
             this.Create.Location = new System.Drawing.Point(4, 22);
             this.Create.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Create.Controls.Add(this.dataGridViewCreate);
+            this.Create.Controls.Add(this.comboBoxCreate);
+            this.Create.Location = new System.Drawing.Point(4, 25);
             this.Create.Name = "Create";
             this.Create.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Create.Size = new System.Drawing.Size(564, 337);
             this.Create.TabIndex = 0;
             this.Create.Text = "Create";
             this.Create.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxCreate
+            // 
+            this.comboBoxCreate.FormattingEnabled = true;
+            this.comboBoxCreate.Items.AddRange(new object[] {
+            "Student",
+            "Personal",
+            "Företag",
+            "Class"});
+            this.comboBoxCreate.Location = new System.Drawing.Point(20, 31);
+            this.comboBoxCreate.Name = "comboBoxCreate";
+            this.comboBoxCreate.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxCreate.TabIndex = 0;
+            this.comboBoxCreate.SelectedIndexChanged += new System.EventHandler(this.comboBoxCreate_SelectedIndexChanged);
             // 
             // Edit
             // 
@@ -324,7 +345,6 @@
             this.EditCancelButton.TabIndex = 3;
             this.EditCancelButton.Text = "Cancel";
             this.EditCancelButton.UseVisualStyleBackColor = true;
-            this.EditCancelButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // EditOKButton
             // 
@@ -345,6 +365,7 @@
             this.EditSaveButton.UseVisualStyleBackColor = true;
             // 
             // EditRevertButton
+            // dataGridViewCreate
             // 
             this.EditRevertButton.Location = new System.Drawing.Point(268, 309);
             this.EditRevertButton.Name = "EditRevertButton";
@@ -352,6 +373,12 @@
             this.EditRevertButton.TabIndex = 6;
             this.EditRevertButton.Text = "Revert changes";
             this.EditRevertButton.UseVisualStyleBackColor = true;
+            this.dataGridViewCreate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCreate.Location = new System.Drawing.Point(20, 88);
+            this.dataGridViewCreate.Name = "dataGridViewCreate";
+            this.dataGridViewCreate.RowTemplate.Height = 24;
+            this.dataGridViewCreate.Size = new System.Drawing.Size(672, 253);
+            this.dataGridViewCreate.TabIndex = 1;
             // 
             // PersonalForm
             // 
@@ -366,10 +393,12 @@
             this.tabControl1.ResumeLayout(false);
             this.Edit.ResumeLayout(false);
             this.Edit.PerformLayout();
+            this.Create.ResumeLayout(false);
             this.OrderVisit.ResumeLayout(false);
             this.OrderVisit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderVisit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -402,5 +431,7 @@
         private System.Windows.Forms.Button EditOKButton;
         private System.Windows.Forms.Button EditRevertButton;
         private System.Windows.Forms.Button EditSaveButton;
+        private System.Windows.Forms.ComboBox comboBoxCreate;
+        private System.Windows.Forms.DataGridView dataGridViewCreate;
     }
 }

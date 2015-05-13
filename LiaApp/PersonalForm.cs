@@ -14,6 +14,11 @@ namespace LiaApp
     public partial class PersonalForm : Form
     {
         SqlDataAdapter da = DataAdapter.dataAd;
+        SqlCommand sCommand;
+        SqlDataAdapter sAdapter;
+        SqlCommandBuilder sBuilder;
+        DataSet sDs;
+        DataTable sTable;    
         public PersonalForm()
         {
             InitializeComponent();
@@ -42,8 +47,30 @@ namespace LiaApp
             Startapp.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void comboBoxCreate_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string ChosenCreate = comboBoxCreate.Text;
+            if (ChosenCreate == "Student")
+                visaStudtab();
+        }
+
+        private void visaStudtab()
+        {
+            
+            string sql = "SELECT * FROM Student";
+            SqlConnection connection = new SqlConnection(AzureCon.ConnectionString);
+            connection.Open();
+            sCommand = new SqlCommand(sql, connection);
+            sAdapter = new SqlDataAdapter(sCommand);
+            sBuilder = new SqlCommandBuilder(sAdapter);
+            sDs = new DataSet();
+            sAdapter.Fill(sDs, "Student");
+            sTable = sDs.Tables["Student"];
+            connection.Close();
+            dataGridViewCreate.DataSource = sDs.Tables["Student"];
+            
+            //save_btn.Enabled = false;
+            dataGridViewCreate.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
         }
     }

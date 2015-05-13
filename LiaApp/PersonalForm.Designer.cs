@@ -40,13 +40,8 @@
             this.EditDataGridView = new System.Windows.Forms.DataGridView();
             this.EditSelectLabel = new System.Windows.Forms.Label();
             this.EditSelectCombobox = new System.Windows.Forms.ComboBox();
-            this.Sickness = new System.Windows.Forms.TabPage();
+            this.Absence = new System.Windows.Forms.TabPage();
             this.OrderVisit = new System.Windows.Forms.TabPage();
-            this.trrtu = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Personal = new System.Windows.Forms.Label();
             this.OkButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
@@ -56,6 +51,9 @@
             this.BookSaveButton = new System.Windows.Forms.Button();
             this.VisitOrders = new System.Windows.Forms.Label();
             this.dataGridViewOrderVisit = new System.Windows.Forms.DataGridView();
+            this.OrderVisitOkButton = new System.Windows.Forms.Button();
+            this.OrderVisitCancelButton = new System.Windows.Forms.Button();
+            this.VisitOrdersLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Create.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreate)).BeginInit();
@@ -69,13 +67,13 @@
             // 
             this.tabControl1.Controls.Add(this.Create);
             this.tabControl1.Controls.Add(this.Edit);
-            this.tabControl1.Controls.Add(this.Sickness);
+            this.tabControl1.Controls.Add(this.Absence);
             this.tabControl1.Controls.Add(this.OrderVisit);
             this.tabControl1.Location = new System.Drawing.Point(1, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(572, 363);
+            this.tabControl1.Size = new System.Drawing.Size(573, 365);
             this.tabControl1.TabIndex = 0;
             // 
             // Create
@@ -83,10 +81,10 @@
             this.Create.Controls.Add(this.dataGridViewCreate);
             this.Create.Controls.Add(this.comboBoxCreate);
             this.Create.Location = new System.Drawing.Point(4, 22);
-            this.Create.Margin = new System.Windows.Forms.Padding(2);
+            this.Create.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Create.Name = "Create";
-            this.Create.Padding = new System.Windows.Forms.Padding(2);
-            this.Create.Size = new System.Drawing.Size(564, 337);
+            this.Create.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Create.Size = new System.Drawing.Size(565, 339);
             this.Create.TabIndex = 0;
             this.Create.Text = "Create";
             this.Create.UseVisualStyleBackColor = true;
@@ -124,46 +122,50 @@
             this.Edit.Controls.Add(this.EditSelectLabel);
             this.Edit.Controls.Add(this.EditSelectCombobox);
             this.Edit.Location = new System.Drawing.Point(4, 22);
-            this.Edit.Margin = new System.Windows.Forms.Padding(2);
+            this.Edit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Edit.Name = "Edit";
-            this.Edit.Padding = new System.Windows.Forms.Padding(2);
-            this.Edit.Size = new System.Drawing.Size(564, 337);
+            this.Edit.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Edit.Size = new System.Drawing.Size(565, 339);
             this.Edit.TabIndex = 1;
             this.Edit.Text = "Edit";
             this.Edit.UseVisualStyleBackColor = true;
             // 
             // EditRevertButton
             // 
-            this.EditRevertButton.Location = new System.Drawing.Point(268, 309);
+            this.EditRevertButton.Location = new System.Drawing.Point(340, 310);
+            this.EditRevertButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EditRevertButton.Name = "EditRevertButton";
-            this.EditRevertButton.Size = new System.Drawing.Size(96, 23);
+            this.EditRevertButton.Size = new System.Drawing.Size(72, 19);
             this.EditRevertButton.TabIndex = 6;
             this.EditRevertButton.Text = "Revert changes";
             this.EditRevertButton.UseVisualStyleBackColor = true;
             // 
             // EditSaveButton
             // 
-            this.EditSaveButton.Location = new System.Drawing.Point(168, 309);
+            this.EditSaveButton.Location = new System.Drawing.Point(265, 310);
+            this.EditSaveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EditSaveButton.Name = "EditSaveButton";
-            this.EditSaveButton.Size = new System.Drawing.Size(94, 23);
+            this.EditSaveButton.Size = new System.Drawing.Size(70, 19);
             this.EditSaveButton.TabIndex = 5;
             this.EditSaveButton.Text = "Save changes";
             this.EditSaveButton.UseVisualStyleBackColor = true;
             // 
             // EditOKButton
             // 
-            this.EditOKButton.Location = new System.Drawing.Point(383, 309);
+            this.EditOKButton.Location = new System.Drawing.Point(426, 310);
+            this.EditOKButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EditOKButton.Name = "EditOKButton";
-            this.EditOKButton.Size = new System.Drawing.Size(89, 23);
+            this.EditOKButton.Size = new System.Drawing.Size(67, 19);
             this.EditOKButton.TabIndex = 4;
             this.EditOKButton.Text = "OK";
             this.EditOKButton.UseVisualStyleBackColor = true;
             // 
             // EditCancelButton
             // 
-            this.EditCancelButton.Location = new System.Drawing.Point(478, 309);
+            this.EditCancelButton.Location = new System.Drawing.Point(498, 310);
+            this.EditCancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EditCancelButton.Name = "EditCancelButton";
-            this.EditCancelButton.Size = new System.Drawing.Size(75, 23);
+            this.EditCancelButton.Size = new System.Drawing.Size(56, 19);
             this.EditCancelButton.TabIndex = 3;
             this.EditCancelButton.Text = "Cancel";
             this.EditCancelButton.UseVisualStyleBackColor = true;
@@ -194,6 +196,12 @@
             "Contact Person",
             "LIA",
             "Staff",
+            "Student",
+            "Class",
+            "Company",
+            "Contact Person",
+            "LIA",
+            "Staff",
             "Student"});
             this.EditSelectCombobox.Location = new System.Drawing.Point(7, 27);
             this.EditSelectCombobox.Name = "EditSelectCombobox";
@@ -201,23 +209,18 @@
             this.EditSelectCombobox.TabIndex = 0;
             this.EditSelectCombobox.Text = "Browse...";
             // 
-            // Sickness
+            // Absence
             // 
-            this.Sickness.Location = new System.Drawing.Point(4, 22);
-            this.Sickness.Margin = new System.Windows.Forms.Padding(2);
-            this.Sickness.Name = "Sickness";
-            this.Sickness.Size = new System.Drawing.Size(564, 337);
-            this.Sickness.TabIndex = 2;
-            this.Sickness.Text = "Sickness";
-            this.Sickness.UseVisualStyleBackColor = true;
+            this.Absence.Location = new System.Drawing.Point(4, 22);
+            this.Absence.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Absence.Name = "Absence";
+            this.Absence.Size = new System.Drawing.Size(565, 339);
+            this.Absence.TabIndex = 2;
+            this.Absence.Text = "Absence";
+            this.Absence.UseVisualStyleBackColor = true;
             // 
             // OrderVisit
             // 
-            this.OrderVisit.Controls.Add(this.trrtu);
-            this.OrderVisit.Controls.Add(this.label4);
-            this.OrderVisit.Controls.Add(this.label3);
-            this.OrderVisit.Controls.Add(this.label2);
-            this.OrderVisit.Controls.Add(this.Personal);
             this.OrderVisit.Controls.Add(this.OkButton);
             this.OrderVisit.Controls.Add(this.button1);
             this.OrderVisit.Controls.Add(this.EditButton);
@@ -227,68 +230,21 @@
             this.OrderVisit.Controls.Add(this.BookSaveButton);
             this.OrderVisit.Controls.Add(this.VisitOrders);
             this.OrderVisit.Controls.Add(this.dataGridViewOrderVisit);
+            this.OrderVisit.Controls.Add(this.OrderVisitOkButton);
+            this.OrderVisit.Controls.Add(this.OrderVisitCancelButton);
+            this.OrderVisit.Controls.Add(this.VisitOrdersLabel);
             this.OrderVisit.Location = new System.Drawing.Point(4, 22);
-            this.OrderVisit.Margin = new System.Windows.Forms.Padding(2);
+            this.OrderVisit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OrderVisit.Name = "OrderVisit";
-            this.OrderVisit.Size = new System.Drawing.Size(564, 337);
+            this.OrderVisit.Size = new System.Drawing.Size(565, 339);
             this.OrderVisit.TabIndex = 3;
             this.OrderVisit.Text = "OrderVisit";
             this.OrderVisit.UseVisualStyleBackColor = true;
             // 
-            // trrtu
-            // 
-            this.trrtu.Location = new System.Drawing.Point(163, 125);
-            this.trrtu.Margin = new System.Windows.Forms.Padding(2);
-            this.trrtu.Name = "trrtu";
-            this.trrtu.Size = new System.Drawing.Size(56, 19);
-            this.trrtu.TabIndex = 13;
-            this.trrtu.Text = "dfhdh";
-            this.trrtu.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 193);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "label4";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 151);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "label3";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 102);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "label2";
-            // 
-            // Personal
-            // 
-            this.Personal.AutoSize = true;
-            this.Personal.Location = new System.Drawing.Point(38, 46);
-            this.Personal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Personal.Name = "Personal";
-            this.Personal.Size = new System.Drawing.Size(48, 13);
-            this.Personal.TabIndex = 9;
-            this.Personal.Text = "Personal";
-            // 
             // OkButton
             // 
             this.OkButton.Location = new System.Drawing.Point(418, 306);
-            this.OkButton.Margin = new System.Windows.Forms.Padding(2);
+            this.OkButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(56, 19);
             this.OkButton.TabIndex = 8;
@@ -299,7 +255,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(103, 277);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(62, 24);
             this.button1.TabIndex = 7;
@@ -309,7 +265,7 @@
             // EditButton
             // 
             this.EditButton.Location = new System.Drawing.Point(297, 306);
-            this.EditButton.Margin = new System.Windows.Forms.Padding(2);
+            this.EditButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(56, 19);
             this.EditButton.TabIndex = 6;
@@ -319,7 +275,7 @@
             // RemoveButton
             // 
             this.RemoveButton.Location = new System.Drawing.Point(358, 306);
-            this.RemoveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.RemoveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(56, 19);
             this.RemoveButton.TabIndex = 5;
@@ -329,7 +285,7 @@
             // AddOrderButton
             // 
             this.AddOrderButton.Location = new System.Drawing.Point(38, 277);
-            this.AddOrderButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AddOrderButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddOrderButton.Name = "AddOrderButton";
             this.AddOrderButton.Size = new System.Drawing.Size(61, 24);
             this.AddOrderButton.TabIndex = 4;
@@ -339,7 +295,7 @@
             // CancelButton
             // 
             this.CancelButton.Location = new System.Drawing.Point(479, 306);
-            this.CancelButton.Margin = new System.Windows.Forms.Padding(2);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(56, 19);
             this.CancelButton.TabIndex = 3;
@@ -350,7 +306,7 @@
             // BookSaveButton
             // 
             this.BookSaveButton.Location = new System.Drawing.Point(236, 306);
-            this.BookSaveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.BookSaveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BookSaveButton.Name = "BookSaveButton";
             this.BookSaveButton.Size = new System.Drawing.Size(56, 19);
             this.BookSaveButton.TabIndex = 2;
@@ -373,7 +329,7 @@
             this.dataGridViewOrderVisit.AllowUserToDeleteRows = false;
             this.dataGridViewOrderVisit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOrderVisit.Location = new System.Drawing.Point(226, 16);
-            this.dataGridViewOrderVisit.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewOrderVisit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewOrderVisit.Name = "dataGridViewOrderVisit";
             this.dataGridViewOrderVisit.ReadOnly = true;
             this.dataGridViewOrderVisit.RowHeadersVisible = false;
@@ -381,13 +337,42 @@
             this.dataGridViewOrderVisit.Size = new System.Drawing.Size(326, 284);
             this.dataGridViewOrderVisit.TabIndex = 0;
             // 
+            // OrderVisitOkButton
+            // 
+            this.OrderVisitOkButton.Location = new System.Drawing.Point(558, 376);
+            this.OrderVisitOkButton.Name = "OrderVisitOkButton";
+            this.OrderVisitOkButton.Size = new System.Drawing.Size(75, 23);
+            this.OrderVisitOkButton.TabIndex = 8;
+            this.OrderVisitOkButton.Text = "Ok";
+            this.OrderVisitOkButton.UseVisualStyleBackColor = true;
+            this.OrderVisitOkButton.Click += new System.EventHandler(this.OkButton_Click);
+            // 
+            // OrderVisitCancelButton
+            // 
+            this.OrderVisitCancelButton.Location = new System.Drawing.Point(639, 376);
+            this.OrderVisitCancelButton.Name = "OrderVisitCancelButton";
+            this.OrderVisitCancelButton.Size = new System.Drawing.Size(75, 23);
+            this.OrderVisitCancelButton.TabIndex = 3;
+            this.OrderVisitCancelButton.Text = "Cancel";
+            this.OrderVisitCancelButton.UseVisualStyleBackColor = true;
+            this.OrderVisitCancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // VisitOrdersLabel
+            // 
+            this.VisitOrdersLabel.AutoSize = true;
+            this.VisitOrdersLabel.Location = new System.Drawing.Point(299, 0);
+            this.VisitOrdersLabel.Name = "VisitOrdersLabel";
+            this.VisitOrdersLabel.Size = new System.Drawing.Size(60, 13);
+            this.VisitOrdersLabel.TabIndex = 1;
+            this.VisitOrdersLabel.Text = "Order Visits";
+            // 
             // PersonalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 373);
+            this.ClientSize = new System.Drawing.Size(570, 360);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PersonalForm";
             this.Text = "PersonalForm";
             this.Load += new System.EventHandler(this.PersonalForm_Load);
@@ -409,7 +394,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Create;
         private System.Windows.Forms.TabPage Edit;
-        private System.Windows.Forms.TabPage Sickness;
+        private System.Windows.Forms.TabPage Absence;
         private System.Windows.Forms.TabPage OrderVisit;
         private System.Windows.Forms.Button BookSaveButton;
         private System.Windows.Forms.Label VisitOrders;
@@ -420,11 +405,6 @@
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button RemoveButton;
         private System.Windows.Forms.Button OkButton;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label Personal;
-        private System.Windows.Forms.Button trrtu;
         private System.Windows.Forms.ComboBox EditSelectCombobox;
         private System.Windows.Forms.Label EditSelectLabel;
         private System.Windows.Forms.Button EditCancelButton;
@@ -434,5 +414,8 @@
         private System.Windows.Forms.Button EditSaveButton;
         private System.Windows.Forms.ComboBox comboBoxCreate;
         private System.Windows.Forms.DataGridView dataGridViewCreate;
+        private System.Windows.Forms.Label VisitOrdersLabel;
+        private System.Windows.Forms.Button OrderVisitCancelButton;
+        private System.Windows.Forms.Button OrderVisitOkButton;
     }
 }

@@ -30,10 +30,15 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Create = new System.Windows.Forms.TabPage();
+            this.dataGridViewCreate = new System.Windows.Forms.DataGridView();
+            this.labelCreate = new System.Windows.Forms.Label();
+            this.comboBoxCreate = new System.Windows.Forms.ComboBox();
             this.Edit = new System.Windows.Forms.TabPage();
             this.Sickness = new System.Windows.Forms.TabPage();
             this.OrderVisit = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
+            this.Create.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreate)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -50,6 +55,9 @@
             // 
             // Create
             // 
+            this.Create.Controls.Add(this.dataGridViewCreate);
+            this.Create.Controls.Add(this.labelCreate);
+            this.Create.Controls.Add(this.comboBoxCreate);
             this.Create.Location = new System.Drawing.Point(4, 25);
             this.Create.Name = "Create";
             this.Create.Padding = new System.Windows.Forms.Padding(3);
@@ -57,6 +65,39 @@
             this.Create.TabIndex = 0;
             this.Create.Text = "Create";
             this.Create.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewCreate
+            // 
+            this.dataGridViewCreate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCreate.Location = new System.Drawing.Point(35, 105);
+            this.dataGridViewCreate.Name = "dataGridViewCreate";
+            this.dataGridViewCreate.RowTemplate.Height = 24;
+            this.dataGridViewCreate.Size = new System.Drawing.Size(666, 272);
+            this.dataGridViewCreate.TabIndex = 2;
+            // 
+            // labelCreate
+            // 
+            this.labelCreate.AutoSize = true;
+            this.labelCreate.Location = new System.Drawing.Point(32, 17);
+            this.labelCreate.Name = "labelCreate";
+            this.labelCreate.Size = new System.Drawing.Size(232, 17);
+            this.labelCreate.TabIndex = 1;
+            this.labelCreate.Text = "Choose object to create in dropbox:";
+            // 
+            // comboBoxCreate
+            // 
+            this.comboBoxCreate.FormattingEnabled = true;
+            this.comboBoxCreate.Items.AddRange(new object[] {
+            "Student",
+            "Personal",
+            "Class",
+            "ContactPerson",
+            "Company"});
+            this.comboBoxCreate.Location = new System.Drawing.Point(35, 55);
+            this.comboBoxCreate.Name = "comboBoxCreate";
+            this.comboBoxCreate.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxCreate.TabIndex = 0;
+            this.comboBoxCreate.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Edit
             // 
@@ -95,6 +136,9 @@
             this.Name = "PersonalForm";
             this.Text = "PersonalForm";
             this.tabControl1.ResumeLayout(false);
+            this.Create.ResumeLayout(false);
+            this.Create.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -106,5 +150,8 @@
         private System.Windows.Forms.TabPage Edit;
         private System.Windows.Forms.TabPage Sickness;
         private System.Windows.Forms.TabPage OrderVisit;
+        private System.Windows.Forms.DataGridView dataGridViewCreate;
+        private System.Windows.Forms.Label labelCreate;
+        private System.Windows.Forms.ComboBox comboBoxCreate;
     }
 }

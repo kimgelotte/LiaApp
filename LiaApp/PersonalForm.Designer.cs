@@ -33,6 +33,10 @@
             this.Edit = new System.Windows.Forms.TabPage();
             this.Sickness = new System.Windows.Forms.TabPage();
             this.OrderVisit = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Personal = new System.Windows.Forms.Label();
             this.OkButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
@@ -42,10 +46,7 @@
             this.BookSaveButton = new System.Windows.Forms.Button();
             this.VisitOrders = new System.Windows.Forms.Label();
             this.dataGridViewOrderVisit = new System.Windows.Forms.DataGridView();
-            this.Personal = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.trrtu = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.OrderVisit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderVisit)).BeginInit();
@@ -94,6 +95,7 @@
             // 
             // OrderVisit
             // 
+            this.OrderVisit.Controls.Add(this.trrtu);
             this.OrderVisit.Controls.Add(this.label4);
             this.OrderVisit.Controls.Add(this.label3);
             this.OrderVisit.Controls.Add(this.label2);
@@ -113,6 +115,42 @@
             this.OrderVisit.TabIndex = 3;
             this.OrderVisit.Text = "OrderVisit";
             this.OrderVisit.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(53, 238);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(50, 186);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "label3";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(50, 125);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "label2";
+            // 
+            // Personal
+            // 
+            this.Personal.AutoSize = true;
+            this.Personal.Location = new System.Drawing.Point(50, 56);
+            this.Personal.Name = "Personal";
+            this.Personal.Size = new System.Drawing.Size(64, 17);
+            this.Personal.TabIndex = 9;
+            this.Personal.Text = "Personal";
             // 
             // OkButton
             // 
@@ -201,41 +239,14 @@
             this.dataGridViewOrderVisit.Size = new System.Drawing.Size(434, 350);
             this.dataGridViewOrderVisit.TabIndex = 0;
             // 
-            // Personal
+            // trrtu
             // 
-            this.Personal.AutoSize = true;
-            this.Personal.Location = new System.Drawing.Point(50, 56);
-            this.Personal.Name = "Personal";
-            this.Personal.Size = new System.Drawing.Size(64, 17);
-            this.Personal.TabIndex = 9;
-            this.Personal.Text = "Personal";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 186);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 238);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "label4";
+            this.trrtu.Location = new System.Drawing.Point(217, 154);
+            this.trrtu.Name = "trrtu";
+            this.trrtu.Size = new System.Drawing.Size(75, 23);
+            this.trrtu.TabIndex = 13;
+            this.trrtu.Text = "dfhdh";
+            this.trrtu.UseVisualStyleBackColor = true;
             // 
             // PersonalForm
             // 
@@ -274,5 +285,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Personal;
+        private System.Windows.Forms.Button trrtu;
     }
 }

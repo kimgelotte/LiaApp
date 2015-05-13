@@ -206,9 +206,9 @@
             this.Personal.AutoSize = true;
             this.Personal.Location = new System.Drawing.Point(50, 56);
             this.Personal.Name = "Personal";
-            this.Personal.Size = new System.Drawing.Size(46, 17);
+            this.Personal.Size = new System.Drawing.Size(64, 17);
             this.Personal.TabIndex = 9;
-            this.Personal.Text = "label1";
+            this.Personal.Text = "Personal";
             // 
             // label2
             // 

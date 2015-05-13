@@ -43,9 +43,9 @@
             this.VisitOrders = new System.Windows.Forms.Label();
             this.dataGridViewOrderVisit = new System.Windows.Forms.DataGridView();
             this.Personal = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.LIAStudent = new System.Windows.Forms.Label();
+            this.VisitDate = new System.Windows.Forms.Label();
+            this.IsVisitDone = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.OrderVisit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderVisit)).BeginInit();
@@ -94,9 +94,9 @@
             // 
             // OrderVisit
             // 
-            this.OrderVisit.Controls.Add(this.label4);
-            this.OrderVisit.Controls.Add(this.label3);
-            this.OrderVisit.Controls.Add(this.label2);
+            this.OrderVisit.Controls.Add(this.IsVisitDone);
+            this.OrderVisit.Controls.Add(this.VisitDate);
+            this.OrderVisit.Controls.Add(this.LIAStudent);
             this.OrderVisit.Controls.Add(this.Personal);
             this.OrderVisit.Controls.Add(this.OkButton);
             this.OrderVisit.Controls.Add(this.button1);
@@ -204,38 +204,38 @@
             // Personal
             // 
             this.Personal.AutoSize = true;
-            this.Personal.Location = new System.Drawing.Point(50, 56);
+            this.Personal.Location = new System.Drawing.Point(47, 29);
             this.Personal.Name = "Personal";
             this.Personal.Size = new System.Drawing.Size(64, 17);
             this.Personal.TabIndex = 9;
             this.Personal.Text = "Personal";
             // 
-            // label2
+            // LIAStudent
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "label2";
+            this.LIAStudent.AutoSize = true;
+            this.LIAStudent.Location = new System.Drawing.Point(47, 82);
+            this.LIAStudent.Name = "LIAStudent";
+            this.LIAStudent.Size = new System.Drawing.Size(77, 17);
+            this.LIAStudent.TabIndex = 10;
+            this.LIAStudent.Text = "LIAStudent";
             // 
-            // label3
+            // VisitDate
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 186);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "label3";
+            this.VisitDate.AutoSize = true;
+            this.VisitDate.Location = new System.Drawing.Point(47, 160);
+            this.VisitDate.Name = "VisitDate";
+            this.VisitDate.Size = new System.Drawing.Size(68, 17);
+            this.VisitDate.TabIndex = 11;
+            this.VisitDate.Text = "Visit Date";
             // 
-            // label4
+            // IsVisitDone
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 238);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "label4";
+            this.IsVisitDone.AutoSize = true;
+            this.IsVisitDone.Location = new System.Drawing.Point(47, 234);
+            this.IsVisitDone.Name = "IsVisitDone";
+            this.IsVisitDone.Size = new System.Drawing.Size(94, 17);
+            this.IsVisitDone.TabIndex = 12;
+            this.IsVisitDone.Text = "Is Visit Done?";
             // 
             // PersonalForm
             // 
@@ -270,9 +270,9 @@
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button RemoveButton;
         private System.Windows.Forms.Button OkButton;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label IsVisitDone;
+        private System.Windows.Forms.Label VisitDate;
+        private System.Windows.Forms.Label LIAStudent;
         private System.Windows.Forms.Label Personal;
     }
 }

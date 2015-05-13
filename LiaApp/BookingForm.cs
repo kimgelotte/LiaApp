@@ -16,5 +16,10 @@ namespace LiaApp
         {
             InitializeComponent();
         }
+
+        private void BookingForm_Load(object sender, EventArgs e)
+        {
+            BookingdataGridView.DataSource = AzureCon.tableFrom();
+        }
     }
 }

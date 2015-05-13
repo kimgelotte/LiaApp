@@ -79,7 +79,7 @@
             // comboBoxCreate
             // 
             this.comboBoxCreate.FormattingEnabled = true;
-            this.comboBoxCreate.Location = new System.Drawing.Point(41, 78);
+            this.comboBoxCreate.Location = new System.Drawing.Point(45, 49);
             this.comboBoxCreate.Name = "comboBoxCreate";
             this.comboBoxCreate.Size = new System.Drawing.Size(121, 24);
             this.comboBoxCreate.TabIndex = 0;

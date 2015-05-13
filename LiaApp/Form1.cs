@@ -21,11 +21,9 @@ namespace LiaApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            string connStr = AzureCon.ConnectionString;
             DataSet ds = new DataSet();
 
-            using(SqlConnection conn = new SqlConnection(connStr)){
+            using(SqlConnection conn = new SqlConnection(AzureCon.ConnectionString)){
                 try
                 {
                     conn.Open();
@@ -69,7 +67,6 @@ namespace LiaApp
             }
             else
             {
-             
                 ResultStudentName.Text = Searchtable.Rows[0].ItemArray[1].ToString();
                 ResultCompanyName.Text = Searchtable.Rows[0].ItemArray[2].ToString();
                 ResultVisitId.Text = Searchtable.Rows[0].ItemArray[3].ToString();

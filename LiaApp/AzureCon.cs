@@ -32,9 +32,7 @@ namespace LiaApp
                 cmd.Parameters["KlassN"].Value = klassN;
 
                 dataA = new SqlDataAdapter(cmd);
-
                 int res = dataA.Fill(table);
-
                 return table;
             }
         }
@@ -53,9 +51,7 @@ namespace LiaApp
                 cmd.Parameters["LIAinfo"].Value = klassLIA;
 
                 dataA = new SqlDataAdapter(cmd);
-
                 int res = dataA.Fill(table);
-
                 return table;
             }
         }
@@ -74,6 +70,23 @@ namespace LiaApp
                 "WHERE PersonNummer = @SocialNumber", conn);
                 cmd.Parameters.Add(new SqlParameter("SocialNumber", SqlDbType.VarChar, 12));
                 cmd.Parameters["SocialNumber"].Value = SocialNumber;
+
+                dataA = new SqlDataAdapter(cmd);
+                int res = dataA.Fill(table);
+                return table;
+            }
+        }
+
+        public static DataTable tableFrom()
+        {
+            DataTable table = new DataTable("dbTable");
+            SqlDataAdapter dataA = null;
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM PersonalVisits", conn);
+                //cmd.Parameters.Add(new SqlParameter("databasetable", table));
+                //cmd.Parameters["databasetable"].Value = dbTable;
 
                 dataA = new SqlDataAdapter(cmd);
                 int res = dataA.Fill(table);

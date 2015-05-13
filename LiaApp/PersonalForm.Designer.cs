@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Create = new System.Windows.Forms.TabPage();
+            this.comboBoxCreate = new System.Windows.Forms.ComboBox();
             this.Edit = new System.Windows.Forms.TabPage();
             this.Sickness = new System.Windows.Forms.TabPage();
             this.OrderVisit = new System.Windows.Forms.TabPage();
@@ -46,7 +47,6 @@
             this.BookSaveButton = new System.Windows.Forms.Button();
             this.VisitOrders = new System.Windows.Forms.Label();
             this.dataGridViewOrderVisit = new System.Windows.Forms.DataGridView();
-            this.comboBoxCreate = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.Create.SuspendLayout();
             this.OrderVisit.SuspendLayout();
@@ -75,6 +75,14 @@
             this.Create.TabIndex = 0;
             this.Create.Text = "Create";
             this.Create.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxCreate
+            // 
+            this.comboBoxCreate.FormattingEnabled = true;
+            this.comboBoxCreate.Location = new System.Drawing.Point(41, 78);
+            this.comboBoxCreate.Name = "comboBoxCreate";
+            this.comboBoxCreate.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxCreate.TabIndex = 0;
             // 
             // Edit
             // 
@@ -239,14 +247,6 @@
             this.dataGridViewOrderVisit.RowTemplate.Height = 24;
             this.dataGridViewOrderVisit.Size = new System.Drawing.Size(434, 350);
             this.dataGridViewOrderVisit.TabIndex = 0;
-            // 
-            // comboBoxCreate
-            // 
-            this.comboBoxCreate.FormattingEnabled = true;
-            this.comboBoxCreate.Location = new System.Drawing.Point(42, 52);
-            this.comboBoxCreate.Name = "comboBoxCreate";
-            this.comboBoxCreate.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxCreate.TabIndex = 0;
             // 
             // PersonalForm
             // 

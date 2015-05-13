@@ -40,7 +40,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.EditSelectLabel = new System.Windows.Forms.Label();
             this.EditSelectCombobox = new System.Windows.Forms.ComboBox();
-            this.Sickness = new System.Windows.Forms.TabPage();
+            this.Absence = new System.Windows.Forms.TabPage();
             this.OrderVisit = new System.Windows.Forms.TabPage();
             this.OkButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -67,13 +67,13 @@
             // 
             this.tabControl1.Controls.Add(this.Create);
             this.tabControl1.Controls.Add(this.Edit);
-            this.tabControl1.Controls.Add(this.Sickness);
+            this.tabControl1.Controls.Add(this.Absence);
             this.tabControl1.Controls.Add(this.OrderVisit);
             this.tabControl1.Location = new System.Drawing.Point(1, 0);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(763, 447);
+            this.tabControl1.Size = new System.Drawing.Size(764, 449);
             this.tabControl1.TabIndex = 0;
             // 
             // Create
@@ -84,7 +84,7 @@
             this.Create.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Create.Name = "Create";
             this.Create.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Create.Size = new System.Drawing.Size(755, 418);
+            this.Create.Size = new System.Drawing.Size(756, 420);
             this.Create.TabIndex = 0;
             this.Create.Text = "Create";
             this.Create.UseVisualStyleBackColor = true;
@@ -208,15 +208,15 @@
             this.EditSelectCombobox.TabIndex = 0;
             this.EditSelectCombobox.Text = "Browse...";
             // 
-            // Sickness
+            // Absence
             // 
-            this.Sickness.Location = new System.Drawing.Point(4, 25);
-            this.Sickness.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Sickness.Name = "Sickness";
-            this.Sickness.Size = new System.Drawing.Size(755, 418);
-            this.Sickness.TabIndex = 2;
-            this.Sickness.Text = "Sickness";
-            this.Sickness.UseVisualStyleBackColor = true;
+            this.Absence.Location = new System.Drawing.Point(4, 25);
+            this.Absence.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Absence.Name = "Absence";
+            this.Absence.Size = new System.Drawing.Size(756, 420);
+            this.Absence.TabIndex = 2;
+            this.Absence.Text = "Absence";
+            this.Absence.UseVisualStyleBackColor = true;
             // 
             // OrderVisit
             // 
@@ -235,7 +235,7 @@
             this.OrderVisit.Location = new System.Drawing.Point(4, 25);
             this.OrderVisit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OrderVisit.Name = "OrderVisit";
-            this.OrderVisit.Size = new System.Drawing.Size(755, 418);
+            this.OrderVisit.Size = new System.Drawing.Size(756, 420);
             this.OrderVisit.TabIndex = 3;
             this.OrderVisit.Text = "OrderVisit";
             this.OrderVisit.UseVisualStyleBackColor = true;
@@ -395,7 +395,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Create;
         private System.Windows.Forms.TabPage Edit;
-        private System.Windows.Forms.TabPage Sickness;
+        private System.Windows.Forms.TabPage Absence;
         private System.Windows.Forms.TabPage OrderVisit;
         private System.Windows.Forms.Button BookSaveButton;
         private System.Windows.Forms.Label VisitOrders;

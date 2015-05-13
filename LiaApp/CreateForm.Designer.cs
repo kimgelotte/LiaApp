@@ -39,6 +39,11 @@
             // comboBoxCreate
             // 
             this.comboBoxCreate.FormattingEnabled = true;
+            this.comboBoxCreate.Items.AddRange(new object[] {
+            "Student",
+            "Personal",
+            "Class",
+            "Company"});
             this.comboBoxCreate.Location = new System.Drawing.Point(40, 50);
             this.comboBoxCreate.Name = "comboBoxCreate";
             this.comboBoxCreate.Size = new System.Drawing.Size(121, 24);
@@ -80,6 +85,7 @@
             this.buttonCreateSave.TabIndex = 4;
             this.buttonCreateSave.Text = "Save";
             this.buttonCreateSave.UseVisualStyleBackColor = true;
+            this.buttonCreateSave.Click += new System.EventHandler(this.buttonCreateSave_Click);
             // 
             // CreateForm
             // 

@@ -52,6 +52,7 @@
             this.EditSelectTable.Size = new System.Drawing.Size(121, 21);
             this.EditSelectTable.TabIndex = 0;
             this.EditSelectTable.Text = "Browse...";
+            this.EditSelectTable.SelectedIndexChanged += new System.EventHandler(this.EditSelectTable_SelectedIndexChanged);
             // 
             // EditSelectLabel
             // 
@@ -118,7 +119,7 @@
             this.Controls.Add(this.EditdataGridView);
             this.Controls.Add(this.EditSelectLabel);
             this.Controls.Add(this.EditSelectTable);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditForm";
             this.Text = "EditForm";
             ((System.ComponentModel.ISupportInitialize)(this.EditdataGridView)).EndInit();

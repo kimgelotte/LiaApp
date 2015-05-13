@@ -34,6 +34,7 @@
             this.Edit = new System.Windows.Forms.TabPage();
             this.Sickness = new System.Windows.Forms.TabPage();
             this.OrderVisit = new System.Windows.Forms.TabPage();
+            this.trrtu = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,10 +48,12 @@
             this.BookSaveButton = new System.Windows.Forms.Button();
             this.VisitOrders = new System.Windows.Forms.Label();
             this.dataGridViewOrderVisit = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCreate = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.Create.SuspendLayout();
             this.OrderVisit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderVisit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreate)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -67,6 +70,7 @@
             // 
             // Create
             // 
+            this.Create.Controls.Add(this.dataGridViewCreate);
             this.Create.Controls.Add(this.comboBoxCreate);
             this.Create.Location = new System.Drawing.Point(4, 25);
             this.Create.Name = "Create";
@@ -79,10 +83,16 @@
             // comboBoxCreate
             // 
             this.comboBoxCreate.FormattingEnabled = true;
-            this.comboBoxCreate.Location = new System.Drawing.Point(45, 49);
+            this.comboBoxCreate.Items.AddRange(new object[] {
+            "Student",
+            "Personal",
+            "Företag",
+            "Class"});
+            this.comboBoxCreate.Location = new System.Drawing.Point(20, 31);
             this.comboBoxCreate.Name = "comboBoxCreate";
             this.comboBoxCreate.Size = new System.Drawing.Size(121, 24);
             this.comboBoxCreate.TabIndex = 0;
+            this.comboBoxCreate.SelectedIndexChanged += new System.EventHandler(this.comboBoxCreate_SelectedIndexChanged);
             // 
             // Edit
             // 
@@ -105,6 +115,7 @@
             // 
             // OrderVisit
             // 
+            this.OrderVisit.Controls.Add(this.trrtu);
             this.OrderVisit.Controls.Add(this.label4);
             this.OrderVisit.Controls.Add(this.label3);
             this.OrderVisit.Controls.Add(this.label2);
@@ -124,6 +135,15 @@
             this.OrderVisit.TabIndex = 3;
             this.OrderVisit.Text = "OrderVisit";
             this.OrderVisit.UseVisualStyleBackColor = true;
+            // 
+            // trrtu
+            // 
+            this.trrtu.Location = new System.Drawing.Point(217, 154);
+            this.trrtu.Name = "trrtu";
+            this.trrtu.Size = new System.Drawing.Size(75, 23);
+            this.trrtu.TabIndex = 13;
+            this.trrtu.Text = "dfhdh";
+            this.trrtu.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -248,6 +268,15 @@
             this.dataGridViewOrderVisit.Size = new System.Drawing.Size(434, 350);
             this.dataGridViewOrderVisit.TabIndex = 0;
             // 
+            // dataGridViewCreate
+            // 
+            this.dataGridViewCreate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCreate.Location = new System.Drawing.Point(20, 88);
+            this.dataGridViewCreate.Name = "dataGridViewCreate";
+            this.dataGridViewCreate.RowTemplate.Height = 24;
+            this.dataGridViewCreate.Size = new System.Drawing.Size(672, 253);
+            this.dataGridViewCreate.TabIndex = 1;
+            // 
             // PersonalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -262,6 +291,7 @@
             this.OrderVisit.ResumeLayout(false);
             this.OrderVisit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderVisit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -286,6 +316,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Personal;
+        private System.Windows.Forms.Button trrtu;
         private System.Windows.Forms.ComboBox comboBoxCreate;
+        private System.Windows.Forms.DataGridView dataGridViewCreate;
     }
 }

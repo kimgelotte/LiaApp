@@ -33,23 +33,26 @@
             this.Edit = new System.Windows.Forms.TabPage();
             this.Sickness = new System.Windows.Forms.TabPage();
             this.OrderVisit = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Personal = new System.Windows.Forms.Label();
-            this.OkButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.EditButton = new System.Windows.Forms.Button();
-            this.RemoveButton = new System.Windows.Forms.Button();
-            this.AddOrderButton = new System.Windows.Forms.Button();
-            this.CancelButton = new System.Windows.Forms.Button();
-            this.BookSaveButton = new System.Windows.Forms.Button();
-            this.VisitOrders = new System.Windows.Forms.Label();
-            this.dataGridViewOrderVisit = new System.Windows.Forms.DataGridView();
-            this.trrtu = new System.Windows.Forms.Button();
+            this.OrderVisitIsMeetingDone = new System.Windows.Forms.Label();
+            this.OrderVisitDateLabel = new System.Windows.Forms.Label();
+            this.OrderVisitLiaStudentLabel = new System.Windows.Forms.Label();
+            this.OrderVisitPersonalLabel = new System.Windows.Forms.Label();
+            this.OrderVisitOkButton = new System.Windows.Forms.Button();
+            this.OrderVisitUpdateButton = new System.Windows.Forms.Button();
+            this.OrderVisitEditButton = new System.Windows.Forms.Button();
+            this.OrderVisitRemoveButton = new System.Windows.Forms.Button();
+            this.OrderVisitAddOrderButton = new System.Windows.Forms.Button();
+            this.OrderVisitCancelButton = new System.Windows.Forms.Button();
+            this.OrderVisitBookSaveButton = new System.Windows.Forms.Button();
+            this.VisitOrdersLabel = new System.Windows.Forms.Label();
+            this.OrderVisitdataGridView = new System.Windows.Forms.DataGridView();
+            this.OrderVisitPersonalcomboBox = new System.Windows.Forms.ComboBox();
+            this.OrderVisitLiaStudentcomboBox = new System.Windows.Forms.ComboBox();
+            this.OrderVisitdateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.OrderVisitcheckBox = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.OrderVisit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderVisit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderVisitdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -95,20 +98,23 @@
             // 
             // OrderVisit
             // 
-            this.OrderVisit.Controls.Add(this.trrtu);
-            this.OrderVisit.Controls.Add(this.label4);
-            this.OrderVisit.Controls.Add(this.label3);
-            this.OrderVisit.Controls.Add(this.label2);
-            this.OrderVisit.Controls.Add(this.Personal);
-            this.OrderVisit.Controls.Add(this.OkButton);
-            this.OrderVisit.Controls.Add(this.button1);
-            this.OrderVisit.Controls.Add(this.EditButton);
-            this.OrderVisit.Controls.Add(this.RemoveButton);
-            this.OrderVisit.Controls.Add(this.AddOrderButton);
-            this.OrderVisit.Controls.Add(this.CancelButton);
-            this.OrderVisit.Controls.Add(this.BookSaveButton);
-            this.OrderVisit.Controls.Add(this.VisitOrders);
-            this.OrderVisit.Controls.Add(this.dataGridViewOrderVisit);
+            this.OrderVisit.Controls.Add(this.OrderVisitcheckBox);
+            this.OrderVisit.Controls.Add(this.OrderVisitdateTimePicker);
+            this.OrderVisit.Controls.Add(this.OrderVisitLiaStudentcomboBox);
+            this.OrderVisit.Controls.Add(this.OrderVisitPersonalcomboBox);
+            this.OrderVisit.Controls.Add(this.OrderVisitIsMeetingDone);
+            this.OrderVisit.Controls.Add(this.OrderVisitDateLabel);
+            this.OrderVisit.Controls.Add(this.OrderVisitLiaStudentLabel);
+            this.OrderVisit.Controls.Add(this.OrderVisitPersonalLabel);
+            this.OrderVisit.Controls.Add(this.OrderVisitOkButton);
+            this.OrderVisit.Controls.Add(this.OrderVisitUpdateButton);
+            this.OrderVisit.Controls.Add(this.OrderVisitEditButton);
+            this.OrderVisit.Controls.Add(this.OrderVisitRemoveButton);
+            this.OrderVisit.Controls.Add(this.OrderVisitAddOrderButton);
+            this.OrderVisit.Controls.Add(this.OrderVisitCancelButton);
+            this.OrderVisit.Controls.Add(this.OrderVisitBookSaveButton);
+            this.OrderVisit.Controls.Add(this.VisitOrdersLabel);
+            this.OrderVisit.Controls.Add(this.OrderVisitdataGridView);
             this.OrderVisit.Location = new System.Drawing.Point(4, 25);
             this.OrderVisit.Name = "OrderVisit";
             this.OrderVisit.Size = new System.Drawing.Size(754, 418);
@@ -116,137 +122,161 @@
             this.OrderVisit.Text = "OrderVisit";
             this.OrderVisit.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // OrderVisitIsMeetingDone
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 238);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "label4";
+            this.OrderVisitIsMeetingDone.AutoSize = true;
+            this.OrderVisitIsMeetingDone.Location = new System.Drawing.Point(50, 249);
+            this.OrderVisitIsMeetingDone.Name = "OrderVisitIsMeetingDone";
+            this.OrderVisitIsMeetingDone.Size = new System.Drawing.Size(116, 17);
+            this.OrderVisitIsMeetingDone.TabIndex = 12;
+            this.OrderVisitIsMeetingDone.Text = "Is meeting done?";
             // 
-            // label3
+            // OrderVisitDateLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 186);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "label3";
+            this.OrderVisitDateLabel.AutoSize = true;
+            this.OrderVisitDateLabel.Location = new System.Drawing.Point(50, 186);
+            this.OrderVisitDateLabel.Name = "OrderVisitDateLabel";
+            this.OrderVisitDateLabel.Size = new System.Drawing.Size(38, 17);
+            this.OrderVisitDateLabel.TabIndex = 11;
+            this.OrderVisitDateLabel.Text = "Date";
             // 
-            // label2
+            // OrderVisitLiaStudentLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "label2";
+            this.OrderVisitLiaStudentLabel.AutoSize = true;
+            this.OrderVisitLiaStudentLabel.Location = new System.Drawing.Point(50, 125);
+            this.OrderVisitLiaStudentLabel.Name = "OrderVisitLiaStudentLabel";
+            this.OrderVisitLiaStudentLabel.Size = new System.Drawing.Size(76, 17);
+            this.OrderVisitLiaStudentLabel.TabIndex = 10;
+            this.OrderVisitLiaStudentLabel.Text = "LiaStudent";
             // 
-            // Personal
+            // OrderVisitPersonalLabel
             // 
-            this.Personal.AutoSize = true;
-            this.Personal.Location = new System.Drawing.Point(50, 56);
-            this.Personal.Name = "Personal";
-            this.Personal.Size = new System.Drawing.Size(64, 17);
-            this.Personal.TabIndex = 9;
-            this.Personal.Text = "Personal";
+            this.OrderVisitPersonalLabel.AutoSize = true;
+            this.OrderVisitPersonalLabel.Location = new System.Drawing.Point(50, 56);
+            this.OrderVisitPersonalLabel.Name = "OrderVisitPersonalLabel";
+            this.OrderVisitPersonalLabel.Size = new System.Drawing.Size(64, 17);
+            this.OrderVisitPersonalLabel.TabIndex = 9;
+            this.OrderVisitPersonalLabel.Text = "Personal";
             // 
-            // OkButton
+            // OrderVisitOkButton
             // 
-            this.OkButton.Location = new System.Drawing.Point(558, 376);
-            this.OkButton.Name = "OkButton";
-            this.OkButton.Size = new System.Drawing.Size(75, 23);
-            this.OkButton.TabIndex = 8;
-            this.OkButton.Text = "Ok";
-            this.OkButton.UseVisualStyleBackColor = true;
-            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
+            this.OrderVisitOkButton.Location = new System.Drawing.Point(558, 376);
+            this.OrderVisitOkButton.Name = "OrderVisitOkButton";
+            this.OrderVisitOkButton.Size = new System.Drawing.Size(75, 23);
+            this.OrderVisitOkButton.TabIndex = 8;
+            this.OrderVisitOkButton.Text = "Ok";
+            this.OrderVisitOkButton.UseVisualStyleBackColor = true;
+            this.OrderVisitOkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
-            // button1
+            // OrderVisitUpdateButton
             // 
-            this.button1.Location = new System.Drawing.Point(137, 341);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 29);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = true;
+            this.OrderVisitUpdateButton.Location = new System.Drawing.Point(137, 341);
+            this.OrderVisitUpdateButton.Name = "OrderVisitUpdateButton";
+            this.OrderVisitUpdateButton.Size = new System.Drawing.Size(82, 29);
+            this.OrderVisitUpdateButton.TabIndex = 7;
+            this.OrderVisitUpdateButton.Text = "Update";
+            this.OrderVisitUpdateButton.UseVisualStyleBackColor = true;
             // 
-            // EditButton
+            // OrderVisitEditButton
             // 
-            this.EditButton.Location = new System.Drawing.Point(396, 376);
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(75, 23);
-            this.EditButton.TabIndex = 6;
-            this.EditButton.Text = "Edit";
-            this.EditButton.UseVisualStyleBackColor = true;
+            this.OrderVisitEditButton.Location = new System.Drawing.Point(396, 376);
+            this.OrderVisitEditButton.Name = "OrderVisitEditButton";
+            this.OrderVisitEditButton.Size = new System.Drawing.Size(75, 23);
+            this.OrderVisitEditButton.TabIndex = 6;
+            this.OrderVisitEditButton.Text = "Edit";
+            this.OrderVisitEditButton.UseVisualStyleBackColor = true;
             // 
-            // RemoveButton
+            // OrderVisitRemoveButton
             // 
-            this.RemoveButton.Location = new System.Drawing.Point(477, 376);
-            this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(75, 23);
-            this.RemoveButton.TabIndex = 5;
-            this.RemoveButton.Text = "Remove";
-            this.RemoveButton.UseVisualStyleBackColor = true;
+            this.OrderVisitRemoveButton.Location = new System.Drawing.Point(477, 376);
+            this.OrderVisitRemoveButton.Name = "OrderVisitRemoveButton";
+            this.OrderVisitRemoveButton.Size = new System.Drawing.Size(75, 23);
+            this.OrderVisitRemoveButton.TabIndex = 5;
+            this.OrderVisitRemoveButton.Text = "Remove";
+            this.OrderVisitRemoveButton.UseVisualStyleBackColor = true;
             // 
-            // AddOrderButton
+            // OrderVisitAddOrderButton
             // 
-            this.AddOrderButton.Location = new System.Drawing.Point(50, 341);
-            this.AddOrderButton.Name = "AddOrderButton";
-            this.AddOrderButton.Size = new System.Drawing.Size(81, 29);
-            this.AddOrderButton.TabIndex = 4;
-            this.AddOrderButton.Text = "Add";
-            this.AddOrderButton.UseVisualStyleBackColor = true;
+            this.OrderVisitAddOrderButton.Location = new System.Drawing.Point(50, 341);
+            this.OrderVisitAddOrderButton.Name = "OrderVisitAddOrderButton";
+            this.OrderVisitAddOrderButton.Size = new System.Drawing.Size(81, 29);
+            this.OrderVisitAddOrderButton.TabIndex = 4;
+            this.OrderVisitAddOrderButton.Text = "Add";
+            this.OrderVisitAddOrderButton.UseVisualStyleBackColor = true;
             // 
-            // CancelButton
+            // OrderVisitCancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(639, 376);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(75, 23);
-            this.CancelButton.TabIndex = 3;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.OrderVisitCancelButton.Location = new System.Drawing.Point(639, 376);
+            this.OrderVisitCancelButton.Name = "OrderVisitCancelButton";
+            this.OrderVisitCancelButton.Size = new System.Drawing.Size(75, 23);
+            this.OrderVisitCancelButton.TabIndex = 3;
+            this.OrderVisitCancelButton.Text = "Cancel";
+            this.OrderVisitCancelButton.UseVisualStyleBackColor = true;
+            this.OrderVisitCancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
-            // BookSaveButton
+            // OrderVisitBookSaveButton
             // 
-            this.BookSaveButton.Location = new System.Drawing.Point(315, 376);
-            this.BookSaveButton.Name = "BookSaveButton";
-            this.BookSaveButton.Size = new System.Drawing.Size(75, 23);
-            this.BookSaveButton.TabIndex = 2;
-            this.BookSaveButton.Text = "Save";
-            this.BookSaveButton.UseVisualStyleBackColor = true;
+            this.OrderVisitBookSaveButton.Location = new System.Drawing.Point(315, 376);
+            this.OrderVisitBookSaveButton.Name = "OrderVisitBookSaveButton";
+            this.OrderVisitBookSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.OrderVisitBookSaveButton.TabIndex = 2;
+            this.OrderVisitBookSaveButton.Text = "Save";
+            this.OrderVisitBookSaveButton.UseVisualStyleBackColor = true;
             // 
-            // VisitOrders
+            // VisitOrdersLabel
             // 
-            this.VisitOrders.AutoSize = true;
-            this.VisitOrders.Location = new System.Drawing.Point(299, 0);
-            this.VisitOrders.Name = "VisitOrders";
-            this.VisitOrders.Size = new System.Drawing.Size(82, 17);
-            this.VisitOrders.TabIndex = 1;
-            this.VisitOrders.Text = "Order Visits";
+            this.VisitOrdersLabel.AutoSize = true;
+            this.VisitOrdersLabel.Location = new System.Drawing.Point(299, 0);
+            this.VisitOrdersLabel.Name = "VisitOrdersLabel";
+            this.VisitOrdersLabel.Size = new System.Drawing.Size(82, 17);
+            this.VisitOrdersLabel.TabIndex = 1;
+            this.VisitOrdersLabel.Text = "Order Visits";
             // 
-            // dataGridViewOrderVisit
+            // OrderVisitdataGridView
             // 
-            this.dataGridViewOrderVisit.AllowUserToAddRows = false;
-            this.dataGridViewOrderVisit.AllowUserToDeleteRows = false;
-            this.dataGridViewOrderVisit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrderVisit.Location = new System.Drawing.Point(302, 20);
-            this.dataGridViewOrderVisit.Name = "dataGridViewOrderVisit";
-            this.dataGridViewOrderVisit.ReadOnly = true;
-            this.dataGridViewOrderVisit.RowHeadersVisible = false;
-            this.dataGridViewOrderVisit.RowTemplate.Height = 24;
-            this.dataGridViewOrderVisit.Size = new System.Drawing.Size(434, 350);
-            this.dataGridViewOrderVisit.TabIndex = 0;
+            this.OrderVisitdataGridView.AllowUserToAddRows = false;
+            this.OrderVisitdataGridView.AllowUserToDeleteRows = false;
+            this.OrderVisitdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OrderVisitdataGridView.Location = new System.Drawing.Point(302, 20);
+            this.OrderVisitdataGridView.Name = "OrderVisitdataGridView";
+            this.OrderVisitdataGridView.ReadOnly = true;
+            this.OrderVisitdataGridView.RowHeadersVisible = false;
+            this.OrderVisitdataGridView.RowTemplate.Height = 24;
+            this.OrderVisitdataGridView.Size = new System.Drawing.Size(434, 350);
+            this.OrderVisitdataGridView.TabIndex = 0;
             // 
-            // trrtu
+            // OrderVisitPersonalcomboBox
             // 
-            this.trrtu.Location = new System.Drawing.Point(217, 154);
-            this.trrtu.Name = "trrtu";
-            this.trrtu.Size = new System.Drawing.Size(75, 23);
-            this.trrtu.TabIndex = 13;
-            this.trrtu.Text = "dfhdh";
-            this.trrtu.UseVisualStyleBackColor = true;
+            this.OrderVisitPersonalcomboBox.FormattingEnabled = true;
+            this.OrderVisitPersonalcomboBox.Location = new System.Drawing.Point(53, 77);
+            this.OrderVisitPersonalcomboBox.Name = "OrderVisitPersonalcomboBox";
+            this.OrderVisitPersonalcomboBox.Size = new System.Drawing.Size(121, 24);
+            this.OrderVisitPersonalcomboBox.TabIndex = 13;
+            // 
+            // OrderVisitLiaStudentcomboBox
+            // 
+            this.OrderVisitLiaStudentcomboBox.FormattingEnabled = true;
+            this.OrderVisitLiaStudentcomboBox.Location = new System.Drawing.Point(53, 146);
+            this.OrderVisitLiaStudentcomboBox.Name = "OrderVisitLiaStudentcomboBox";
+            this.OrderVisitLiaStudentcomboBox.Size = new System.Drawing.Size(121, 24);
+            this.OrderVisitLiaStudentcomboBox.TabIndex = 14;
+            // 
+            // OrderVisitdateTimePicker
+            // 
+            this.OrderVisitdateTimePicker.Location = new System.Drawing.Point(53, 207);
+            this.OrderVisitdateTimePicker.Name = "OrderVisitdateTimePicker";
+            this.OrderVisitdateTimePicker.Size = new System.Drawing.Size(200, 22);
+            this.OrderVisitdateTimePicker.TabIndex = 15;
+            // 
+            // OrderVisitcheckBox
+            // 
+            this.OrderVisitcheckBox.AutoSize = true;
+            this.OrderVisitcheckBox.Location = new System.Drawing.Point(53, 284);
+            this.OrderVisitcheckBox.Name = "OrderVisitcheckBox";
+            this.OrderVisitcheckBox.Size = new System.Drawing.Size(109, 21);
+            this.OrderVisitcheckBox.TabIndex = 16;
+            this.OrderVisitcheckBox.Text = "Check if true";
+            this.OrderVisitcheckBox.UseVisualStyleBackColor = true;
             // 
             // PersonalForm
             // 
@@ -260,7 +290,7 @@
             this.tabControl1.ResumeLayout(false);
             this.OrderVisit.ResumeLayout(false);
             this.OrderVisit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderVisit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderVisitdataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -272,19 +302,22 @@
         private System.Windows.Forms.TabPage Edit;
         private System.Windows.Forms.TabPage Sickness;
         private System.Windows.Forms.TabPage OrderVisit;
-        private System.Windows.Forms.Button BookSaveButton;
-        private System.Windows.Forms.Label VisitOrders;
-        private System.Windows.Forms.DataGridView dataGridViewOrderVisit;
-        private System.Windows.Forms.Button AddOrderButton;
-        private System.Windows.Forms.Button CancelButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button EditButton;
-        private System.Windows.Forms.Button RemoveButton;
-        private System.Windows.Forms.Button OkButton;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label Personal;
-        private System.Windows.Forms.Button trrtu;
+        private System.Windows.Forms.Button OrderVisitBookSaveButton;
+        private System.Windows.Forms.Label VisitOrdersLabel;
+        private System.Windows.Forms.DataGridView OrderVisitdataGridView;
+        private System.Windows.Forms.Button OrderVisitAddOrderButton;
+        private System.Windows.Forms.Button OrderVisitCancelButton;
+        private System.Windows.Forms.Button OrderVisitUpdateButton;
+        private System.Windows.Forms.Button OrderVisitEditButton;
+        private System.Windows.Forms.Button OrderVisitRemoveButton;
+        private System.Windows.Forms.Button OrderVisitOkButton;
+        private System.Windows.Forms.Label OrderVisitIsMeetingDone;
+        private System.Windows.Forms.Label OrderVisitDateLabel;
+        private System.Windows.Forms.Label OrderVisitLiaStudentLabel;
+        private System.Windows.Forms.Label OrderVisitPersonalLabel;
+        private System.Windows.Forms.CheckBox OrderVisitcheckBox;
+        private System.Windows.Forms.DateTimePicker OrderVisitdateTimePicker;
+        private System.Windows.Forms.ComboBox OrderVisitLiaStudentcomboBox;
+        private System.Windows.Forms.ComboBox OrderVisitPersonalcomboBox;
     }
 }

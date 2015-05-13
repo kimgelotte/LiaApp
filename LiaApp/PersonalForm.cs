@@ -23,7 +23,7 @@ namespace LiaApp
         {
             DataSet ds = new DataSet();
 
-            dataGridViewOrderVisit.DataSource = AzureCon.tableFrom();
+            OrderVisitdataGridView.DataSource = AzureCon.tableFrom();
         }
 
         private void CancelButton_Click(object sender, EventArgs e)

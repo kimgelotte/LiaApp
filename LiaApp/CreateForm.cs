@@ -70,7 +70,16 @@ namespace LiaApp
 
         private void buttonCreateSave_Click(object sender, EventArgs e)
         {
-            sAdapter.Update(sTable);
+            try
+            {
+                sAdapter.Update(sTable);
+                MessageBox.Show("Database updated.");
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show(err.Message);
+
+            }
 
         }
 

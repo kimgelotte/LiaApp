@@ -41,5 +41,10 @@ namespace LiaApp
             Startapp.Closed += (s, eventA) => this.Close();
             Startapp.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

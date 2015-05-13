@@ -75,5 +75,10 @@ namespace LiaApp
                 ResultPersonaltele.Text = Searchtable.Rows[0].ItemArray[6].ToString();
             }
         }
+
+        private void dataGridViewClass_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -46,6 +46,10 @@
             this.LIAStudent = new System.Windows.Forms.Label();
             this.VisitDate = new System.Windows.Forms.Label();
             this.IsVisitDone = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.OrderVisit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderVisit)).BeginInit();
@@ -94,6 +98,10 @@
             // 
             // OrderVisit
             // 
+            this.OrderVisit.Controls.Add(this.comboBox3);
+            this.OrderVisit.Controls.Add(this.dateTimePicker1);
+            this.OrderVisit.Controls.Add(this.comboBox2);
+            this.OrderVisit.Controls.Add(this.comboBox1);
             this.OrderVisit.Controls.Add(this.IsVisitDone);
             this.OrderVisit.Controls.Add(this.VisitDate);
             this.OrderVisit.Controls.Add(this.LIAStudent);
@@ -222,7 +230,7 @@
             // VisitDate
             // 
             this.VisitDate.AutoSize = true;
-            this.VisitDate.Location = new System.Drawing.Point(47, 160);
+            this.VisitDate.Location = new System.Drawing.Point(47, 140);
             this.VisitDate.Name = "VisitDate";
             this.VisitDate.Size = new System.Drawing.Size(68, 17);
             this.VisitDate.TabIndex = 11;
@@ -231,11 +239,42 @@
             // IsVisitDone
             // 
             this.IsVisitDone.AutoSize = true;
-            this.IsVisitDone.Location = new System.Drawing.Point(47, 234);
+            this.IsVisitDone.Location = new System.Drawing.Point(47, 201);
             this.IsVisitDone.Name = "IsVisitDone";
             this.IsVisitDone.Size = new System.Drawing.Size(94, 17);
             this.IsVisitDone.TabIndex = 12;
             this.IsVisitDone.Text = "Is Visit Done?";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(50, 50);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 13;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(50, 103);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.TabIndex = 14;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(50, 161);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 15;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(50, 222);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 24);
+            this.comboBox3.TabIndex = 16;
             // 
             // PersonalForm
             // 
@@ -274,5 +313,9 @@
         private System.Windows.Forms.Label VisitDate;
         private System.Windows.Forms.Label LIAStudent;
         private System.Windows.Forms.Label Personal;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

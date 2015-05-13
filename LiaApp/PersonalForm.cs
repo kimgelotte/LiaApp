@@ -16,5 +16,37 @@ namespace LiaApp
         {
             InitializeComponent();
         }
+
+        private void createToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var Createform = new CreateForm();
+            Createform.Closed += (s, args) => this.Close();
+            Createform.Show();
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var Editform = new EditForm();
+            Editform.Closed += (s, args) => this.Close();
+            Editform.Show();
+        }
+
+        private void absenceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var Absenceform = new AbsenceForm();
+            Absenceform.Closed += (s, args) => this.Close();
+            Absenceform.Show();
+        }
+
+        private void bookingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var Bookingform = new BookingForm();
+            Bookingform.Closed += (s, args) => this.Close();
+            Bookingform.Show();
+        }
     }
 }

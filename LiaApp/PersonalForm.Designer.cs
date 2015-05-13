@@ -34,7 +34,12 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.absenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridViewTabells = new System.Windows.Forms.DataGridView();
+            this.TabellcomboBox = new System.Windows.Forms.ComboBox();
+            this.TabellLabel = new System.Windows.Forms.Label();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTabells)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -64,36 +69,80 @@
             this.createToolStripMenuItem.Name = "createToolStripMenuItem";
             this.createToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
             this.createToolStripMenuItem.Text = "Create";
+            this.createToolStripMenuItem.Click += new System.EventHandler(this.createToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
             this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // absenceToolStripMenuItem
             // 
             this.absenceToolStripMenuItem.Name = "absenceToolStripMenuItem";
             this.absenceToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
             this.absenceToolStripMenuItem.Text = "Absence";
+            this.absenceToolStripMenuItem.Click += new System.EventHandler(this.absenceToolStripMenuItem_Click);
             // 
             // bookingToolStripMenuItem
             // 
             this.bookingToolStripMenuItem.Name = "bookingToolStripMenuItem";
             this.bookingToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
             this.bookingToolStripMenuItem.Text = "Booking";
+            this.bookingToolStripMenuItem.Click += new System.EventHandler(this.bookingToolStripMenuItem_Click);
+            // 
+            // dataGridViewTabells
+            // 
+            this.dataGridViewTabells.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTabells.Location = new System.Drawing.Point(12, 75);
+            this.dataGridViewTabells.Name = "dataGridViewTabells";
+            this.dataGridViewTabells.RowTemplate.Height = 24;
+            this.dataGridViewTabells.Size = new System.Drawing.Size(653, 276);
+            this.dataGridViewTabells.TabIndex = 1;
+            // 
+            // TabellcomboBox
+            // 
+            this.TabellcomboBox.FormattingEnabled = true;
+            this.TabellcomboBox.Location = new System.Drawing.Point(69, 45);
+            this.TabellcomboBox.Name = "TabellcomboBox";
+            this.TabellcomboBox.Size = new System.Drawing.Size(121, 24);
+            this.TabellcomboBox.TabIndex = 2;
+            // 
+            // TabellLabel
+            // 
+            this.TabellLabel.AutoSize = true;
+            this.TabellLabel.Location = new System.Drawing.Point(12, 48);
+            this.TabellLabel.Name = "TabellLabel";
+            this.TabellLabel.Size = new System.Drawing.Size(51, 17);
+            this.TabellLabel.TabIndex = 3;
+            this.TabellLabel.Text = "Tabell:";
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(590, 357);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 4;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.UseVisualStyleBackColor = true;
             // 
             // PersonalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(677, 390);
+            this.Controls.Add(this.CloseButton);
+            this.Controls.Add(this.TabellLabel);
+            this.Controls.Add(this.TabellcomboBox);
+            this.Controls.Add(this.dataGridViewTabells);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PersonalForm";
             this.Text = "PersonalForm";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTabells)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,5 +156,9 @@
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem absenceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookingToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridViewTabells;
+        private System.Windows.Forms.ComboBox TabellcomboBox;
+        private System.Windows.Forms.Label TabellLabel;
+        private System.Windows.Forms.Button CloseButton;
     }
 }

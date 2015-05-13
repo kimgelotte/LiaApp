@@ -19,7 +19,6 @@ namespace LiaApp
             InitializeComponent();
         }
 
-
         private void PersonalForm_Load(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();

@@ -93,5 +93,43 @@ namespace LiaApp
                 return table;
             }
         }
+
+        public static DataTable BookingNewMeeting(int VisitId, int PersonalId, DateTime Date, bool IsDone)
+        {
+            DataTable table = new DataTable("newBooking");
+            SqlDataAdapter dataA = null;
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand("INSERT INTO PersonalVisits " +
+                    "VALUES (@VisitId,@PersonalId,@Date,@IsDone);", conn);
+                cmd.Parameters.AddWithValue("VisitId", VisitId);
+                cmd.Parameters.AddWithValue("PersonalId", PersonalId);
+                cmd.Parameters.AddWithValue("Date", Date);
+                cmd.Parameters.AddWithValue("IsDone", IsDone);
+
+                dataA = new SqlDataAdapter(cmd);
+                int res = dataA.Fill(table);
+                return table;
+            }
+        }
+
+        public static DataTable BookingForms()
+        {
+            DataTable table = new DataTable("fact");
+            SqlDataAdapter dataA = null;
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand("SELECT Personal.PNamn, Student.Namn " +
+                    "FROM Personal INNER JOIN PersonalVisits ON Personal.P_Id = PersonalVisits.P_Id " +
+                    "INNER JOIN LIA ON PersonalVisits.Visit_Id = LIA.Visit_Id " +
+                    "INNER JOIN Student ON LIA.Student_Id = Student.Id ", conn);
+
+                dataA = new SqlDataAdapter(cmd);
+                int res = dataA.Fill(table);
+                return table;
+            }
+        }
     }
 }

@@ -41,7 +41,7 @@
             this.BookingStudentlabel = new System.Windows.Forms.Label();
             this.BookingStudentcomboBox = new System.Windows.Forms.ComboBox();
             this.BookingDatelabel = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.BookingdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.BookingIsTruelabel = new System.Windows.Forms.Label();
             this.BookingYesradioButton = new System.Windows.Forms.RadioButton();
             this.BookingNoRadioButton = new System.Windows.Forms.RadioButton();
@@ -53,10 +53,10 @@
             // BookingdataGridView
             // 
             this.BookingdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BookingdataGridView.Location = new System.Drawing.Point(381, 35);
+            this.BookingdataGridView.Location = new System.Drawing.Point(320, 35);
             this.BookingdataGridView.Name = "BookingdataGridView";
             this.BookingdataGridView.RowTemplate.Height = 24;
-            this.BookingdataGridView.Size = new System.Drawing.Size(399, 235);
+            this.BookingdataGridView.Size = new System.Drawing.Size(460, 235);
             this.BookingdataGridView.TabIndex = 0;
             // 
             // BookingCancelButton
@@ -67,6 +67,7 @@
             this.BookingCancelButton.TabIndex = 1;
             this.BookingCancelButton.Text = "Cancel";
             this.BookingCancelButton.UseVisualStyleBackColor = true;
+            this.BookingCancelButton.Click += new System.EventHandler(this.BookingCancelButton_Click);
             // 
             // BookingOkButton
             // 
@@ -76,10 +77,11 @@
             this.BookingOkButton.TabIndex = 2;
             this.BookingOkButton.Text = "Ok";
             this.BookingOkButton.UseVisualStyleBackColor = true;
+            this.BookingOkButton.Click += new System.EventHandler(this.BookingOkButton_Click);
             // 
             // BookingEditButton
             // 
-            this.BookingEditButton.Location = new System.Drawing.Point(381, 276);
+            this.BookingEditButton.Location = new System.Drawing.Point(320, 276);
             this.BookingEditButton.Name = "BookingEditButton";
             this.BookingEditButton.Size = new System.Drawing.Size(75, 23);
             this.BookingEditButton.TabIndex = 3;
@@ -108,7 +110,7 @@
             // 
             this.Bookingdatagridlabel.AutoSize = true;
             this.Bookingdatagridlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bookingdatagridlabel.Location = new System.Drawing.Point(526, 7);
+            this.Bookingdatagridlabel.Location = new System.Drawing.Point(502, 7);
             this.Bookingdatagridlabel.Name = "Bookingdatagridlabel";
             this.Bookingdatagridlabel.Size = new System.Drawing.Size(101, 25);
             this.Bookingdatagridlabel.TabIndex = 6;
@@ -137,7 +139,7 @@
             this.BookingPersonalcomboBox.FormattingEnabled = true;
             this.BookingPersonalcomboBox.Location = new System.Drawing.Point(6, 50);
             this.BookingPersonalcomboBox.Name = "BookingPersonalcomboBox";
-            this.BookingPersonalcomboBox.Size = new System.Drawing.Size(121, 24);
+            this.BookingPersonalcomboBox.Size = new System.Drawing.Size(141, 24);
             this.BookingPersonalcomboBox.TabIndex = 9;
             // 
             // BookingStudentlabel
@@ -154,7 +156,7 @@
             this.BookingStudentcomboBox.FormattingEnabled = true;
             this.BookingStudentcomboBox.Location = new System.Drawing.Point(6, 97);
             this.BookingStudentcomboBox.Name = "BookingStudentcomboBox";
-            this.BookingStudentcomboBox.Size = new System.Drawing.Size(121, 24);
+            this.BookingStudentcomboBox.Size = new System.Drawing.Size(141, 24);
             this.BookingStudentcomboBox.TabIndex = 11;
             // 
             // BookingDatelabel
@@ -166,17 +168,17 @@
             this.BookingDatelabel.TabIndex = 12;
             this.BookingDatelabel.Text = "Date";
             // 
-            // dateTimePicker1
+            // BookingdateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 144);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(195, 22);
-            this.dateTimePicker1.TabIndex = 13;
+            this.BookingdateTimePicker.Location = new System.Drawing.Point(6, 144);
+            this.BookingdateTimePicker.Name = "BookingdateTimePicker";
+            this.BookingdateTimePicker.Size = new System.Drawing.Size(184, 22);
+            this.BookingdateTimePicker.TabIndex = 13;
             // 
             // BookingIsTruelabel
             // 
             this.BookingIsTruelabel.AutoSize = true;
-            this.BookingIsTruelabel.Location = new System.Drawing.Point(6, 169);
+            this.BookingIsTruelabel.Location = new System.Drawing.Point(6, 184);
             this.BookingIsTruelabel.Name = "BookingIsTruelabel";
             this.BookingIsTruelabel.Size = new System.Drawing.Size(141, 17);
             this.BookingIsTruelabel.TabIndex = 14;
@@ -185,7 +187,7 @@
             // BookingYesradioButton
             // 
             this.BookingYesradioButton.AutoSize = true;
-            this.BookingYesradioButton.Location = new System.Drawing.Point(6, 189);
+            this.BookingYesradioButton.Location = new System.Drawing.Point(6, 204);
             this.BookingYesradioButton.Name = "BookingYesradioButton";
             this.BookingYesradioButton.Size = new System.Drawing.Size(53, 21);
             this.BookingYesradioButton.TabIndex = 15;
@@ -196,7 +198,7 @@
             // BookingNoRadioButton
             // 
             this.BookingNoRadioButton.AutoSize = true;
-            this.BookingNoRadioButton.Location = new System.Drawing.Point(6, 216);
+            this.BookingNoRadioButton.Location = new System.Drawing.Point(6, 231);
             this.BookingNoRadioButton.Name = "BookingNoRadioButton";
             this.BookingNoRadioButton.Size = new System.Drawing.Size(47, 21);
             this.BookingNoRadioButton.TabIndex = 16;
@@ -214,7 +216,7 @@
             this.BookinggroupBox.Controls.Add(this.BookingStudentlabel);
             this.BookinggroupBox.Controls.Add(this.BookingIsTruelabel);
             this.BookinggroupBox.Controls.Add(this.BookingStudentcomboBox);
-            this.BookinggroupBox.Controls.Add(this.dateTimePicker1);
+            this.BookinggroupBox.Controls.Add(this.BookingdateTimePicker);
             this.BookinggroupBox.Controls.Add(this.BookingDatelabel);
             this.BookinggroupBox.Location = new System.Drawing.Point(12, 7);
             this.BookinggroupBox.Name = "BookinggroupBox";
@@ -263,7 +265,7 @@
         private System.Windows.Forms.Label BookingStudentlabel;
         private System.Windows.Forms.ComboBox BookingStudentcomboBox;
         private System.Windows.Forms.Label BookingDatelabel;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker BookingdateTimePicker;
         private System.Windows.Forms.Label BookingIsTruelabel;
         private System.Windows.Forms.RadioButton BookingYesradioButton;
         private System.Windows.Forms.RadioButton BookingNoRadioButton;

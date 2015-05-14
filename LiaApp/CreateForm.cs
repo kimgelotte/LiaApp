@@ -18,7 +18,7 @@ namespace LiaApp
         SqlDataAdapter sAdapter;
         SqlCommandBuilder sBuilder;
         DataSet sDs;
-        DataTable sTable;
+      
         public CreateForm()
         {
             InitializeComponent();
@@ -29,57 +29,99 @@ namespace LiaApp
             string ChosenCreate = comboBoxCreate.Text;
             if (ChosenCreate == "Student")
                 visaStudtab();
-            if (ChosenCreate == "Personal")
+            else if (ChosenCreate == "Personal")
                 visaPerstab();
         }
 
         private void visaStudtab()
         {
-
-            string sql = "SELECT * FROM Student";
-            SqlConnection connection = new SqlConnection(AzureCon.ConnectionString);
-            connection.Open();
-            sCommand = new SqlCommand(sql, connection);
-            sAdapter = new SqlDataAdapter(sCommand);
-            sBuilder = new SqlCommandBuilder(sAdapter);
-            sDs = new DataSet();
-            sAdapter.Fill(sDs, "Student");
-            sTable = sDs.Tables["Student"];
-            connection.Close();
-            dataGridViewCreate.DataSource = sDs.Tables["Student"];
-            //save_btn.Enabled = false;
-            dataGridViewCreate.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
+            panelCreateStudent.Show();
+            panelCreatePersonal.Hide();
+      
         }
         private void visaPerstab()
         {
+            panelCreatePersonal.Show();
+                panelCreateStudent.Hide();
 
-            string sql = "SELECT * FROM Personal";
-            SqlConnection connection = new SqlConnection(AzureCon.ConnectionString);
-            connection.Open();
-            sCommand = new SqlCommand(sql, connection);
-            sAdapter = new SqlDataAdapter(sCommand);
-            sBuilder = new SqlCommandBuilder(sAdapter);
-            sDs = new DataSet();
-            sAdapter.Fill(sDs, "Personal");
-            sTable = sDs.Tables["Personal"];
-            connection.Close();
-            dataGridViewCreate.DataSource = sDs.Tables["Personal"];
-            dataGridViewCreate.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void buttonCreateSave_Click(object sender, EventArgs e)
         {
-            try
+             string ChosenCr = comboBoxCreate.Text;
+             if (ChosenCr == "Student")
+             {
+                 string sql = "SELECT * FROM Student";
+                 SqlConnection connection = new SqlConnection(AzureCon.ConnectionString);
+                 //connection.Open();
+                 sCommand = new SqlCommand(sql, connection);
+                 sAdapter = new SqlDataAdapter(sCommand);
+                 sBuilder = new SqlCommandBuilder(sAdapter);
+                 sDs = new DataSet();
+                 sAdapter.Fill(sDs, "Student");
+
+
+                 DataRow row = sDs.Tables["Student"].NewRow();
+                 row["Id"] = Int32.Parse(textBoxcREATEid.Text);
+                 row["Namn"] = textBoxcREATEnAME.Text;
+                 row["PersonNummer"] = textBoxcREATEpERSNR.Text;
+                 row["Adress"] = textBoxcREATEADRESS.Text;
+                 row["PostAdress"] = textBoxCreatePadress.Text;
+                 row["PostNummer"] = textBoxCreatePnummer.Text;
+                 row["Examen"] = checkBoxCreateExamen.Checked;
+                 row["MejlAdress"] = textBoxCteateMail.Text;
+                 row["ClassNamn"] = textBoxCreateClass.Text;
+
+                 sDs.Tables["Student"].Rows.Add(row);
+
+                 try
+                 {
+                     sAdapter.Update(sDs, "Student");
+                     MessageBox.Show("Database updated.");
+                 }
+                 catch (Exception err)
+                 {
+                     MessageBox.Show(err.Message);
+
+                 }
+             }
+            else if (ChosenCr == "Personal")
             {
-                sAdapter.Update(sTable);
-                MessageBox.Show("Database updated.");
-            }
-            catch(Exception err)
-            {
-                MessageBox.Show(err.Message);
+                string sql = "SELECT * FROM Personal";
+                SqlConnection connection = new SqlConnection(AzureCon.ConnectionString);
+                //connection.Open();
+                sCommand = new SqlCommand(sql, connection);
+                sAdapter = new SqlDataAdapter(sCommand);
+                sBuilder = new SqlCommandBuilder(sAdapter);
+                sDs = new DataSet();
+                sAdapter.Fill(sDs, "Personal");
+
+
+                DataRow row = sDs.Tables["Personal"].NewRow();
+                row["P_Id"] = Int32.Parse(textBoxP_Id.Text);
+                row["Namn"] = textBoxCreateNamn.Text;
+                row["Telefon"] = textBoxCreateTele.Text;
+                row["MejlAdress"] = textBoxCreateMail.Text;
+  
+                sDs.Tables["Personal"].Rows.Add(row);
+
+                try
+                {
+                    sAdapter.Update(sDs, "Personal");
+                    MessageBox.Show("Database updated.");
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message);
+
+                }
 
             }
+
+        }
+
+        private void panelCreateStudent_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 

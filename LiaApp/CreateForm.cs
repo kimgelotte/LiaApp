@@ -46,9 +46,9 @@ namespace LiaApp
             sAdapter.Fill(sDs, "Student");
             sTable = sDs.Tables["Student"];
             connection.Close();
-            dataGridViewCreate.DataSource = sDs.Tables["Student"];
+           // dataGridViewCreate.DataSource = sDs.Tables["Student"];
             //save_btn.Enabled = false;
-            dataGridViewCreate.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            //dataGridViewCreate.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
         }
         private void visaPerstab()
@@ -64,8 +64,8 @@ namespace LiaApp
             sAdapter.Fill(sDs, "Personal");
             sTable = sDs.Tables["Personal"];
             connection.Close();
-            dataGridViewCreate.DataSource = sDs.Tables["Personal"];
-            dataGridViewCreate.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+           // dataGridViewCreate.DataSource = sDs.Tables["Personal"];
+           // dataGridViewCreate.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void buttonCreateSave_Click(object sender, EventArgs e)

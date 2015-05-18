@@ -63,7 +63,7 @@ namespace LiaApp
 
             if (Searchtable.Rows.Count == 0)
             {
-                MessageBox.Show(SearchResult + " Finns ingen elev med det personnumret");
+                MessageBox.Show(SearchResult + " Finns ingen elev med det personnumret på LIA för tillfället.");
             }
             else
             {

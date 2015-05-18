@@ -52,14 +52,14 @@
             this.textBoxcREATEnAME = new System.Windows.Forms.TextBox();
             this.textBoxcREATEid = new System.Windows.Forms.TextBox();
             this.panelCreatePersonal = new System.Windows.Forms.Panel();
-            this.textBoxP_Id = new System.Windows.Forms.TextBox();
-            this.textBoxCreateNamn = new System.Windows.Forms.TextBox();
-            this.textBoxCreateTele = new System.Windows.Forms.TextBox();
-            this.textBoxCreateMail = new System.Windows.Forms.TextBox();
-            this.labelCreId = new System.Windows.Forms.Label();
-            this.labelCreNam = new System.Windows.Forms.Label();
-            this.labelCrTele = new System.Windows.Forms.Label();
             this.labelCreaMail = new System.Windows.Forms.Label();
+            this.labelCrTele = new System.Windows.Forms.Label();
+            this.labelCreNam = new System.Windows.Forms.Label();
+            this.labelCreId = new System.Windows.Forms.Label();
+            this.textBoxCreateMail = new System.Windows.Forms.TextBox();
+            this.textBoxCreateTele = new System.Windows.Forms.TextBox();
+            this.textBoxCreateNamn = new System.Windows.Forms.TextBox();
+            this.textBoxP_Id = new System.Windows.Forms.TextBox();
             this.panelCreateStudent.SuspendLayout();
             this.panelCreatePersonal.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +77,7 @@
             this.comboBoxCreate.Name = "comboBoxCreate";
             this.comboBoxCreate.Size = new System.Drawing.Size(121, 24);
             this.comboBoxCreate.TabIndex = 0;
+            this.comboBoxCreate.Text = "Browse...";
             this.comboBoxCreate.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // labelCreate
@@ -298,51 +299,14 @@
             this.panelCreatePersonal.TabIndex = 18;
             this.panelCreatePersonal.Visible = false;
             // 
-            // textBoxP_Id
+            // labelCreaMail
             // 
-            this.textBoxP_Id.Location = new System.Drawing.Point(117, 32);
-            this.textBoxP_Id.Name = "textBoxP_Id";
-            this.textBoxP_Id.Size = new System.Drawing.Size(100, 22);
-            this.textBoxP_Id.TabIndex = 0;
-            // 
-            // textBoxCreateNamn
-            // 
-            this.textBoxCreateNamn.Location = new System.Drawing.Point(117, 74);
-            this.textBoxCreateNamn.Name = "textBoxCreateNamn";
-            this.textBoxCreateNamn.Size = new System.Drawing.Size(100, 22);
-            this.textBoxCreateNamn.TabIndex = 1;
-            // 
-            // textBoxCreateTele
-            // 
-            this.textBoxCreateTele.Location = new System.Drawing.Point(117, 115);
-            this.textBoxCreateTele.Name = "textBoxCreateTele";
-            this.textBoxCreateTele.Size = new System.Drawing.Size(100, 22);
-            this.textBoxCreateTele.TabIndex = 2;
-            // 
-            // textBoxCreateMail
-            // 
-            this.textBoxCreateMail.Location = new System.Drawing.Point(117, 162);
-            this.textBoxCreateMail.Name = "textBoxCreateMail";
-            this.textBoxCreateMail.Size = new System.Drawing.Size(100, 22);
-            this.textBoxCreateMail.TabIndex = 3;
-            // 
-            // labelCreId
-            // 
-            this.labelCreId.AutoSize = true;
-            this.labelCreId.Location = new System.Drawing.Point(24, 32);
-            this.labelCreId.Name = "labelCreId";
-            this.labelCreId.Size = new System.Drawing.Size(23, 17);
-            this.labelCreId.TabIndex = 4;
-            this.labelCreId.Text = "Id:";
-            // 
-            // labelCreNam
-            // 
-            this.labelCreNam.AutoSize = true;
-            this.labelCreNam.Location = new System.Drawing.Point(24, 74);
-            this.labelCreNam.Name = "labelCreNam";
-            this.labelCreNam.Size = new System.Drawing.Size(49, 17);
-            this.labelCreNam.TabIndex = 5;
-            this.labelCreNam.Text = "Name:";
+            this.labelCreaMail.AutoSize = true;
+            this.labelCreaMail.Location = new System.Drawing.Point(27, 162);
+            this.labelCreaMail.Name = "labelCreaMail";
+            this.labelCreaMail.Size = new System.Drawing.Size(37, 17);
+            this.labelCreaMail.TabIndex = 7;
+            this.labelCreaMail.Text = "Mail:";
             // 
             // labelCrTele
             // 
@@ -353,14 +317,51 @@
             this.labelCrTele.TabIndex = 6;
             this.labelCrTele.Text = "Phone:";
             // 
-            // labelCreaMail
+            // labelCreNam
             // 
-            this.labelCreaMail.AutoSize = true;
-            this.labelCreaMail.Location = new System.Drawing.Point(27, 162);
-            this.labelCreaMail.Name = "labelCreaMail";
-            this.labelCreaMail.Size = new System.Drawing.Size(37, 17);
-            this.labelCreaMail.TabIndex = 7;
-            this.labelCreaMail.Text = "Mail:";
+            this.labelCreNam.AutoSize = true;
+            this.labelCreNam.Location = new System.Drawing.Point(24, 74);
+            this.labelCreNam.Name = "labelCreNam";
+            this.labelCreNam.Size = new System.Drawing.Size(49, 17);
+            this.labelCreNam.TabIndex = 5;
+            this.labelCreNam.Text = "Name:";
+            // 
+            // labelCreId
+            // 
+            this.labelCreId.AutoSize = true;
+            this.labelCreId.Location = new System.Drawing.Point(24, 32);
+            this.labelCreId.Name = "labelCreId";
+            this.labelCreId.Size = new System.Drawing.Size(23, 17);
+            this.labelCreId.TabIndex = 4;
+            this.labelCreId.Text = "Id:";
+            // 
+            // textBoxCreateMail
+            // 
+            this.textBoxCreateMail.Location = new System.Drawing.Point(117, 162);
+            this.textBoxCreateMail.Name = "textBoxCreateMail";
+            this.textBoxCreateMail.Size = new System.Drawing.Size(100, 22);
+            this.textBoxCreateMail.TabIndex = 3;
+            // 
+            // textBoxCreateTele
+            // 
+            this.textBoxCreateTele.Location = new System.Drawing.Point(117, 115);
+            this.textBoxCreateTele.Name = "textBoxCreateTele";
+            this.textBoxCreateTele.Size = new System.Drawing.Size(100, 22);
+            this.textBoxCreateTele.TabIndex = 2;
+            // 
+            // textBoxCreateNamn
+            // 
+            this.textBoxCreateNamn.Location = new System.Drawing.Point(117, 74);
+            this.textBoxCreateNamn.Name = "textBoxCreateNamn";
+            this.textBoxCreateNamn.Size = new System.Drawing.Size(100, 22);
+            this.textBoxCreateNamn.TabIndex = 1;
+            // 
+            // textBoxP_Id
+            // 
+            this.textBoxP_Id.Location = new System.Drawing.Point(117, 32);
+            this.textBoxP_Id.Name = "textBoxP_Id";
+            this.textBoxP_Id.Size = new System.Drawing.Size(100, 22);
+            this.textBoxP_Id.TabIndex = 0;
             // 
             // CreateForm
             // 

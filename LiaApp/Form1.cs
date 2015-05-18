@@ -80,5 +80,13 @@ namespace LiaApp
         {
 
         }
+
+        private void ElevBackButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var Startapp = new StartApp();
+            Startapp.Closed += (s, args) => this.Close();
+            Startapp.Show();
+        }
     }
 }

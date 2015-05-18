@@ -14,7 +14,7 @@ namespace LiaApp
             get
             {
                 SqlDataAdapter dA = new SqlDataAdapter
-                ("SELECT * FROM Student", AzureCon.ConnectionString);
+                ("SELECT DISTINCT ClassNamn FROM Student", AzureCon.ConnectionString);
                 return dA;
             }
         }

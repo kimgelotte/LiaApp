@@ -99,7 +99,7 @@ namespace LiaApp
 
                 DataRow row = sDs.Tables["Personal"].NewRow();
                 row["P_Id"] = Int32.Parse(textBoxP_Id.Text);
-                row["Namn"] = textBoxCreateNamn.Text;
+                row["PNamn"] = textBoxCreateNamn.Text;
                 row["Telefon"] = textBoxCreateTele.Text;
                 row["MejlAdress"] = textBoxCreateMail.Text;
   

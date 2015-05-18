@@ -160,42 +160,63 @@ namespace LiaApp
 
         private void EditRevertChangesButton_Click(object sender, EventArgs e)
         {
-            string ChosenEdit = EditSelectTable.Text;
-            try
+
+            if (sDs.HasChanges())
             {
-                if (ChosenEdit == "Student") 
+                var confirmResult = MessageBox.Show("Are you sure you want to reload the database?\nChanges you have made will be lost!",
+                            "Reload Database",
+                            MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
                 {
-                    sTable.Clear();
-                    sAdapter.Fill(sDs, "Student");
+                    string ChosenEdit = EditSelectTable.Text;
+                    try
+                    {
+                        if (ChosenEdit == "Student")
+                        {
+                            sTable.Clear();
+                            sAdapter.Fill(sDs, "Student");
+                        }
+                        if (ChosenEdit == "Staff")
+                        {
+                            sTable.Clear();
+                            sAdapter.Fill(sDs, "Personal");
+                        }
+                        if (ChosenEdit == "LIA")
+                        {
+                            sTable.Clear();
+                            sAdapter.Fill(sDs, "Lia");
+                        }
+                        if (ChosenEdit == "Company")
+                        {
+                            sTable.Clear();
+                            sAdapter.Fill(sDs, "Företag");
+                        }
+                        if (ChosenEdit == "Contact person")
+                        {
+                            sTable.Clear();
+                            sAdapter.Fill(sDs, "KontaktPerson");
+                        }
+
+                        MessageBox.Show("Database reloaded.");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show(err.Message);
+
+                    }
                 }
-                if (ChosenEdit == "Staff")
+                else
                 {
-                    sTable.Clear();
-                    sAdapter.Fill(sDs, "Personal");
-                }
-                if (ChosenEdit == "LIA")
-                {
-                    sTable.Clear();
-                    sAdapter.Fill(sDs, "Lia");
-                }
-                if (ChosenEdit == "Company")
-                {
-                    sTable.Clear();
-                    sAdapter.Fill(sDs, "Företag");
-                }
-                if (ChosenEdit == "Contact person")
-                {
-                    sTable.Clear();
-                    sAdapter.Fill(sDs, "KontaktPerson");
+                    MessageBox.Show("Database reloaded.");
                 }
 
+            }
+            else
+            {
                 MessageBox.Show("Database reloaded.");
             }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-
-            }
+            
+            
         }
 
         private void EditOKButton_Click(object sender, EventArgs e)
@@ -233,10 +254,32 @@ namespace LiaApp
 
         private void EditCancelButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var PersonalForm = new PersonalForm();
-            PersonalForm.Closed += (s, args) => this.Close();
-            PersonalForm.Show();
+            if (sDs.HasChanges())
+                {
+                         var confirmResult = MessageBox.Show("Are you sure you want to close this window?\nChanges you have made will be lost!",
+                                     "Close window",
+                                     MessageBoxButtons.YesNo);
+                         if (confirmResult == DialogResult.Yes)
+                            {
+                                this.Hide();
+                                var PersonalForm = new PersonalForm();
+                                PersonalForm.Closed += (s, args) => this.Close();
+                                PersonalForm.Show();
+                            }
+                        else
+                            {
+                
+                            }       
+       
+                }
+            else
+            {
+                this.Hide();
+                var PersonalForm = new PersonalForm();
+                PersonalForm.Closed += (s, args) => this.Close();
+                PersonalForm.Show();
+            }
+            
         }
 
         private void EditForm_Load(object sender, EventArgs e)

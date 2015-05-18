@@ -238,5 +238,10 @@ namespace LiaApp
             PersonalForm.Closed += (s, args) => this.Close();
             PersonalForm.Show();
         }
+
+        private void EditForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

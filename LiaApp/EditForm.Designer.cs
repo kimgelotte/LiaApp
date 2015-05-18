@@ -127,6 +127,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditForm";
             this.Text = "EditForm";
+            this.Load += new System.EventHandler(this.EditForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.EditdataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

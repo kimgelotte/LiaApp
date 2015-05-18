@@ -61,7 +61,7 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(110, 21);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 0;
@@ -102,9 +102,9 @@
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(9, 3);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(701, 352);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
@@ -238,7 +238,7 @@
             // Search
             // 
             this.Search.Location = new System.Drawing.Point(629, 82);
-            this.Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Search.Margin = new System.Windows.Forms.Padding(2);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(52, 23);
             this.Search.TabIndex = 11;
@@ -249,7 +249,7 @@
             // SearchBox
             // 
             this.SearchBox.Location = new System.Drawing.Point(550, 84);
-            this.SearchBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchBox.Margin = new System.Windows.Forms.Padding(2);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(76, 20);
             this.SearchBox.TabIndex = 10;
@@ -280,7 +280,7 @@
             this.dataGridViewLIA.AllowUserToDeleteRows = false;
             this.dataGridViewLIA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLIA.Location = new System.Drawing.Point(22, 240);
-            this.dataGridViewLIA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewLIA.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewLIA.Name = "dataGridViewLIA";
             this.dataGridViewLIA.ReadOnly = true;
             this.dataGridViewLIA.RowHeadersVisible = false;
@@ -304,7 +304,7 @@
             this.dataGridViewClass.AllowUserToDeleteRows = false;
             this.dataGridViewClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewClass.Location = new System.Drawing.Point(20, 84);
-            this.dataGridViewClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewClass.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewClass.Name = "dataGridViewClass";
             this.dataGridViewClass.ReadOnly = true;
             this.dataGridViewClass.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -320,7 +320,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(719, 365);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Elev";
             this.Load += new System.EventHandler(this.Form1_Load);

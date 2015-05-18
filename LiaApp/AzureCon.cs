@@ -124,6 +124,7 @@ namespace LiaApp
                 SqlCommand cmd = new SqlCommand("SELECT Personal.PNamn FROM Personal", conn);
                 dataA = new SqlDataAdapter(cmd);
                 int res = dataA.Fill(table);
+                
                 return table;
             }
         }

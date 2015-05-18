@@ -43,5 +43,11 @@ namespace LiaApp
             PersonalForm.Closed += (s, args) => this.Close();
             PersonalForm.Show();
         }
+
+        private void BookingNewButton_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            
+        }
     }
 }

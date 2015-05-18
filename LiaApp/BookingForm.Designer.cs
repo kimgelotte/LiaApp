@@ -35,7 +35,6 @@
             this.BookingNewButton = new System.Windows.Forms.Button();
             this.BookingSaveButton = new System.Windows.Forms.Button();
             this.Bookingdatagridlabel = new System.Windows.Forms.Label();
-            this.BookingExecuteButton = new System.Windows.Forms.Button();
             this.Personallabel = new System.Windows.Forms.Label();
             this.BookingPersonalcomboBox = new System.Windows.Forms.ComboBox();
             this.BookingStudentlabel = new System.Windows.Forms.Label();
@@ -94,8 +93,9 @@
             this.BookingNewButton.Name = "BookingNewButton";
             this.BookingNewButton.Size = new System.Drawing.Size(89, 35);
             this.BookingNewButton.TabIndex = 4;
-            this.BookingNewButton.Text = "New";
+            this.BookingNewButton.Text = "Execute";
             this.BookingNewButton.UseVisualStyleBackColor = true;
+            this.BookingNewButton.Click += new System.EventHandler(this.BookingNewButton_Click);
             // 
             // BookingSaveButton
             // 
@@ -115,15 +115,6 @@
             this.Bookingdatagridlabel.Size = new System.Drawing.Size(101, 25);
             this.Bookingdatagridlabel.TabIndex = 6;
             this.Bookingdatagridlabel.Text = "Bookings";
-            // 
-            // BookingExecuteButton
-            // 
-            this.BookingExecuteButton.Location = new System.Drawing.Point(113, 293);
-            this.BookingExecuteButton.Name = "BookingExecuteButton";
-            this.BookingExecuteButton.Size = new System.Drawing.Size(89, 35);
-            this.BookingExecuteButton.TabIndex = 7;
-            this.BookingExecuteButton.Text = "Execute";
-            this.BookingExecuteButton.UseVisualStyleBackColor = true;
             // 
             // Personallabel
             // 
@@ -231,7 +222,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 431);
             this.Controls.Add(this.BookinggroupBox);
-            this.Controls.Add(this.BookingExecuteButton);
             this.Controls.Add(this.Bookingdatagridlabel);
             this.Controls.Add(this.BookingSaveButton);
             this.Controls.Add(this.BookingNewButton);
@@ -259,7 +249,6 @@
         private System.Windows.Forms.Button BookingNewButton;
         private System.Windows.Forms.Button BookingSaveButton;
         private System.Windows.Forms.Label Bookingdatagridlabel;
-        private System.Windows.Forms.Button BookingExecuteButton;
         private System.Windows.Forms.Label Personallabel;
         private System.Windows.Forms.ComboBox BookingPersonalcomboBox;
         private System.Windows.Forms.Label BookingStudentlabel;

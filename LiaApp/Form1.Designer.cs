@@ -31,6 +31,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ElevBackButton = new System.Windows.Forms.Button();
             this.ResultVisitId = new System.Windows.Forms.Label();
             this.VisitIdlabel = new System.Windows.Forms.Label();
             this.ResultPersonaltele = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.dataGridViewLIA = new System.Windows.Forms.DataGridView();
             this.LiaInfo = new System.Windows.Forms.Label();
             this.dataGridViewClass = new System.Windows.Forms.DataGridView();
-            this.ElevBackButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLIA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClass)).BeginInit();
@@ -61,8 +61,8 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(110, 21);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Location = new System.Drawing.Point(146, 27);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 0;
@@ -110,6 +110,16 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Studentinfo";
+            // 
+            // ElevBackButton
+            // 
+            this.ElevBackButton.Location = new System.Drawing.Point(839, 394);
+            this.ElevBackButton.Name = "ElevBackButton";
+            this.ElevBackButton.Size = new System.Drawing.Size(90, 34);
+            this.ElevBackButton.TabIndex = 25;
+            this.ElevBackButton.Text = "Back";
+            this.ElevBackButton.UseVisualStyleBackColor = true;
+            this.ElevBackButton.Click += new System.EventHandler(this.ElevBackButton_Click);
             // 
             // ResultVisitId
             // 
@@ -225,8 +235,8 @@
             // 
             // Search
             // 
-            this.Search.Location = new System.Drawing.Point(629, 82);
-            this.Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Search.Location = new System.Drawing.Point(728, 96);
+            this.Search.Margin = new System.Windows.Forms.Padding(2);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(69, 28);
             this.Search.TabIndex = 11;
@@ -236,8 +246,8 @@
             // 
             // SearchBox
             // 
-            this.SearchBox.Location = new System.Drawing.Point(550, 84);
-            this.SearchBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchBox.Location = new System.Drawing.Point(801, 99);
+            this.SearchBox.Margin = new System.Windows.Forms.Padding(2);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(100, 22);
             this.SearchBox.TabIndex = 10;
@@ -245,7 +255,7 @@
             // SocialNumberlabel
             // 
             this.SocialNumberlabel.AutoSize = true;
-            this.SocialNumberlabel.Location = new System.Drawing.Point(733, 84);
+            this.SocialNumberlabel.Location = new System.Drawing.Point(801, 80);
             this.SocialNumberlabel.Name = "SocialNumberlabel";
             this.SocialNumberlabel.Size = new System.Drawing.Size(100, 17);
             this.SocialNumberlabel.TabIndex = 9;
@@ -266,7 +276,7 @@
             this.dataGridViewLIA.AllowUserToDeleteRows = false;
             this.dataGridViewLIA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLIA.Location = new System.Drawing.Point(22, 240);
-            this.dataGridViewLIA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewLIA.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewLIA.Name = "dataGridViewLIA";
             this.dataGridViewLIA.ReadOnly = true;
             this.dataGridViewLIA.RowHeadersVisible = false;
@@ -289,7 +299,7 @@
             this.dataGridViewClass.AllowUserToDeleteRows = false;
             this.dataGridViewClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewClass.Location = new System.Drawing.Point(20, 84);
-            this.dataGridViewClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewClass.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewClass.Name = "dataGridViewClass";
             this.dataGridViewClass.ReadOnly = true;
             this.dataGridViewClass.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -299,23 +309,13 @@
             this.dataGridViewClass.TabIndex = 5;
             this.dataGridViewClass.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClass_CellContentClick);
             // 
-            // ElevBackButton
-            // 
-            this.ElevBackButton.Location = new System.Drawing.Point(839, 394);
-            this.ElevBackButton.Name = "ElevBackButton";
-            this.ElevBackButton.Size = new System.Drawing.Size(90, 34);
-            this.ElevBackButton.TabIndex = 25;
-            this.ElevBackButton.Text = "Back";
-            this.ElevBackButton.UseVisualStyleBackColor = true;
-            this.ElevBackButton.Click += new System.EventHandler(this.ElevBackButton_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(959, 449);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Elev";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -16,7 +16,7 @@ namespace LiaApp
         {
             get
             {
-                return ConfigurationManager.ConnectionStrings["AzureConnection"].ToString();
+                return ConfigurationManager.ConnectionStrings["DBConnection"].ToString();
             }
         }
 
@@ -114,18 +114,29 @@ namespace LiaApp
             }
         }
 
-        public static DataTable BookingForms()
+        public static DataTable BookingPNamnForms()
         {
             DataTable table = new DataTable("fact");
             SqlDataAdapter dataA = null;
 
             using (SqlConnection conn = new SqlConnection(ConnectionString))
             {
-                SqlCommand cmd = new SqlCommand("SELECT Personal.PNamn, Student.Namn " +
-                    "FROM Personal INNER JOIN PersonalVisits ON Personal.P_Id = PersonalVisits.P_Id " +
-                    "INNER JOIN LIA ON PersonalVisits.Visit_Id = LIA.Visit_Id " +
-                    "INNER JOIN Student ON LIA.Student_Id = Student.Id ", conn);
+                SqlCommand cmd = new SqlCommand("SELECT Personal.PNamn FROM Personal", conn);
+                dataA = new SqlDataAdapter(cmd);
+                int res = dataA.Fill(table);
+                
+                return table;
+            }
+        }
 
+        public static DataTable BookingElevNamnForms()
+        {
+            DataTable table = new DataTable("ElevNamnWithLia");
+            SqlDataAdapter dataA = null;
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand("SELECT Namn FROM Student INNER JOIN LIA ON Student.Id = LIA.Student_Id", conn);
                 dataA = new SqlDataAdapter(cmd);
                 int res = dataA.Fill(table);
                 return table;

@@ -21,10 +21,10 @@ namespace LiaApp
         {
             BookingdataGridView.DataSource = AzureCon.tableFrom();
 
-            BookingPersonalcomboBox.DataSource = AzureCon.BookingForms().DefaultView;
+            BookingPersonalcomboBox.DataSource = AzureCon.BookingPNamnForms().DefaultView;
             BookingPersonalcomboBox.DisplayMember = "PNamn";
 
-            BookingStudentcomboBox.DataSource = AzureCon.BookingForms().DefaultView;
+            BookingStudentcomboBox.DataSource = AzureCon.BookingElevNamnForms().DefaultView;
             BookingStudentcomboBox.DisplayMember = "Namn";
         }
 

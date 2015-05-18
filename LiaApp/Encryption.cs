@@ -20,6 +20,7 @@ namespace LiaApp
                 ConnectionStringsSection section = config.GetSection("connectionStrings") as ConnectionStringsSection;
 
                 if (section.SectionInformation.IsProtected)
+
                 {
                     section.SectionInformation.UnprotectSection();
                 }

@@ -24,6 +24,7 @@ namespace LiaApp
             InitializeComponent();
         }
 
+        //HÄMTAR VALD TABELL IFRÅN DATABASEN
         private void EditSelectTable_SelectedIndexChanged(object sender, EventArgs e)
         {
             string ChosenEdit = EditSelectTable.Text;
@@ -38,6 +39,7 @@ namespace LiaApp
             if (ChosenEdit == "Contact person")
                 visaConttab();
         }
+        //STUDENT-TABELLEN
         private void visaStudtab()
         {
 
@@ -52,9 +54,9 @@ namespace LiaApp
             sTable = sDs.Tables["Student"];
             connection.Close();
             EditdataGridView.DataSource = sDs.Tables["Student"];
-            //save_btn.Enabled = false;
             EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+        //PERSONAL-TABELLEN
         private void visaPerstab()
         {
 
@@ -71,6 +73,7 @@ namespace LiaApp
             EditdataGridView.DataSource = sDs.Tables["Personal"];
             EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+        //LIA-TABELLEN
         private void visaLiatab()
         {
 
@@ -85,9 +88,9 @@ namespace LiaApp
             sTable = sDs.Tables["Lia"];
             connection.Close();
             EditdataGridView.DataSource = sDs.Tables["Lia"];
-            //save_btn.Enabled = false;
             EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+        //FÖRETAGS-TABELLEN
         private void visaComptab()
         {
 
@@ -102,9 +105,9 @@ namespace LiaApp
             sTable = sDs.Tables["Företag"];
             connection.Close();
             EditdataGridView.DataSource = sDs.Tables["Företag"];
-            //save_btn.Enabled = false;
             EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+        //KONTAKTPERSON-TABELLEN
         private void visaConttab()
         {
 
@@ -119,7 +122,6 @@ namespace LiaApp
             sTable = sDs.Tables["KontaktPerson"];
             connection.Close();
             EditdataGridView.DataSource = sDs.Tables["KontaktPerson"];
-            //save_btn.Enabled = false;
             EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
@@ -128,8 +130,10 @@ namespace LiaApp
 
         }
 
+        //SPARA ÄNDRINGAR
         private void EditSaveChangesButton_Click(object sender, EventArgs e)
         {
+            //Kolla vilken tabell i comboboxen som är markerad och uppdaterar db vid klick på knappen
             string ChosenEdit = EditSelectTable.Text;
             try
             {
@@ -158,11 +162,13 @@ namespace LiaApp
             }
         }
 
+        //LADDA OM DATABASEN
         private void EditRevertChangesButton_Click(object sender, EventArgs e)
         {
-
+            //Om ändringar har gjorts
             if (sDs.HasChanges())
             {
+                //Dialog om man vill fortsätta ladda om databasen utan att spara ändringar
                 var confirmResult = MessageBox.Show("Are you sure you want to reload the database?\nChanges you have made will be lost!",
                             "Reload Database",
                             MessageBoxButtons.YesNo);
@@ -171,6 +177,7 @@ namespace LiaApp
                     string ChosenEdit = EditSelectTable.Text;
                     try
                     {
+                        //Tömmer datagrid och laddar in igen
                         if (ChosenEdit == "Student")
                         {
                             sTable.Clear();
@@ -219,11 +226,13 @@ namespace LiaApp
             
         }
 
+        //SPARA ÄNDRINGAR OCH STÄNG NER
         private void EditOKButton_Click(object sender, EventArgs e)
         {
             string ChosenEdit = EditSelectTable.Text;
             try
             {
+                
                 if (ChosenEdit == "Student")
                     sAdapter.Update(sDs, "Student");
 
@@ -252,10 +261,13 @@ namespace LiaApp
             }
         }
 
+        //STÄNG NER FÖNSTER
         private void EditCancelButton_Click(object sender, EventArgs e)
         {
+            //Kollar om ändringar har gjorts
             if (sDs.HasChanges())
                 {
+                //Varningsruta om att ändringar kommer gå förlorade
                          var confirmResult = MessageBox.Show("Are you sure you want to close this window?\nChanges you have made will be lost!",
                                      "Close window",
                                      MessageBoxButtons.YesNo);

@@ -142,5 +142,20 @@ namespace LiaApp
                 return table;
             }
         }
+
+        public static DataTable FindPersonal(string StaffName)
+        {
+            DataTable table = new DataTable("StaffInfo");
+            SqlDataAdapter dataA = null;
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Personal WHERE PNamn = @PersonNamn", conn);
+                cmd.Parameters.AddWithValue("PersonNamn", StaffName);
+                dataA = new SqlDataAdapter(cmd);
+                int res = dataA.Fill(table);
+                return table;
+            }
+        }
     }
 }

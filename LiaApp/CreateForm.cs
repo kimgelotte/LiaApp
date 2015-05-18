@@ -32,6 +32,7 @@ namespace LiaApp
             {
                 SqlDataAdapter sApt;
                 DataSet sD = new DataSet();
+               
                 sCommand = new SqlCommand(query, con);
                 sApt = new SqlDataAdapter(sCommand);
                 sBuilder = new SqlCommandBuilder(sApt);
@@ -86,12 +87,13 @@ namespace LiaApp
             {
                 string sql = "SELECT * FROM Student";
                 SqlConnection connection = new SqlConnection(AzureCon.ConnectionString);
-                //connection.Open();
+                connection.Open();
                 sCommand = new SqlCommand(sql, connection);
                 sAdapter = new SqlDataAdapter(sCommand);
                 sBuilder = new SqlCommandBuilder(sAdapter);
                 sDs = new DataSet();
                 sAdapter.Fill(sDs, "Student");
+
 
 
 
@@ -113,7 +115,9 @@ namespace LiaApp
                 try
                 {
                     sAdapter.Update(sDs, "Student");
+                    sDs.AcceptChanges();
                     MessageBox.Show("Database updated.");
+                    connection.Close();
                 }
                 catch (Exception err)
                 {

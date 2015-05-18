@@ -33,6 +33,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.EditButton = new System.Windows.Forms.Button();
+            this.BackButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClass)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,17 +43,17 @@
             this.dataGridViewClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewClass.Location = new System.Drawing.Point(130, 9);
             this.dataGridViewClass.Name = "dataGridViewClass";
-            this.dataGridViewClass.Size = new System.Drawing.Size(558, 290);
+            this.dataGridViewClass.Size = new System.Drawing.Size(558, 319);
             this.dataGridViewClass.TabIndex = 0;
             this.dataGridViewClass.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClass_CellContentClick);
             // 
             // Updbutton
             // 
-            this.Updbutton.Location = new System.Drawing.Point(3, 70);
+            this.Updbutton.Location = new System.Drawing.Point(3, 98);
             this.Updbutton.Name = "Updbutton";
-            this.Updbutton.Size = new System.Drawing.Size(75, 23);
+            this.Updbutton.Size = new System.Drawing.Size(102, 23);
             this.Updbutton.TabIndex = 1;
-            this.Updbutton.Text = "Update Date";
+            this.Updbutton.Text = "Save changes";
             this.Updbutton.UseVisualStyleBackColor = true;
             // 
             // comboBox1
@@ -77,15 +79,38 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(0, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Chose Class";
+            this.label2.Text = "Choose Class";
+            // 
+            // EditButton
+            // 
+            this.EditButton.Location = new System.Drawing.Point(3, 69);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(102, 23);
+            this.EditButton.TabIndex = 5;
+            this.EditButton.Text = "Edit";
+            this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
+            // 
+            // BackButton
+            // 
+            this.BackButton.Location = new System.Drawing.Point(3, 127);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.BackButton.Size = new System.Drawing.Size(102, 23);
+            this.BackButton.TabIndex = 6;
+            this.BackButton.Text = "Back";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // AbsenceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 340);
+            this.Controls.Add(this.BackButton);
+            this.Controls.Add(this.EditButton);
             this.Controls.Add(this.dataGridViewClass);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -109,5 +134,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button EditButton;
+        private System.Windows.Forms.Button BackButton;
     }
 }

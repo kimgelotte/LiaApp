@@ -32,7 +32,7 @@ namespace LiaApp
                     comboBox1.DataSource = ds.Tables[0].DefaultView;
 
                     comboBox1.DisplayMember = "ClassNamn";
-                    comboBox1.ValueMember = "Namn";
+                    comboBox1.ValueMember = "ClassNamn";
 
                 }
                 catch (SqlException ex)

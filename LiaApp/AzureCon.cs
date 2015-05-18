@@ -143,7 +143,7 @@ namespace LiaApp
             }
         }
 
-        public static DataTable FindPersonal(string Staff)
+        public static DataTable FindPersonal(string StaffName)
         {
             DataTable table = new DataTable("StaffInfo");
             SqlDataAdapter dataA = null;
@@ -151,7 +151,7 @@ namespace LiaApp
             using (SqlConnection conn = new SqlConnection(ConnectionString))
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Personal WHERE PNamn = @PersonNamn", conn);
-                cmd.Parameters.AddWithValue("PersonNamn", Staff);
+                cmd.Parameters.AddWithValue("PersonNamn", StaffName);
                 dataA = new SqlDataAdapter(cmd);
                 int res = dataA.Fill(table);
                 return table;

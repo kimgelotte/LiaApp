@@ -60,8 +60,21 @@
             this.textBoxCreateTele = new System.Windows.Forms.TextBox();
             this.textBoxCreateNamn = new System.Windows.Forms.TextBox();
             this.textBoxP_Id = new System.Windows.Forms.TextBox();
+            this.panelCreateCompany = new System.Windows.Forms.Panel();
+            this.labelCreatePostN = new System.Windows.Forms.Label();
+            this.labelCreatePostA = new System.Windows.Forms.Label();
+            this.labelCreatetfn = new System.Windows.Forms.Label();
+            this.labelCrAdress = new System.Windows.Forms.Label();
+            this.labelCreateForetag = new System.Windows.Forms.Label();
+            this.textBoxCrFoPN = new System.Windows.Forms.TextBox();
+            this.textBoxCrFoPA = new System.Windows.Forms.TextBox();
+            this.textBoxCrFoTfn = new System.Windows.Forms.TextBox();
+            this.textBoxCrFoAd = new System.Windows.Forms.TextBox();
+            this.textBoxCrFo = new System.Windows.Forms.TextBox();
+            this.comboBoxCrSt = new System.Windows.Forms.ComboBox();
             this.panelCreateStudent.SuspendLayout();
             this.panelCreatePersonal.SuspendLayout();
+            this.panelCreateCompany.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBoxCreate
@@ -113,6 +126,7 @@
             // 
             // panelCreateStudent
             // 
+            this.panelCreateStudent.Controls.Add(this.comboBoxCrSt);
             this.panelCreateStudent.Controls.Add(this.checkBoxCreateExamen);
             this.panelCreateStudent.Controls.Add(this.textBoxCreateClass);
             this.panelCreateStudent.Controls.Add(this.textBoxCteateMail);
@@ -294,7 +308,7 @@
             this.panelCreatePersonal.Controls.Add(this.textBoxCreateTele);
             this.panelCreatePersonal.Controls.Add(this.textBoxCreateNamn);
             this.panelCreatePersonal.Controls.Add(this.textBoxP_Id);
-            this.panelCreatePersonal.Location = new System.Drawing.Point(46, 88);
+            this.panelCreatePersonal.Location = new System.Drawing.Point(46, 98);
             this.panelCreatePersonal.Name = "panelCreatePersonal";
             this.panelCreatePersonal.Size = new System.Drawing.Size(661, 250);
             this.panelCreatePersonal.TabIndex = 18;
@@ -364,13 +378,120 @@
             this.textBoxP_Id.Size = new System.Drawing.Size(100, 22);
             this.textBoxP_Id.TabIndex = 0;
             // 
+            // panelCreateCompany
+            // 
+            this.panelCreateCompany.Controls.Add(this.labelCreatePostN);
+            this.panelCreateCompany.Controls.Add(this.labelCreatePostA);
+            this.panelCreateCompany.Controls.Add(this.labelCreatetfn);
+            this.panelCreateCompany.Controls.Add(this.labelCrAdress);
+            this.panelCreateCompany.Controls.Add(this.labelCreateForetag);
+            this.panelCreateCompany.Controls.Add(this.textBoxCrFoPN);
+            this.panelCreateCompany.Controls.Add(this.textBoxCrFoPA);
+            this.panelCreateCompany.Controls.Add(this.textBoxCrFoTfn);
+            this.panelCreateCompany.Controls.Add(this.textBoxCrFoAd);
+            this.panelCreateCompany.Controls.Add(this.textBoxCrFo);
+            this.panelCreateCompany.Location = new System.Drawing.Point(40, 98);
+            this.panelCreateCompany.Name = "panelCreateCompany";
+            this.panelCreateCompany.Size = new System.Drawing.Size(594, 262);
+            this.panelCreateCompany.TabIndex = 8;
+            this.panelCreateCompany.Visible = false;
+            // 
+            // labelCreatePostN
+            // 
+            this.labelCreatePostN.AutoSize = true;
+            this.labelCreatePostN.Location = new System.Drawing.Point(39, 202);
+            this.labelCreatePostN.Name = "labelCreatePostN";
+            this.labelCreatePostN.Size = new System.Drawing.Size(59, 17);
+            this.labelCreatePostN.TabIndex = 9;
+            this.labelCreatePostN.Text = "Post.Nr:";
+            // 
+            // labelCreatePostA
+            // 
+            this.labelCreatePostA.AutoSize = true;
+            this.labelCreatePostA.Location = new System.Drawing.Point(36, 161);
+            this.labelCreatePostA.Name = "labelCreatePostA";
+            this.labelCreatePostA.Size = new System.Drawing.Size(69, 17);
+            this.labelCreatePostA.TabIndex = 8;
+            this.labelCreatePostA.Text = "P.Adress:";
+            // 
+            // labelCreatetfn
+            // 
+            this.labelCreatetfn.AutoSize = true;
+            this.labelCreatetfn.Location = new System.Drawing.Point(33, 115);
+            this.labelCreatetfn.Name = "labelCreatetfn";
+            this.labelCreatetfn.Size = new System.Drawing.Size(53, 17);
+            this.labelCreatetfn.TabIndex = 7;
+            this.labelCreatetfn.Text = "Phone:";
+            // 
+            // labelCrAdress
+            // 
+            this.labelCrAdress.AutoSize = true;
+            this.labelCrAdress.Location = new System.Drawing.Point(33, 74);
+            this.labelCrAdress.Name = "labelCrAdress";
+            this.labelCrAdress.Size = new System.Drawing.Size(56, 17);
+            this.labelCrAdress.TabIndex = 6;
+            this.labelCrAdress.Text = "Adress:";
+            // 
+            // labelCreateForetag
+            // 
+            this.labelCreateForetag.AutoSize = true;
+            this.labelCreateForetag.Location = new System.Drawing.Point(37, 32);
+            this.labelCreateForetag.Name = "labelCreateForetag";
+            this.labelCreateForetag.Size = new System.Drawing.Size(49, 17);
+            this.labelCreateForetag.TabIndex = 5;
+            this.labelCreateForetag.Text = "Name:";
+            // 
+            // textBoxCrFoPN
+            // 
+            this.textBoxCrFoPN.Location = new System.Drawing.Point(123, 202);
+            this.textBoxCrFoPN.Name = "textBoxCrFoPN";
+            this.textBoxCrFoPN.Size = new System.Drawing.Size(100, 22);
+            this.textBoxCrFoPN.TabIndex = 4;
+            // 
+            // textBoxCrFoPA
+            // 
+            this.textBoxCrFoPA.Location = new System.Drawing.Point(123, 161);
+            this.textBoxCrFoPA.Name = "textBoxCrFoPA";
+            this.textBoxCrFoPA.Size = new System.Drawing.Size(100, 22);
+            this.textBoxCrFoPA.TabIndex = 3;
+            // 
+            // textBoxCrFoTfn
+            // 
+            this.textBoxCrFoTfn.Location = new System.Drawing.Point(122, 115);
+            this.textBoxCrFoTfn.Name = "textBoxCrFoTfn";
+            this.textBoxCrFoTfn.Size = new System.Drawing.Size(100, 22);
+            this.textBoxCrFoTfn.TabIndex = 2;
+            // 
+            // textBoxCrFoAd
+            // 
+            this.textBoxCrFoAd.Location = new System.Drawing.Point(123, 72);
+            this.textBoxCrFoAd.Name = "textBoxCrFoAd";
+            this.textBoxCrFoAd.Size = new System.Drawing.Size(100, 22);
+            this.textBoxCrFoAd.TabIndex = 1;
+            // 
+            // textBoxCrFo
+            // 
+            this.textBoxCrFo.Location = new System.Drawing.Point(122, 31);
+            this.textBoxCrFo.Name = "textBoxCrFo";
+            this.textBoxCrFo.Size = new System.Drawing.Size(100, 22);
+            this.textBoxCrFo.TabIndex = 0;
+            // 
+            // comboBoxCrSt
+            // 
+            this.comboBoxCrSt.FormattingEnabled = true;
+            this.comboBoxCrSt.Location = new System.Drawing.Point(491, 202);
+            this.comboBoxCrSt.Name = "comboBoxCrSt";
+            this.comboBoxCrSt.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxCrSt.TabIndex = 18;
+            // 
             // CreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelCreatePersonal);
             this.Controls.Add(this.panelCreateStudent);
+            this.Controls.Add(this.panelCreateCompany);
+            this.Controls.Add(this.panelCreatePersonal);
             this.Controls.Add(this.buttonCreateSave);
             this.Controls.Add(this.buttonCancelCreate);
             this.Controls.Add(this.labelCreate);
@@ -382,6 +503,8 @@
             this.panelCreateStudent.PerformLayout();
             this.panelCreatePersonal.ResumeLayout(false);
             this.panelCreatePersonal.PerformLayout();
+            this.panelCreateCompany.ResumeLayout(false);
+            this.panelCreateCompany.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,5 +544,17 @@
         private System.Windows.Forms.TextBox textBoxCreateTele;
         private System.Windows.Forms.TextBox textBoxCreateNamn;
         private System.Windows.Forms.TextBox textBoxP_Id;
+        private System.Windows.Forms.Panel panelCreateCompany;
+        private System.Windows.Forms.Label labelCreatePostN;
+        private System.Windows.Forms.Label labelCreatePostA;
+        private System.Windows.Forms.Label labelCreatetfn;
+        private System.Windows.Forms.Label labelCrAdress;
+        private System.Windows.Forms.Label labelCreateForetag;
+        private System.Windows.Forms.TextBox textBoxCrFoPN;
+        private System.Windows.Forms.TextBox textBoxCrFoPA;
+        private System.Windows.Forms.TextBox textBoxCrFoTfn;
+        private System.Windows.Forms.TextBox textBoxCrFoAd;
+        private System.Windows.Forms.TextBox textBoxCrFo;
+        private System.Windows.Forms.ComboBox comboBoxCrSt;
     }
 }

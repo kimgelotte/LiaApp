@@ -143,6 +143,7 @@ namespace LiaApp
             }
         }
 
+        int visitid = 1;
         public static DataTable FindPersonal(string StaffName)
         {
             DataTable table = new DataTable("StaffInfo");

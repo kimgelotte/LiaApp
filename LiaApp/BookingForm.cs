@@ -20,12 +20,6 @@ namespace LiaApp
         private void BookingForm_Load(object sender, EventArgs e)
         {
             BookingdataGridView.DataSource = AzureCon.tableFrom();
-
-            BookingPersonalcomboBox.DataSource = AzureCon.BookingPNamnForms().DefaultView;
-            BookingPersonalcomboBox.DisplayMember = "PNamn";
-
-            BookingStudentcomboBox.DataSource = AzureCon.BookingElevNamnForms().DefaultView;
-            BookingStudentcomboBox.DisplayMember = "Namn";
         }
 
         private void BookingCancelButton_Click(object sender, EventArgs e)
@@ -44,10 +38,6 @@ namespace LiaApp
             PersonalForm.Show();
         }
 
-        private void BookingNewButton_Click(object sender, EventArgs e)
-        {
-            int i = 0;
-            
-        }
+        
     }
 }

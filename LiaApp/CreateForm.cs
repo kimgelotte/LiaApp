@@ -99,7 +99,7 @@ namespace LiaApp
 
                 DataRow row = sDs.Tables["Personal"].NewRow();
                 row["P_Id"] = Int32.Parse(textBoxP_Id.Text);
-                row["Namn"] = textBoxCreateNamn.Text;
+                row["PNamn"] = textBoxCreateNamn.Text;
                 row["Telefon"] = textBoxCreateTele.Text;
                 row["MejlAdress"] = textBoxCreateMail.Text;
   
@@ -123,6 +123,14 @@ namespace LiaApp
         private void panelCreateStudent_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void buttonCancelCreate_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var PersonalForm = new PersonalForm();
+            PersonalForm.Closed += (s, args) => this.Close();
+            PersonalForm.Show();
         }
 
  

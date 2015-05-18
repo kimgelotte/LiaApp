@@ -49,8 +49,7 @@
             this.PersonaltoolStripMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(508, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(677, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -62,90 +61,84 @@
             this.absenceToolStripMenuItem,
             this.bookingToolStripMenuItem});
             this.PersonaltoolStripMenu.Name = "PersonaltoolStripMenu";
-            this.PersonaltoolStripMenu.Size = new System.Drawing.Size(46, 20);
+            this.PersonaltoolStripMenu.Size = new System.Drawing.Size(54, 24);
             this.PersonaltoolStripMenu.Text = "Arkiv";
             // 
             // createToolStripMenuItem
             // 
             this.createToolStripMenuItem.Name = "createToolStripMenuItem";
-            this.createToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.createToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.createToolStripMenuItem.Text = "Create";
             this.createToolStripMenuItem.Click += new System.EventHandler(this.createToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // absenceToolStripMenuItem
             // 
             this.absenceToolStripMenuItem.Name = "absenceToolStripMenuItem";
-            this.absenceToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.absenceToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.absenceToolStripMenuItem.Text = "Absence";
             this.absenceToolStripMenuItem.Click += new System.EventHandler(this.absenceToolStripMenuItem_Click);
             // 
             // bookingToolStripMenuItem
             // 
             this.bookingToolStripMenuItem.Name = "bookingToolStripMenuItem";
-            this.bookingToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.bookingToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.bookingToolStripMenuItem.Text = "Booking";
             this.bookingToolStripMenuItem.Click += new System.EventHandler(this.bookingToolStripMenuItem_Click);
             // 
             // dataGridViewTabells
             // 
             this.dataGridViewTabells.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTabells.Location = new System.Drawing.Point(9, 61);
-            this.dataGridViewTabells.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewTabells.Location = new System.Drawing.Point(12, 75);
             this.dataGridViewTabells.Name = "dataGridViewTabells";
             this.dataGridViewTabells.RowTemplate.Height = 24;
-            this.dataGridViewTabells.Size = new System.Drawing.Size(490, 224);
+            this.dataGridViewTabells.Size = new System.Drawing.Size(653, 276);
             this.dataGridViewTabells.TabIndex = 1;
             // 
             // TabellcomboBox
             // 
             this.TabellcomboBox.FormattingEnabled = true;
-            this.TabellcomboBox.Items.AddRange(new object[] {
-            "Absence"});
-            this.TabellcomboBox.Location = new System.Drawing.Point(52, 37);
-            this.TabellcomboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TabellcomboBox.Location = new System.Drawing.Point(69, 45);
             this.TabellcomboBox.Name = "TabellcomboBox";
-            this.TabellcomboBox.Size = new System.Drawing.Size(92, 21);
+            this.TabellcomboBox.Size = new System.Drawing.Size(121, 24);
             this.TabellcomboBox.TabIndex = 2;
             // 
             // TabellLabel
             // 
             this.TabellLabel.AutoSize = true;
-            this.TabellLabel.Location = new System.Drawing.Point(9, 39);
-            this.TabellLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TabellLabel.Location = new System.Drawing.Point(12, 48);
             this.TabellLabel.Name = "TabellLabel";
-            this.TabellLabel.Size = new System.Drawing.Size(39, 13);
+            this.TabellLabel.Size = new System.Drawing.Size(51, 17);
             this.TabellLabel.TabIndex = 3;
             this.TabellLabel.Text = "Tabell:";
             // 
             // CloseButton
             // 
-            this.CloseButton.Location = new System.Drawing.Point(442, 290);
-            this.CloseButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CloseButton.Location = new System.Drawing.Point(590, 357);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(56, 19);
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
             this.CloseButton.TabIndex = 4;
             this.CloseButton.Text = "Close";
             this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // PersonalForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 317);
+            this.ClientSize = new System.Drawing.Size(677, 390);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.TabellLabel);
             this.Controls.Add(this.TabellcomboBox);
             this.Controls.Add(this.dataGridViewTabells);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PersonalForm";
             this.Text = "PersonalForm";
             this.menuStrip1.ResumeLayout(false);

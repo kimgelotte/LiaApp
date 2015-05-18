@@ -32,7 +32,7 @@ namespace LiaApp
                     comboBox1.DataSource = ds.Tables[0].DefaultView ;
 
                     comboBox1.DisplayMember = "ClassNamn";
-                    comboBox1.ValueMember = "Namn";
+                    comboBox1.ValueMember = "ClassNamn";
    
                 }
                 catch (SqlException ex)
@@ -63,7 +63,7 @@ namespace LiaApp
 
             if (Searchtable.Rows.Count == 0)
             {
-                MessageBox.Show(SearchResult + " Finns ingen elev med det personnumret");
+                MessageBox.Show(SearchResult + " Finns ingen elev med det personnumret på LIA för tillfället.");
             }
             else
             {
@@ -79,6 +79,14 @@ namespace LiaApp
         private void dataGridViewClass_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void ElevBackButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var Startapp = new StartApp();
+            Startapp.Closed += (s, args) => this.Close();
+            Startapp.Show();
         }
     }
 }

@@ -19,7 +19,9 @@ namespace LiaApp
 
         private void BookingForm_Load(object sender, EventArgs e)
         {
-            BookingdataGridView.DataSource = AzureCon.tableFrom();
+            // TODO: This line of code loads data into the 'databaseDataSet1.PersonalVisits' table. You can move, or remove it, as needed.
+            this.personalVisitsTableAdapter.Fill(this.databaseDataSet1.PersonalVisits);
+            //BookingdataGridView.DataSource = AzureCon.tableFrom();
         }
 
         private void BookingCancelButton_Click(object sender, EventArgs e)

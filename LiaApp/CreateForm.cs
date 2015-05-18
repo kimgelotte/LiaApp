@@ -125,6 +125,14 @@ namespace LiaApp
 
         }
 
+        private void buttonCancelCreate_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var PersonalForm = new PersonalForm();
+            PersonalForm.Closed += (s, args) => this.Close();
+            PersonalForm.Show();
+        }
+
  
 
     }

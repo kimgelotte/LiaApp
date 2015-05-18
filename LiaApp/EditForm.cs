@@ -24,6 +24,7 @@ namespace LiaApp
             InitializeComponent();
         }
 
+        //HÄMTAR VALD TABELL IFRÅN DATABASEN
         private void EditSelectTable_SelectedIndexChanged(object sender, EventArgs e)
         {
             string ChosenEdit = EditSelectTable.Text;
@@ -38,6 +39,7 @@ namespace LiaApp
             if (ChosenEdit == "Contact person")
                 visaConttab();
         }
+        //STUDENT-TABELLEN
         private void visaStudtab()
         {
 
@@ -52,9 +54,9 @@ namespace LiaApp
             sTable = sDs.Tables["Student"];
             connection.Close();
             EditdataGridView.DataSource = sDs.Tables["Student"];
-            //save_btn.Enabled = false;
             EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+        //PERSONAL-TABELLEN
         private void visaPerstab()
         {
 
@@ -71,6 +73,7 @@ namespace LiaApp
             EditdataGridView.DataSource = sDs.Tables["Personal"];
             EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+        //LIA-TABELLEN
         private void visaLiatab()
         {
 
@@ -85,9 +88,9 @@ namespace LiaApp
             sTable = sDs.Tables["Lia"];
             connection.Close();
             EditdataGridView.DataSource = sDs.Tables["Lia"];
-            //save_btn.Enabled = false;
             EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+        //FÖRETAGS-TABELLEN
         private void visaComptab()
         {
 
@@ -102,9 +105,9 @@ namespace LiaApp
             sTable = sDs.Tables["Företag"];
             connection.Close();
             EditdataGridView.DataSource = sDs.Tables["Företag"];
-            //save_btn.Enabled = false;
             EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+        //KONTAKTPERSON-TABELLEN
         private void visaConttab()
         {
 
@@ -119,8 +122,181 @@ namespace LiaApp
             sTable = sDs.Tables["KontaktPerson"];
             connection.Close();
             EditdataGridView.DataSource = sDs.Tables["KontaktPerson"];
-            //save_btn.Enabled = false;
             EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void EditdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        //SPARA ÄNDRINGAR
+        private void EditSaveChangesButton_Click(object sender, EventArgs e)
+        {
+            //Kolla vilken tabell i comboboxen som är markerad och uppdaterar db vid klick på knappen
+            string ChosenEdit = EditSelectTable.Text;
+            try
+            {
+                if (ChosenEdit == "Student")
+                    sAdapter.Update(sDs, "Student");
+
+                if (ChosenEdit == "Staff")
+                    sAdapter.Update(sDs, "Personal");
+                
+                if (ChosenEdit == "LIA")
+                    sAdapter.Update(sDs, "Lia");
+
+                if (ChosenEdit == "Company")
+                    sAdapter.Update(sDs, "Företag");
+
+                if (ChosenEdit == "Contact person")
+                    sAdapter.Update(sDs, "KontaktPerson");
+
+                
+                MessageBox.Show("Database updated.");
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+
+            }
+        }
+
+        //LADDA OM DATABASEN
+        private void EditRevertChangesButton_Click(object sender, EventArgs e)
+        {
+            //Om ändringar har gjorts
+            if (sDs.HasChanges())
+            {
+                //Dialog om man vill fortsätta ladda om databasen utan att spara ändringar
+                var confirmResult = MessageBox.Show("Are you sure you want to reload the database?\nChanges you have made will be lost!",
+                            "Reload Database",
+                            MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    string ChosenEdit = EditSelectTable.Text;
+                    try
+                    {
+                        //Tömmer datagrid och laddar in igen
+                        if (ChosenEdit == "Student")
+                        {
+                            sTable.Clear();
+                            sAdapter.Fill(sDs, "Student");
+                        }
+                        if (ChosenEdit == "Staff")
+                        {
+                            sTable.Clear();
+                            sAdapter.Fill(sDs, "Personal");
+                        }
+                        if (ChosenEdit == "LIA")
+                        {
+                            sTable.Clear();
+                            sAdapter.Fill(sDs, "Lia");
+                        }
+                        if (ChosenEdit == "Company")
+                        {
+                            sTable.Clear();
+                            sAdapter.Fill(sDs, "Företag");
+                        }
+                        if (ChosenEdit == "Contact person")
+                        {
+                            sTable.Clear();
+                            sAdapter.Fill(sDs, "KontaktPerson");
+                        }
+
+                        MessageBox.Show("Database reloaded.");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show(err.Message);
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Database reloaded.");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Database reloaded.");
+            }
+            
+            
+        }
+
+        //SPARA ÄNDRINGAR OCH STÄNG NER
+        private void EditOKButton_Click(object sender, EventArgs e)
+        {
+            string ChosenEdit = EditSelectTable.Text;
+            try
+            {
+                
+                if (ChosenEdit == "Student")
+                    sAdapter.Update(sDs, "Student");
+
+                if (ChosenEdit == "Staff")
+                    sAdapter.Update(sDs, "Personal");
+
+                if (ChosenEdit == "LIA")
+                    sAdapter.Update(sDs, "Lia");
+
+                if (ChosenEdit == "Company")
+                    sAdapter.Update(sDs, "Företag");
+
+                if (ChosenEdit == "Contact person")
+                    sAdapter.Update(sDs, "KontaktPerson");
+
+                this.Hide();
+                var PersonalForm = new PersonalForm();
+                PersonalForm.Closed += (s, args) => this.Close();
+                PersonalForm.Show();
+            }
+
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+
+            }
+        }
+
+        //STÄNG NER FÖNSTER
+        private void EditCancelButton_Click(object sender, EventArgs e)
+        {
+            //Kollar om ändringar har gjorts
+            if (sDs.HasChanges())
+                {
+                //Varningsruta om att ändringar kommer gå förlorade
+                         var confirmResult = MessageBox.Show("Are you sure you want to close this window?\nChanges you have made will be lost!",
+                                     "Close window",
+                                     MessageBoxButtons.YesNo);
+                         if (confirmResult == DialogResult.Yes)
+                            {
+                                this.Hide();
+                                var PersonalForm = new PersonalForm();
+                                PersonalForm.Closed += (s, args) => this.Close();
+                                PersonalForm.Show();
+                            }
+                        else
+                            {
+                
+                            }       
+       
+                }
+            else
+            {
+                this.Hide();
+                var PersonalForm = new PersonalForm();
+                PersonalForm.Closed += (s, args) => this.Close();
+                PersonalForm.Show();
+            }
+            
+        }
+
+        private void EditForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

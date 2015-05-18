@@ -13,6 +13,7 @@ namespace LiaApp
 {
     public partial class AbsenceForm : Form
     {
+        
         SqlDataAdapter da = DataAdapter.dataAd;
         public AbsenceForm()
         {
@@ -20,6 +21,7 @@ namespace LiaApp
         }
         private void AbsenceForm_Load_1(object sender, EventArgs e)
         {
+
             DataSet ds = new DataSet();
 
             using (SqlConnection conn = new SqlConnection(AzureCon.ConnectionString))
@@ -32,16 +34,16 @@ namespace LiaApp
                     comboBox1.DataSource = ds.Tables[0].DefaultView;
 
                     comboBox1.DisplayMember = "ClassNamn";
-                    comboBox1.ValueMember = "Namn";
-
+                    comboBox1.ValueMember = "ClassNamn";
+                    
                 }
                 catch (SqlException ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
+                
             }
 
-            Encryption.ToggleConfigEncryption();
         }
  
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,6 +65,20 @@ namespace LiaApp
         private void Load_Click(object sender, EventArgs e)
         {
          
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var PersonalForm = new PersonalForm();
+            PersonalForm.Closed += (s, args) => this.Close();
+            PersonalForm.Show();
+        
         }
 
         

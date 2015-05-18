@@ -122,5 +122,121 @@ namespace LiaApp
             //save_btn.Enabled = false;
             EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+
+        private void EditdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void EditSaveChangesButton_Click(object sender, EventArgs e)
+        {
+            string ChosenEdit = EditSelectTable.Text;
+            try
+            {
+                if (ChosenEdit == "Student")
+                    sAdapter.Update(sDs, "Student");
+
+                if (ChosenEdit == "Staff")
+                    sAdapter.Update(sDs, "Personal");
+                
+                if (ChosenEdit == "LIA")
+                    sAdapter.Update(sDs, "Lia");
+
+                if (ChosenEdit == "Company")
+                    sAdapter.Update(sDs, "Företag");
+
+                if (ChosenEdit == "Contact person")
+                    sAdapter.Update(sDs, "KontaktPerson");
+
+                
+                MessageBox.Show("Database updated.");
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+
+            }
+        }
+
+        private void EditRevertChangesButton_Click(object sender, EventArgs e)
+        {
+            string ChosenEdit = EditSelectTable.Text;
+            try
+            {
+                if (ChosenEdit == "Student") 
+                {
+                    sTable.Clear();
+                    sAdapter.Fill(sDs, "Student");
+                }
+                if (ChosenEdit == "Staff")
+                {
+                    sTable.Clear();
+                    sAdapter.Fill(sDs, "Personal");
+                }
+                if (ChosenEdit == "LIA")
+                {
+                    sTable.Clear();
+                    sAdapter.Fill(sDs, "Lia");
+                }
+                if (ChosenEdit == "Company")
+                {
+                    sTable.Clear();
+                    sAdapter.Fill(sDs, "Företag");
+                }
+                if (ChosenEdit == "Contact person")
+                {
+                    sTable.Clear();
+                    sAdapter.Fill(sDs, "KontaktPerson");
+                }
+
+                MessageBox.Show("Database reloaded.");
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+
+            }
+        }
+
+        private void EditOKButton_Click(object sender, EventArgs e)
+        {
+            string ChosenEdit = EditSelectTable.Text;
+            try
+            {
+                if (ChosenEdit == "Student")
+                    sAdapter.Update(sDs, "Student");
+
+                if (ChosenEdit == "Staff")
+                    sAdapter.Update(sDs, "Personal");
+
+                if (ChosenEdit == "LIA")
+                    sAdapter.Update(sDs, "Lia");
+
+                if (ChosenEdit == "Company")
+                    sAdapter.Update(sDs, "Företag");
+
+                if (ChosenEdit == "Contact person")
+                    sAdapter.Update(sDs, "KontaktPerson");
+
+                this.Hide();
+                var PersonalForm = new PersonalForm();
+                PersonalForm.Closed += (s, args) => this.Close();
+                PersonalForm.Show();
+            }
+
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+
+            }
+        }
+
+        private void EditCancelButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var PersonalForm = new PersonalForm();
+            PersonalForm.Closed += (s, args) => this.Close();
+            PersonalForm.Show();
+        }
     }
 }

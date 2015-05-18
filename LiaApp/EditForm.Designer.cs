@@ -70,6 +70,7 @@
             this.EditdataGridView.Name = "EditdataGridView";
             this.EditdataGridView.Size = new System.Drawing.Size(576, 280);
             this.EditdataGridView.TabIndex = 2;
+            this.EditdataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EditdataGridView_CellContentClick);
             // 
             // EditCancelButton
             // 
@@ -79,6 +80,7 @@
             this.EditCancelButton.TabIndex = 3;
             this.EditCancelButton.Text = "Cancel";
             this.EditCancelButton.UseVisualStyleBackColor = true;
+            this.EditCancelButton.Click += new System.EventHandler(this.EditCancelButton_Click);
             // 
             // EditOKButton
             // 
@@ -88,6 +90,7 @@
             this.EditOKButton.TabIndex = 4;
             this.EditOKButton.Text = "OK";
             this.EditOKButton.UseVisualStyleBackColor = true;
+            this.EditOKButton.Click += new System.EventHandler(this.EditOKButton_Click);
             // 
             // EditSaveChangesButton
             // 
@@ -95,17 +98,19 @@
             this.EditSaveChangesButton.Name = "EditSaveChangesButton";
             this.EditSaveChangesButton.Size = new System.Drawing.Size(95, 23);
             this.EditSaveChangesButton.TabIndex = 5;
-            this.EditSaveChangesButton.Text = "Save changes";
+            this.EditSaveChangesButton.Text = "Save Changes";
             this.EditSaveChangesButton.UseVisualStyleBackColor = true;
+            this.EditSaveChangesButton.Click += new System.EventHandler(this.EditSaveChangesButton_Click);
             // 
             // EditRevertChangesButton
             // 
             this.EditRevertChangesButton.Location = new System.Drawing.Point(113, 340);
             this.EditRevertChangesButton.Name = "EditRevertChangesButton";
-            this.EditRevertChangesButton.Size = new System.Drawing.Size(88, 23);
+            this.EditRevertChangesButton.Size = new System.Drawing.Size(102, 23);
             this.EditRevertChangesButton.TabIndex = 6;
-            this.EditRevertChangesButton.Text = "Revert changes";
+            this.EditRevertChangesButton.Text = "Reload Database";
             this.EditRevertChangesButton.UseVisualStyleBackColor = true;
+            this.EditRevertChangesButton.Click += new System.EventHandler(this.EditRevertChangesButton_Click);
             // 
             // EditForm
             // 

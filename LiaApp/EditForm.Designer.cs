@@ -46,7 +46,8 @@
             "Staff",
             "Company",
             "Contact person",
-            "LIA"});
+            "LIA",
+            "Class"});
             this.EditSelectTable.Location = new System.Drawing.Point(12, 27);
             this.EditSelectTable.Name = "EditSelectTable";
             this.EditSelectTable.Size = new System.Drawing.Size(121, 21);
@@ -126,7 +127,7 @@
             this.Controls.Add(this.EditSelectTable);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditForm";
-            this.Text = "EditForm";
+            this.Text = "LiaAPP - Edit";
             this.Load += new System.EventHandler(this.EditForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.EditdataGridView)).EndInit();
             this.ResumeLayout(false);

@@ -61,7 +61,7 @@
             // 
             this.BookingCancelButton.Location = new System.Drawing.Point(262, 278);
             this.BookingCancelButton.Name = "BookingCancelButton";
-            this.BookingCancelButton.Size = new System.Drawing.Size(76, 33);
+            this.BookingCancelButton.Size = new System.Drawing.Size(57, 27);
             this.BookingCancelButton.TabIndex = 1;
             this.BookingCancelButton.Text = "Cancel";
             this.BookingCancelButton.UseVisualStyleBackColor = true;
@@ -71,7 +71,7 @@
             // 
             this.BookingOkButton.Location = new System.Drawing.Point(176, 278);
             this.BookingOkButton.Name = "BookingOkButton";
-            this.BookingOkButton.Size = new System.Drawing.Size(80, 33);
+            this.BookingOkButton.Size = new System.Drawing.Size(60, 27);
             this.BookingOkButton.TabIndex = 2;
             this.BookingOkButton.Text = "Ok";
             this.BookingOkButton.UseVisualStyleBackColor = true;
@@ -81,7 +81,7 @@
             // 
             this.BookingSaveButton.Location = new System.Drawing.Point(93, 278);
             this.BookingSaveButton.Name = "BookingSaveButton";
-            this.BookingSaveButton.Size = new System.Drawing.Size(77, 33);
+            this.BookingSaveButton.Size = new System.Drawing.Size(58, 27);
             this.BookingSaveButton.TabIndex = 5;
             this.BookingSaveButton.Text = "Save";
             this.BookingSaveButton.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@
             this.Bookingdatagridlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bookingdatagridlabel.Location = new System.Drawing.Point(114, 9);
             this.Bookingdatagridlabel.Name = "Bookingdatagridlabel";
-            this.Bookingdatagridlabel.Size = new System.Drawing.Size(101, 25);
+            this.Bookingdatagridlabel.Size = new System.Drawing.Size(83, 20);
             this.Bookingdatagridlabel.TabIndex = 6;
             this.Bookingdatagridlabel.Text = "Bookings";
             // 
@@ -100,7 +100,7 @@
             // 
             this.BookingNewButton.Location = new System.Drawing.Point(12, 278);
             this.BookingNewButton.Name = "BookingNewButton";
-            this.BookingNewButton.Size = new System.Drawing.Size(75, 33);
+            this.BookingNewButton.Size = new System.Drawing.Size(56, 27);
             this.BookingNewButton.TabIndex = 8;
             this.BookingNewButton.Text = "New";
             this.BookingNewButton.UseVisualStyleBackColor = true;
@@ -217,9 +217,29 @@
             // 
             this.studentTableAdapter.ClearBeforeFill = true;
             // 
+            // personalVisitsBindingSource
+            // 
+            this.personalVisitsBindingSource.DataMember = "PersonalVisits";
+            this.personalVisitsBindingSource.DataSource = this.databaseDataSet1;
+            // 
+            // databaseDataSet1
+            // 
+            this.databaseDataSet1.DataSetName = "DatabaseDataSet1";
+            this.databaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // personalVisitsTableAdapter
+            // 
+            this.personalVisitsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.PersonalVisitsTableAdapter = this.personalVisitsTableAdapter;
+            this.tableAdapterManager.UpdateOrder = LiaApp.DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // BookingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(347, 327);
             this.Controls.Add(this.BookingStudentlabel);
@@ -234,8 +254,9 @@
             this.Controls.Add(this.BookingSaveButton);
             this.Controls.Add(this.BookingOkButton);
             this.Controls.Add(this.BookingCancelButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "BookingForm";
-            this.Text = "BookingForm";
+            this.Text = "LiaAPP - Booking";
             this.Load += new System.EventHandler(this.BookingForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBooking)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalVisitsBindingSource)).EndInit();

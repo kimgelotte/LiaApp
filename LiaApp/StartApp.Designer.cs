@@ -40,30 +40,32 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(232, 52);
+            this.label2.Location = new System.Drawing.Point(166, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 24);
+            this.label2.Size = new System.Drawing.Size(268, 24);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Logga in:";
+            this.label2.Text = "Please log in to access LiaAPP";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Personal",
-            "Elev"});
-            this.comboBox1.Location = new System.Drawing.Point(236, 110);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            "Staff",
+            "Student"});
+            this.comboBox1.SelectedIndex = 1;
+            this.comboBox1.Location = new System.Drawing.Point(236, 128);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(136, 21);
-            this.comboBox1.TabIndex = 5;
+            this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(236, 167);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
             this.textBox1.Size = new System.Drawing.Size(136, 20);
@@ -72,31 +74,31 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(170, 110);
+            this.label1.Location = new System.Drawing.Point(194, 131);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Användare:";
+            this.label1.Text = "User:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(170, 167);
+            this.label3.Location = new System.Drawing.Point(170, 170);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Lösenord:";
+            this.label3.Text = "Password:";
             // 
             // okbutton
             // 
-            this.okbutton.Location = new System.Drawing.Point(268, 213);
-            this.okbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.okbutton.Location = new System.Drawing.Point(269, 201);
+            this.okbutton.Margin = new System.Windows.Forms.Padding(2);
             this.okbutton.Name = "okbutton";
             this.okbutton.Size = new System.Drawing.Size(62, 24);
-            this.okbutton.TabIndex = 6;
-            this.okbutton.Text = "Logga in";
+            this.okbutton.TabIndex = 1;
+            this.okbutton.Text = "Log In";
             this.okbutton.UseVisualStyleBackColor = true;
             this.okbutton.Click += new System.EventHandler(this.okbutton_Click);
             // 
@@ -113,7 +115,8 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Name = "StartApp";
-            this.Text = "LIA Inlogg";
+            this.Text = "LiaApp - Log In";
+            this.Load += new System.EventHandler(this.StartApp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

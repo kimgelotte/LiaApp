@@ -38,6 +38,8 @@ namespace LiaApp
                 visaComptab();
             if (ChosenEdit == "Contact person")
                 visaConttab();
+            if (ChosenEdit == "Class")
+                visaClasstab();
         }
         //STUDENT-TABELLEN
         private void visaStudtab()
@@ -124,6 +126,23 @@ namespace LiaApp
             EditdataGridView.DataSource = sDs.Tables["KontaktPerson"];
             EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+        //Klass-TABELLEN
+        private void visaClasstab()
+        {
+
+            string sql = "SELECT * FROM Klass";
+            SqlConnection connection = new SqlConnection(AzureCon.ConnectionString);
+            connection.Open();
+            sCommand = new SqlCommand(sql, connection);
+            sAdapter = new SqlDataAdapter(sCommand);
+            sBuilder = new SqlCommandBuilder(sAdapter);
+            sDs = new DataSet();
+            sAdapter.Fill(sDs, "Klass");
+            sTable = sDs.Tables["Klass"];
+            connection.Close();
+            EditdataGridView.DataSource = sDs.Tables["Klass"];
+            EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
 
         private void EditdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -152,6 +171,8 @@ namespace LiaApp
                 if (ChosenEdit == "Contact person")
                     sAdapter.Update(sDs, "KontaktPerson");
 
+                if (ChosenEdit == "Class")
+                    sAdapter.Update(sDs, "Klass");
                 
                 MessageBox.Show("Database updated.");
             }
@@ -203,6 +224,11 @@ namespace LiaApp
                             sTable.Clear();
                             sAdapter.Fill(sDs, "KontaktPerson");
                         }
+                        if (ChosenEdit == "Class")
+                        {
+                            sTable.Clear();
+                            sAdapter.Fill(sDs, "Klass");
+                        }
 
                         MessageBox.Show("Database reloaded.");
                     }
@@ -247,6 +273,9 @@ namespace LiaApp
 
                 if (ChosenEdit == "Contact person")
                     sAdapter.Update(sDs, "KontaktPerson");
+
+                if (ChosenEdit == "Class")
+                    sAdapter.Update(sDs, "Klass");
 
                 this.Hide();
                 var PersonalForm = new PersonalForm();

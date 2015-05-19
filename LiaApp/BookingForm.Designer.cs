@@ -38,26 +38,27 @@
             this.BookingEditButton = new System.Windows.Forms.Button();
             this.BookingNewButton = new System.Windows.Forms.Button();
             this.BookingdataGridView = new System.Windows.Forms.DataGridView();
-            this.databaseDataSet1 = new LiaApp.DatabaseDataSet1();
-            this.personalVisitsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personalVisitsTableAdapter = new LiaApp.DatabaseDataSet1TableAdapters.PersonalVisitsTableAdapter();
-            this.tableAdapterManager = new LiaApp.DatabaseDataSet1TableAdapters.TableAdapterManager();
             this.visitIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.visitDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.visitDoneDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.personalVisitsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet1 = new LiaApp.DatabaseDataSet1();
+            this.personalVisitsTableAdapter = new LiaApp.DatabaseDataSet1TableAdapters.PersonalVisitsTableAdapter();
+            this.tableAdapterManager = new LiaApp.DatabaseDataSet1TableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookingdataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalVisitsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // BookingCancelButton
             // 
-            this.BookingCancelButton.Location = new System.Drawing.Point(341, 278);
+            this.BookingCancelButton.Location = new System.Drawing.Point(256, 226);
+            this.BookingCancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BookingCancelButton.Name = "BookingCancelButton";
-            this.BookingCancelButton.Size = new System.Drawing.Size(76, 33);
+            this.BookingCancelButton.Size = new System.Drawing.Size(57, 27);
             this.BookingCancelButton.TabIndex = 1;
             this.BookingCancelButton.Text = "Cancel";
             this.BookingCancelButton.UseVisualStyleBackColor = true;
@@ -65,9 +66,10 @@
             // 
             // BookingOkButton
             // 
-            this.BookingOkButton.Location = new System.Drawing.Point(255, 278);
+            this.BookingOkButton.Location = new System.Drawing.Point(191, 226);
+            this.BookingOkButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BookingOkButton.Name = "BookingOkButton";
-            this.BookingOkButton.Size = new System.Drawing.Size(80, 33);
+            this.BookingOkButton.Size = new System.Drawing.Size(60, 27);
             this.BookingOkButton.TabIndex = 2;
             this.BookingOkButton.Text = "Ok";
             this.BookingOkButton.UseVisualStyleBackColor = true;
@@ -75,9 +77,10 @@
             // 
             // BookingSaveButton
             // 
-            this.BookingSaveButton.Location = new System.Drawing.Point(172, 278);
+            this.BookingSaveButton.Location = new System.Drawing.Point(129, 226);
+            this.BookingSaveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BookingSaveButton.Name = "BookingSaveButton";
-            this.BookingSaveButton.Size = new System.Drawing.Size(77, 33);
+            this.BookingSaveButton.Size = new System.Drawing.Size(58, 27);
             this.BookingSaveButton.TabIndex = 5;
             this.BookingSaveButton.Text = "Save";
             this.BookingSaveButton.UseVisualStyleBackColor = true;
@@ -86,9 +89,10 @@
             // 
             this.Bookingdatagridlabel.AutoSize = true;
             this.Bookingdatagridlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bookingdatagridlabel.Location = new System.Drawing.Point(158, 9);
+            this.Bookingdatagridlabel.Location = new System.Drawing.Point(118, 7);
+            this.Bookingdatagridlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Bookingdatagridlabel.Name = "Bookingdatagridlabel";
-            this.Bookingdatagridlabel.Size = new System.Drawing.Size(101, 25);
+            this.Bookingdatagridlabel.Size = new System.Drawing.Size(83, 20);
             this.Bookingdatagridlabel.TabIndex = 6;
             this.Bookingdatagridlabel.Text = "Bookings";
             // 
@@ -104,18 +108,20 @@
             // 
             // BookingEditButton
             // 
-            this.BookingEditButton.Location = new System.Drawing.Point(91, 278);
+            this.BookingEditButton.Location = new System.Drawing.Point(68, 226);
+            this.BookingEditButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BookingEditButton.Name = "BookingEditButton";
-            this.BookingEditButton.Size = new System.Drawing.Size(75, 33);
+            this.BookingEditButton.Size = new System.Drawing.Size(56, 27);
             this.BookingEditButton.TabIndex = 7;
             this.BookingEditButton.Text = "Edit";
             this.BookingEditButton.UseVisualStyleBackColor = true;
             // 
             // BookingNewButton
             // 
-            this.BookingNewButton.Location = new System.Drawing.Point(10, 278);
+            this.BookingNewButton.Location = new System.Drawing.Point(8, 226);
+            this.BookingNewButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BookingNewButton.Name = "BookingNewButton";
-            this.BookingNewButton.Size = new System.Drawing.Size(75, 33);
+            this.BookingNewButton.Size = new System.Drawing.Size(56, 27);
             this.BookingNewButton.TabIndex = 8;
             this.BookingNewButton.Text = "New";
             this.BookingNewButton.UseVisualStyleBackColor = true;
@@ -130,31 +136,12 @@
             this.visitDateDataGridViewTextBoxColumn,
             this.visitDoneDataGridViewCheckBoxColumn});
             this.BookingdataGridView.DataSource = this.personalVisitsBindingSource;
-            this.BookingdataGridView.Location = new System.Drawing.Point(10, 37);
+            this.BookingdataGridView.Location = new System.Drawing.Point(8, 30);
+            this.BookingdataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BookingdataGridView.Name = "BookingdataGridView";
             this.BookingdataGridView.RowTemplate.Height = 24;
-            this.BookingdataGridView.Size = new System.Drawing.Size(405, 235);
+            this.BookingdataGridView.Size = new System.Drawing.Size(304, 191);
             this.BookingdataGridView.TabIndex = 9;
-            // 
-            // databaseDataSet1
-            // 
-            this.databaseDataSet1.DataSetName = "DatabaseDataSet1";
-            this.databaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // personalVisitsBindingSource
-            // 
-            this.personalVisitsBindingSource.DataMember = "PersonalVisits";
-            this.personalVisitsBindingSource.DataSource = this.databaseDataSet1;
-            // 
-            // personalVisitsTableAdapter
-            // 
-            this.personalVisitsTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.PersonalVisitsTableAdapter = this.personalVisitsTableAdapter;
-            this.tableAdapterManager.UpdateOrder = LiaApp.DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // visitIdDataGridViewTextBoxColumn
             // 
@@ -180,11 +167,31 @@
             this.visitDoneDataGridViewCheckBoxColumn.HeaderText = "Visit_Done";
             this.visitDoneDataGridViewCheckBoxColumn.Name = "visitDoneDataGridViewCheckBoxColumn";
             // 
+            // personalVisitsBindingSource
+            // 
+            this.personalVisitsBindingSource.DataMember = "PersonalVisits";
+            this.personalVisitsBindingSource.DataSource = this.databaseDataSet1;
+            // 
+            // databaseDataSet1
+            // 
+            this.databaseDataSet1.DataSetName = "DatabaseDataSet1";
+            this.databaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // personalVisitsTableAdapter
+            // 
+            this.personalVisitsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.PersonalVisitsTableAdapter = this.personalVisitsTableAdapter;
+            this.tableAdapterManager.UpdateOrder = LiaApp.DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // BookingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 327);
+            this.ClientSize = new System.Drawing.Size(327, 266);
             this.Controls.Add(this.BookingdataGridView);
             this.Controls.Add(this.BookingNewButton);
             this.Controls.Add(this.BookingEditButton);
@@ -192,14 +199,15 @@
             this.Controls.Add(this.BookingSaveButton);
             this.Controls.Add(this.BookingOkButton);
             this.Controls.Add(this.BookingCancelButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "BookingForm";
-            this.Text = "BookingForm";
+            this.Text = "LiaAPP - Booking";
             this.Load += new System.EventHandler(this.BookingForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookingdataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalVisitsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

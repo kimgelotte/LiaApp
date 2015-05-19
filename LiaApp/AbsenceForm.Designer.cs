@@ -118,7 +118,7 @@
             this.Controls.Add(this.Updbutton);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AbsenceForm";
-            this.Text = "AbsenceForm";
+            this.Text = "LiaAPP - Absence";
             this.Load += new System.EventHandler(this.AbsenceForm_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClass)).EndInit();
             this.ResumeLayout(false);

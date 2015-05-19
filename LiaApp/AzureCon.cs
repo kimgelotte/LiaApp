@@ -117,7 +117,7 @@ namespace LiaApp
             }
         }
 
-        public static void BookingNewMeeting(int VisitId, int PersonalId, DateTime Date, bool IsDone)
+        public static void BookingNewMeeting(int VisitId, int PersonalId, string Date, string IsDone)
         {
             DataTable table = new DataTable("newBooking");
             SqlDataAdapter dataA = null;
@@ -125,7 +125,7 @@ namespace LiaApp
             using (SqlConnection conn = new SqlConnection(ConnectionString))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO PersonalVisits (Visit_Id, P_Id, VisitDate, Visit_Done)" +
+                SqlCommand cmd = new SqlCommand("INSERT INTO PersonalVisits " +
                     "VALUES (@VisitId,@PersonalId,@Date,@IsDone);", conn);
                 cmd.Parameters.AddWithValue("@VisitId", VisitId);
                 cmd.Parameters.AddWithValue("@PersonalId", PersonalId);
@@ -138,7 +138,8 @@ namespace LiaApp
                 {
                     cmd.ExecuteNonQuery();
                 }
-                catch(SqlException e){
+                catch (SqlException e)
+                {
                     MessageBox.Show(e.Message);
                 }
             }
@@ -173,7 +174,7 @@ namespace LiaApp
             }
         }
 
-        int visitid = 1;
+        
         public static DataTable FindPersonal(string StaffName)
         {
             DataTable table = new DataTable("StaffInfo");
@@ -216,6 +217,42 @@ namespace LiaApp
                 dataA = new SqlDataAdapter(cmd);
                 int res = dataA.Fill(table);
                 return table;
+            }
+        }
+
+        public static void BookingNewMeeting2(int VisitId, int PersonalId, string Date, string IsDone)
+        {
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"AddMeeting";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlParameter p1 = new SqlParameter("VisitId", SqlDbType.Int);
+                    SqlParameter p2 = new SqlParameter("PersonalId", SqlDbType.Int);
+                    SqlParameter p3 = new SqlParameter("Date", SqlDbType.Date);
+                    SqlParameter p4 = new SqlParameter("IsDone", SqlDbType.Bit);
+                    p1.Value = VisitId;
+                    p2.Value = PersonalId;
+                    p3.Value = Date;
+                    p4.Value = IsDone;
+
+                    cmd.Parameters.Add(p1);
+                    cmd.Parameters.Add(p2);
+                    cmd.Parameters.Add(p3);
+                    cmd.Parameters.Add(p4);
+
+                    try
+                    {
+                        int res = cmd.ExecuteNonQuery();
+                    }
+                    catch (SqlException e)
+                    {
+                        MessageBox.Show(e.Message);
+                    }
+                }
             }
         }
     }

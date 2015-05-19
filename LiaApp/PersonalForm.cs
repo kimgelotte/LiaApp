@@ -97,6 +97,22 @@ namespace LiaApp
 
         }
 
+        private void LogOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var StartApp = new StartApp();
+            StartApp.Closed += (s, args) => this.Close();
+            StartApp.Show();
+        }
+
+        private void ExitToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            var StartApp = new StartApp();
+            StartApp.Closed += (s, args) => this.Close();
+            StartApp.Close();
+        }
+
 
 
     }

@@ -35,10 +35,12 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.absenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.LogoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewTabells = new System.Windows.Forms.DataGridView();
             this.TabellcomboBox = new System.Windows.Forms.ComboBox();
             this.TabellLabel = new System.Windows.Forms.Label();
-            this.CloseButton = new System.Windows.Forms.Button();
             this.databaseDataSet = new LiaApp.DatabaseDataSet();
             this.databaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databaseDataSet1 = new LiaApp.DatabaseDataSet1();
@@ -60,7 +62,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(603, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(795, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,61 +72,85 @@
             this.createToolStripMenuItem,
             this.editToolStripMenuItem,
             this.absenceToolStripMenuItem,
-            this.bookingToolStripMenuItem});
+            this.bookingToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.LogoutToolStripMenuItem,
+            this.ExitToolStripMenuItem});
             this.PersonaltoolStripMenu.Name = "PersonaltoolStripMenu";
-            this.PersonaltoolStripMenu.Size = new System.Drawing.Size(46, 20);
-            this.PersonaltoolStripMenu.Text = "Arkiv";
+            this.PersonaltoolStripMenu.Size = new System.Drawing.Size(37, 20);
+            this.PersonaltoolStripMenu.Text = "File";
             // 
             // createToolStripMenuItem
             // 
             this.createToolStripMenuItem.Name = "createToolStripMenuItem";
-            this.createToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.createToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.createToolStripMenuItem.Text = "Create";
             this.createToolStripMenuItem.Click += new System.EventHandler(this.createToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // absenceToolStripMenuItem
             // 
             this.absenceToolStripMenuItem.Name = "absenceToolStripMenuItem";
-            this.absenceToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.absenceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.absenceToolStripMenuItem.Text = "Absence";
             this.absenceToolStripMenuItem.Click += new System.EventHandler(this.absenceToolStripMenuItem_Click);
             // 
             // bookingToolStripMenuItem
             // 
             this.bookingToolStripMenuItem.Name = "bookingToolStripMenuItem";
-            this.bookingToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.bookingToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bookingToolStripMenuItem.Text = "Booking";
             this.bookingToolStripMenuItem.Click += new System.EventHandler(this.bookingToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            // 
+            // LogoutToolStripMenuItem
+            // 
+            this.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem";
+            this.LogoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.LogoutToolStripMenuItem.Text = "Log out";
+            this.LogoutToolStripMenuItem.Click += new System.EventHandler(this.LogOutToolStripMenuItem_Click);
+            // 
+            // ExitToolStripMenuItem
+            // 
+            this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ExitToolStripMenuItem.Text = "Exit";
+            this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click_1);
             // 
             // dataGridViewTabells
             // 
             this.dataGridViewTabells.AllowUserToAddRows = false;
             this.dataGridViewTabells.AllowUserToDeleteRows = false;
+            this.dataGridViewTabells.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewTabells.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTabells.Location = new System.Drawing.Point(9, 61);
             this.dataGridViewTabells.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewTabells.Name = "dataGridViewTabells";
             this.dataGridViewTabells.ReadOnly = true;
+            this.dataGridViewTabells.RowHeadersVisible = false;
             this.dataGridViewTabells.RowTemplate.Height = 24;
-            this.dataGridViewTabells.Size = new System.Drawing.Size(583, 224);
+            this.dataGridViewTabells.Size = new System.Drawing.Size(775, 410);
             this.dataGridViewTabells.TabIndex = 1;
             // 
             // TabellcomboBox
             // 
             this.TabellcomboBox.FormattingEnabled = true;
-            this.TabellcomboBox.Location = new System.Drawing.Point(52, 37);
+            this.TabellcomboBox.Location = new System.Drawing.Point(78, 36);
             this.TabellcomboBox.Margin = new System.Windows.Forms.Padding(2);
             this.TabellcomboBox.Name = "TabellcomboBox";
             this.TabellcomboBox.Size = new System.Drawing.Size(92, 21);
             this.TabellcomboBox.TabIndex = 2;
-            this.TabellcomboBox.Text = "System.Data.DataViewManagerListItemTypeDescriptor";
+            this.TabellcomboBox.Text = "Browse...";
             this.TabellcomboBox.SelectedIndexChanged += new System.EventHandler(this.TabellcomboBox_SelectedIndexChanged_1);
             // 
             // TabellLabel
@@ -133,20 +159,9 @@
             this.TabellLabel.Location = new System.Drawing.Point(9, 39);
             this.TabellLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TabellLabel.Name = "TabellLabel";
-            this.TabellLabel.Size = new System.Drawing.Size(39, 13);
+            this.TabellLabel.Size = new System.Drawing.Size(65, 13);
             this.TabellLabel.TabIndex = 3;
-            this.TabellLabel.Text = "Tabell:";
-            // 
-            // CloseButton
-            // 
-            this.CloseButton.Location = new System.Drawing.Point(526, 289);
-            this.CloseButton.Margin = new System.Windows.Forms.Padding(2);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(66, 24);
-            this.CloseButton.TabIndex = 4;
-            this.CloseButton.Text = "Close";
-            this.CloseButton.UseVisualStyleBackColor = true;
-            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            this.TabellLabel.Text = "Select Class";
             // 
             // databaseDataSet
             // 
@@ -176,8 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 319);
-            this.Controls.Add(this.CloseButton);
+            this.ClientSize = new System.Drawing.Size(795, 482);
             this.Controls.Add(this.TabellLabel);
             this.Controls.Add(this.TabellcomboBox);
             this.Controls.Add(this.dataGridViewTabells);
@@ -210,11 +224,13 @@
         private System.Windows.Forms.DataGridView dataGridViewTabells;
         private System.Windows.Forms.ComboBox TabellcomboBox;
         private System.Windows.Forms.Label TabellLabel;
-        private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.BindingSource databaseDataSetBindingSource;
         private DatabaseDataSet databaseDataSet;
         private DatabaseDataSet1 databaseDataSet1;
         private System.Windows.Forms.BindingSource lIABindingSource;
         private DatabaseDataSet1TableAdapters.LIATableAdapter lIATableAdapter;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem LogoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
     }
 }

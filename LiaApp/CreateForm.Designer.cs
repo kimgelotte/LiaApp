@@ -33,8 +33,8 @@
             this.buttonCancelCreate = new System.Windows.Forms.Button();
             this.buttonCreateSave = new System.Windows.Forms.Button();
             this.panelCreateStudent = new System.Windows.Forms.Panel();
+            this.comboBoxCrSt = new System.Windows.Forms.ComboBox();
             this.checkBoxCreateExamen = new System.Windows.Forms.CheckBox();
-            this.textBoxCreateClass = new System.Windows.Forms.TextBox();
             this.textBoxCteateMail = new System.Windows.Forms.TextBox();
             this.labelCreateClass = new System.Windows.Forms.Label();
             this.labelCreateMail = new System.Windows.Forms.Label();
@@ -71,7 +71,6 @@
             this.textBoxCrFoTfn = new System.Windows.Forms.TextBox();
             this.textBoxCrFoAd = new System.Windows.Forms.TextBox();
             this.textBoxCrFo = new System.Windows.Forms.TextBox();
-            this.comboBoxCrSt = new System.Windows.Forms.ComboBox();
             this.panelCreateStudent.SuspendLayout();
             this.panelCreatePersonal.SuspendLayout();
             this.panelCreateCompany.SuspendLayout();
@@ -128,7 +127,6 @@
             // 
             this.panelCreateStudent.Controls.Add(this.comboBoxCrSt);
             this.panelCreateStudent.Controls.Add(this.checkBoxCreateExamen);
-            this.panelCreateStudent.Controls.Add(this.textBoxCreateClass);
             this.panelCreateStudent.Controls.Add(this.textBoxCteateMail);
             this.panelCreateStudent.Controls.Add(this.labelCreateClass);
             this.panelCreateStudent.Controls.Add(this.labelCreateMail);
@@ -152,6 +150,14 @@
             this.panelCreateStudent.Visible = false;
             this.panelCreateStudent.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCreateStudent_Paint);
             // 
+            // comboBoxCrSt
+            // 
+            this.comboBoxCrSt.FormattingEnabled = true;
+            this.comboBoxCrSt.Location = new System.Drawing.Point(491, 166);
+            this.comboBoxCrSt.Name = "comboBoxCrSt";
+            this.comboBoxCrSt.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxCrSt.TabIndex = 18;
+            // 
             // checkBoxCreateExamen
             // 
             this.checkBoxCreateExamen.AutoSize = true;
@@ -160,13 +166,6 @@
             this.checkBoxCreateExamen.Size = new System.Drawing.Size(18, 17);
             this.checkBoxCreateExamen.TabIndex = 17;
             this.checkBoxCreateExamen.UseVisualStyleBackColor = true;
-            // 
-            // textBoxCreateClass
-            // 
-            this.textBoxCreateClass.Location = new System.Drawing.Point(491, 162);
-            this.textBoxCreateClass.Name = "textBoxCreateClass";
-            this.textBoxCreateClass.Size = new System.Drawing.Size(100, 22);
-            this.textBoxCreateClass.TabIndex = 16;
             // 
             // textBoxCteateMail
             // 
@@ -476,14 +475,6 @@
             this.textBoxCrFo.Size = new System.Drawing.Size(100, 22);
             this.textBoxCrFo.TabIndex = 0;
             // 
-            // comboBoxCrSt
-            // 
-            this.comboBoxCrSt.FormattingEnabled = true;
-            this.comboBoxCrSt.Location = new System.Drawing.Point(491, 202);
-            this.comboBoxCrSt.Name = "comboBoxCrSt";
-            this.comboBoxCrSt.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxCrSt.TabIndex = 18;
-            // 
             // CreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -518,7 +509,6 @@
         private System.Windows.Forms.Button buttonCreateSave;
         private System.Windows.Forms.Panel panelCreateStudent;
         private System.Windows.Forms.CheckBox checkBoxCreateExamen;
-        private System.Windows.Forms.TextBox textBoxCreateClass;
         private System.Windows.Forms.TextBox textBoxCteateMail;
         private System.Windows.Forms.Label labelCreateClass;
         private System.Windows.Forms.Label labelCreateMail;

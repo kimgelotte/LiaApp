@@ -71,9 +71,31 @@
             this.textBoxCrFoTfn = new System.Windows.Forms.TextBox();
             this.textBoxCrFoAd = new System.Windows.Forms.TextBox();
             this.textBoxCrFo = new System.Windows.Forms.TextBox();
+            this.panelCreateClass = new System.Windows.Forms.Panel();
+            this.textBoxcrcla = new System.Windows.Forms.TextBox();
+            this.textBoxcrclst = new System.Windows.Forms.TextBox();
+            this.checkBoxcrclong = new System.Windows.Forms.CheckBox();
+            this.labelcrclna = new System.Windows.Forms.Label();
+            this.labelcrantst = new System.Windows.Forms.Label();
+            this.labelcrcllia1 = new System.Windows.Forms.Label();
+            this.comboBoxcrcllia1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxcrcllia2 = new System.Windows.Forms.ComboBox();
+            this.labelcrcllia2 = new System.Windows.Forms.Label();
+            this.labelcrclstn = new System.Windows.Forms.Label();
+            this.labelcrclong = new System.Windows.Forms.Label();
+            this.labelcrclco = new System.Windows.Forms.Label();
+            this.groupBoxcrclLia = new System.Windows.Forms.GroupBox();
+            this.labelcrcld1 = new System.Windows.Forms.Label();
+            this.labelcrcld = new System.Windows.Forms.Label();
+            this.labelcrcll1d1 = new System.Windows.Forms.Label();
+            this.labelcrcll2d1 = new System.Windows.Forms.Label();
+            this.labelcrcll1d2 = new System.Windows.Forms.Label();
+            this.labelcrcll2d2 = new System.Windows.Forms.Label();
             this.panelCreateStudent.SuspendLayout();
             this.panelCreatePersonal.SuspendLayout();
             this.panelCreateCompany.SuspendLayout();
+            this.panelCreateClass.SuspendLayout();
+            this.groupBoxcrclLia.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBoxCreate
@@ -475,11 +497,200 @@
             this.textBoxCrFo.Size = new System.Drawing.Size(100, 22);
             this.textBoxCrFo.TabIndex = 0;
             // 
+            // panelCreateClass
+            // 
+            this.panelCreateClass.Controls.Add(this.groupBoxcrclLia);
+            this.panelCreateClass.Controls.Add(this.labelcrclco);
+            this.panelCreateClass.Controls.Add(this.labelcrclong);
+            this.panelCreateClass.Controls.Add(this.labelcrclstn);
+            this.panelCreateClass.Controls.Add(this.labelcrantst);
+            this.panelCreateClass.Controls.Add(this.labelcrclna);
+            this.panelCreateClass.Controls.Add(this.checkBoxcrclong);
+            this.panelCreateClass.Controls.Add(this.textBoxcrclst);
+            this.panelCreateClass.Controls.Add(this.textBoxcrcla);
+            this.panelCreateClass.Location = new System.Drawing.Point(49, 91);
+            this.panelCreateClass.Name = "panelCreateClass";
+            this.panelCreateClass.Size = new System.Drawing.Size(664, 282);
+            this.panelCreateClass.TabIndex = 19;
+            this.panelCreateClass.Visible = false;
+            // 
+            // textBoxcrcla
+            // 
+            this.textBoxcrcla.Location = new System.Drawing.Point(111, 19);
+            this.textBoxcrcla.Name = "textBoxcrcla";
+            this.textBoxcrcla.Size = new System.Drawing.Size(100, 22);
+            this.textBoxcrcla.TabIndex = 0;
+            // 
+            // textBoxcrclst
+            // 
+            this.textBoxcrclst.Location = new System.Drawing.Point(114, 235);
+            this.textBoxcrclst.Name = "textBoxcrclst";
+            this.textBoxcrclst.Size = new System.Drawing.Size(100, 22);
+            this.textBoxcrclst.TabIndex = 4;
+            // 
+            // checkBoxcrclong
+            // 
+            this.checkBoxcrclong.AutoSize = true;
+            this.checkBoxcrclong.Location = new System.Drawing.Point(366, 19);
+            this.checkBoxcrclong.Name = "checkBoxcrclong";
+            this.checkBoxcrclong.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxcrclong.TabIndex = 5;
+            this.checkBoxcrclong.UseVisualStyleBackColor = true;
+            // 
+            // labelcrclna
+            // 
+            this.labelcrclna.AutoSize = true;
+            this.labelcrclna.Location = new System.Drawing.Point(40, 20);
+            this.labelcrclna.Name = "labelcrclna";
+            this.labelcrclna.Size = new System.Drawing.Size(49, 17);
+            this.labelcrclna.TabIndex = 6;
+            this.labelcrclna.Text = "Name:";
+            // 
+            // labelcrantst
+            // 
+            this.labelcrantst.AutoSize = true;
+            this.labelcrantst.Location = new System.Drawing.Point(6, 77);
+            this.labelcrantst.Name = "labelcrantst";
+            this.labelcrantst.Size = new System.Drawing.Size(90, 17);
+            this.labelcrantst.TabIndex = 7;
+            this.labelcrantst.Text = "No. of Studs:";
+            // 
+            // labelcrcllia1
+            // 
+            this.labelcrcllia1.AutoSize = true;
+            this.labelcrcllia1.Location = new System.Drawing.Point(23, 31);
+            this.labelcrcllia1.Name = "labelcrcllia1";
+            this.labelcrcllia1.Size = new System.Drawing.Size(43, 17);
+            this.labelcrcllia1.TabIndex = 8;
+            this.labelcrcllia1.Text = "Lia 1:";
+            // 
+            // comboBoxcrcllia1
+            // 
+            this.comboBoxcrcllia1.FormattingEnabled = true;
+            this.comboBoxcrcllia1.Location = new System.Drawing.Point(97, 28);
+            this.comboBoxcrcllia1.Name = "comboBoxcrcllia1";
+            this.comboBoxcrcllia1.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxcrcllia1.TabIndex = 9;
+            // 
+            // comboBoxcrcllia2
+            // 
+            this.comboBoxcrcllia2.FormattingEnabled = true;
+            this.comboBoxcrcllia2.Location = new System.Drawing.Point(97, 63);
+            this.comboBoxcrcllia2.Name = "comboBoxcrcllia2";
+            this.comboBoxcrcllia2.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxcrcllia2.TabIndex = 10;
+            // 
+            // labelcrcllia2
+            // 
+            this.labelcrcllia2.AutoSize = true;
+            this.labelcrcllia2.Location = new System.Drawing.Point(23, 63);
+            this.labelcrcllia2.Name = "labelcrcllia2";
+            this.labelcrcllia2.Size = new System.Drawing.Size(43, 17);
+            this.labelcrcllia2.TabIndex = 11;
+            this.labelcrcllia2.Text = "Lia 2:";
+            // 
+            // labelcrclstn
+            // 
+            this.labelcrclstn.AutoSize = true;
+            this.labelcrclstn.Location = new System.Drawing.Point(14, 237);
+            this.labelcrclstn.Name = "labelcrclstn";
+            this.labelcrclstn.Size = new System.Drawing.Size(75, 17);
+            this.labelcrclstn.TabIndex = 12;
+            this.labelcrclstn.Text = "2nd name:";
+            // 
+            // labelcrclong
+            // 
+            this.labelcrclong.AutoSize = true;
+            this.labelcrclong.Location = new System.Drawing.Point(268, 19);
+            this.labelcrclong.Name = "labelcrclong";
+            this.labelcrclong.Size = new System.Drawing.Size(81, 17);
+            this.labelcrclong.TabIndex = 13;
+            this.labelcrclong.Text = "Ongoing st:";
+            // 
+            // labelcrclco
+            // 
+            this.labelcrclco.AutoSize = true;
+            this.labelcrclco.Location = new System.Drawing.Point(114, 78);
+            this.labelcrclco.Name = "labelcrclco";
+            this.labelcrclco.Size = new System.Drawing.Size(16, 17);
+            this.labelcrclco.TabIndex = 14;
+            this.labelcrclco.Text = "0";
+            // 
+            // groupBoxcrclLia
+            // 
+            this.groupBoxcrclLia.Controls.Add(this.labelcrcll2d2);
+            this.groupBoxcrclLia.Controls.Add(this.labelcrcll1d2);
+            this.groupBoxcrclLia.Controls.Add(this.labelcrcll2d1);
+            this.groupBoxcrclLia.Controls.Add(this.labelcrcll1d1);
+            this.groupBoxcrclLia.Controls.Add(this.labelcrcld);
+            this.groupBoxcrclLia.Controls.Add(this.labelcrcld1);
+            this.groupBoxcrclLia.Controls.Add(this.labelcrcllia1);
+            this.groupBoxcrclLia.Controls.Add(this.comboBoxcrcllia1);
+            this.groupBoxcrclLia.Controls.Add(this.labelcrcllia2);
+            this.groupBoxcrclLia.Controls.Add(this.comboBoxcrcllia2);
+            this.groupBoxcrclLia.Location = new System.Drawing.Point(17, 116);
+            this.groupBoxcrclLia.Name = "groupBoxcrclLia";
+            this.groupBoxcrclLia.Size = new System.Drawing.Size(479, 106);
+            this.groupBoxcrclLia.TabIndex = 15;
+            this.groupBoxcrclLia.TabStop = false;
+            this.groupBoxcrclLia.Text = "Lia-periods";
+            // 
+            // labelcrcld1
+            // 
+            this.labelcrcld1.AutoSize = true;
+            this.labelcrcld1.Location = new System.Drawing.Point(243, 28);
+            this.labelcrcld1.Name = "labelcrcld1";
+            this.labelcrcld1.Size = new System.Drawing.Size(42, 17);
+            this.labelcrcld1.TabIndex = 12;
+            this.labelcrcld1.Text = "Date:";
+            // 
+            // labelcrcld
+            // 
+            this.labelcrcld.AutoSize = true;
+            this.labelcrcld.Location = new System.Drawing.Point(243, 65);
+            this.labelcrcld.Name = "labelcrcld";
+            this.labelcrcld.Size = new System.Drawing.Size(42, 17);
+            this.labelcrcld.TabIndex = 13;
+            this.labelcrcld.Text = "Date:";
+            // 
+            // labelcrcll1d1
+            // 
+            this.labelcrcll1d1.AutoSize = true;
+            this.labelcrcll1d1.Location = new System.Drawing.Point(316, 28);
+            this.labelcrcll1d1.Name = "labelcrcll1d1";
+            this.labelcrcll1d1.Size = new System.Drawing.Size(0, 17);
+            this.labelcrcll1d1.TabIndex = 14;
+            // 
+            // labelcrcll2d1
+            // 
+            this.labelcrcll2d1.AutoSize = true;
+            this.labelcrcll2d1.Location = new System.Drawing.Point(316, 65);
+            this.labelcrcll2d1.Name = "labelcrcll2d1";
+            this.labelcrcll2d1.Size = new System.Drawing.Size(0, 17);
+            this.labelcrcll2d1.TabIndex = 15;
+            // 
+            // labelcrcll1d2
+            // 
+            this.labelcrcll1d2.AutoSize = true;
+            this.labelcrcll1d2.Location = new System.Drawing.Point(399, 28);
+            this.labelcrcll1d2.Name = "labelcrcll1d2";
+            this.labelcrcll1d2.Size = new System.Drawing.Size(0, 17);
+            this.labelcrcll1d2.TabIndex = 16;
+            // 
+            // labelcrcll2d2
+            // 
+            this.labelcrcll2d2.AutoSize = true;
+            this.labelcrcll2d2.Location = new System.Drawing.Point(399, 65);
+            this.labelcrcll2d2.Name = "labelcrcll2d2";
+            this.labelcrcll2d2.Size = new System.Drawing.Size(0, 17);
+            this.labelcrcll2d2.TabIndex = 17;
+            // 
             // CreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panelCreateClass);
             this.Controls.Add(this.panelCreateStudent);
             this.Controls.Add(this.panelCreateCompany);
             this.Controls.Add(this.panelCreatePersonal);
@@ -496,6 +707,10 @@
             this.panelCreatePersonal.PerformLayout();
             this.panelCreateCompany.ResumeLayout(false);
             this.panelCreateCompany.PerformLayout();
+            this.panelCreateClass.ResumeLayout(false);
+            this.panelCreateClass.PerformLayout();
+            this.groupBoxcrclLia.ResumeLayout(false);
+            this.groupBoxcrclLia.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,5 +761,25 @@
         private System.Windows.Forms.TextBox textBoxCrFoAd;
         private System.Windows.Forms.TextBox textBoxCrFo;
         private System.Windows.Forms.ComboBox comboBoxCrSt;
+        private System.Windows.Forms.Panel panelCreateClass;
+        private System.Windows.Forms.Label labelcrclong;
+        private System.Windows.Forms.Label labelcrclstn;
+        private System.Windows.Forms.Label labelcrcllia2;
+        private System.Windows.Forms.ComboBox comboBoxcrcllia2;
+        private System.Windows.Forms.ComboBox comboBoxcrcllia1;
+        private System.Windows.Forms.Label labelcrcllia1;
+        private System.Windows.Forms.Label labelcrantst;
+        private System.Windows.Forms.Label labelcrclna;
+        private System.Windows.Forms.CheckBox checkBoxcrclong;
+        private System.Windows.Forms.TextBox textBoxcrclst;
+        private System.Windows.Forms.TextBox textBoxcrcla;
+        private System.Windows.Forms.Label labelcrclco;
+        private System.Windows.Forms.GroupBox groupBoxcrclLia;
+        private System.Windows.Forms.Label labelcrcll2d2;
+        private System.Windows.Forms.Label labelcrcll1d2;
+        private System.Windows.Forms.Label labelcrcll2d1;
+        private System.Windows.Forms.Label labelcrcll1d1;
+        private System.Windows.Forms.Label labelcrcld;
+        private System.Windows.Forms.Label labelcrcld1;
     }
 }

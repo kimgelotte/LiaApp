@@ -77,6 +77,29 @@ namespace LiaApp
             }
         }
 
+        public static DataTable PersonalFormQuery(string Klass)
+        {
+            DataTable table = new DataTable("PersonalQuery");
+            SqlDataAdapter dataA = null;
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand("SELECT Student.Namn AS 'Student Name', LIA.Company AS Company, KontaktPerson.Namn AS Mentor, VisitDate as 'Visit Date', Personal.PNamn AS 'Staff Name', Student.MejlAdress AS 'Student E-mail' " +
+                "FROM Student INNER JOIN LIA ON Student.Id = LIA.Student_Id " +
+                "INNER JOIN PersonalVisits ON LIA.Visit_Id = PersonalVisits.Visit_Id " +
+                "INNER JOIN Personal ON PersonalVisits.P_Id = Personal.P_Id " +
+                "INNER JOIN Företag ON Lia.Company = Företag.Företag " +
+                "INNER JOIN KontaktPerson ON Företag.Företag = KontaktPerson.Företag " +
+                "WHERE ClassNamn = @Klass", conn);
+                cmd.Parameters.Add(new SqlParameter("Klass", SqlDbType.VarChar, 12));
+                cmd.Parameters["Klass"].Value = Klass;
+
+                dataA = new SqlDataAdapter(cmd);
+                int res = dataA.Fill(table);
+                return table;
+            }
+        }
+
         public static DataTable tableFrom()
         {
             DataTable table = new DataTable("dbTable");

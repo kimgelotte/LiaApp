@@ -49,6 +49,11 @@ namespace LiaApp
                 MessageBox.Show("Fel lösenord");
         }
 
+        private void StartApp_Load(object sender, EventArgs e)
+        {
+
+        }
+
    
 
        

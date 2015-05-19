@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.PersonaltoolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.createToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,8 +39,17 @@
             this.TabellcomboBox = new System.Windows.Forms.ComboBox();
             this.TabellLabel = new System.Windows.Forms.Label();
             this.CloseButton = new System.Windows.Forms.Button();
+            this.databaseDataSet = new LiaApp.DatabaseDataSet();
+            this.databaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet1 = new LiaApp.DatabaseDataSet1();
+            this.lIABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lIATableAdapter = new LiaApp.DatabaseDataSet1TableAdapters.LIATableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTabells)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lIABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -49,7 +59,8 @@
             this.PersonaltoolStripMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(677, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(603, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -61,89 +72,128 @@
             this.absenceToolStripMenuItem,
             this.bookingToolStripMenuItem});
             this.PersonaltoolStripMenu.Name = "PersonaltoolStripMenu";
-            this.PersonaltoolStripMenu.Size = new System.Drawing.Size(54, 24);
+            this.PersonaltoolStripMenu.Size = new System.Drawing.Size(46, 20);
             this.PersonaltoolStripMenu.Text = "Arkiv";
             // 
             // createToolStripMenuItem
             // 
             this.createToolStripMenuItem.Name = "createToolStripMenuItem";
-            this.createToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.createToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.createToolStripMenuItem.Text = "Create";
             this.createToolStripMenuItem.Click += new System.EventHandler(this.createToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // absenceToolStripMenuItem
             // 
             this.absenceToolStripMenuItem.Name = "absenceToolStripMenuItem";
-            this.absenceToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.absenceToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.absenceToolStripMenuItem.Text = "Absence";
             this.absenceToolStripMenuItem.Click += new System.EventHandler(this.absenceToolStripMenuItem_Click);
             // 
             // bookingToolStripMenuItem
             // 
             this.bookingToolStripMenuItem.Name = "bookingToolStripMenuItem";
-            this.bookingToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.bookingToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.bookingToolStripMenuItem.Text = "Booking";
             this.bookingToolStripMenuItem.Click += new System.EventHandler(this.bookingToolStripMenuItem_Click);
             // 
             // dataGridViewTabells
             // 
+            this.dataGridViewTabells.AllowUserToAddRows = false;
+            this.dataGridViewTabells.AllowUserToDeleteRows = false;
             this.dataGridViewTabells.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTabells.Location = new System.Drawing.Point(12, 75);
+            this.dataGridViewTabells.Location = new System.Drawing.Point(9, 61);
+            this.dataGridViewTabells.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewTabells.Name = "dataGridViewTabells";
+            this.dataGridViewTabells.ReadOnly = true;
             this.dataGridViewTabells.RowTemplate.Height = 24;
-            this.dataGridViewTabells.Size = new System.Drawing.Size(653, 276);
+            this.dataGridViewTabells.Size = new System.Drawing.Size(583, 224);
             this.dataGridViewTabells.TabIndex = 1;
             // 
             // TabellcomboBox
             // 
             this.TabellcomboBox.FormattingEnabled = true;
-            this.TabellcomboBox.Location = new System.Drawing.Point(69, 45);
+            this.TabellcomboBox.Location = new System.Drawing.Point(52, 37);
+            this.TabellcomboBox.Margin = new System.Windows.Forms.Padding(2);
             this.TabellcomboBox.Name = "TabellcomboBox";
-            this.TabellcomboBox.Size = new System.Drawing.Size(121, 24);
+            this.TabellcomboBox.Size = new System.Drawing.Size(92, 21);
             this.TabellcomboBox.TabIndex = 2;
+            this.TabellcomboBox.Text = "System.Data.DataViewManagerListItemTypeDescriptor";
+            this.TabellcomboBox.SelectedIndexChanged += new System.EventHandler(this.TabellcomboBox_SelectedIndexChanged_1);
             // 
             // TabellLabel
             // 
             this.TabellLabel.AutoSize = true;
-            this.TabellLabel.Location = new System.Drawing.Point(12, 48);
+            this.TabellLabel.Location = new System.Drawing.Point(9, 39);
+            this.TabellLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TabellLabel.Name = "TabellLabel";
-            this.TabellLabel.Size = new System.Drawing.Size(51, 17);
+            this.TabellLabel.Size = new System.Drawing.Size(39, 13);
             this.TabellLabel.TabIndex = 3;
             this.TabellLabel.Text = "Tabell:";
             // 
             // CloseButton
             // 
-            this.CloseButton.Location = new System.Drawing.Point(590, 357);
+            this.CloseButton.Location = new System.Drawing.Point(526, 289);
+            this.CloseButton.Margin = new System.Windows.Forms.Padding(2);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.Size = new System.Drawing.Size(66, 24);
             this.CloseButton.TabIndex = 4;
             this.CloseButton.Text = "Close";
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // databaseDataSet
+            // 
+            this.databaseDataSet.DataSetName = "DatabaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // databaseDataSetBindingSource
+            // 
+            this.databaseDataSetBindingSource.DataSource = this.databaseDataSet;
+            this.databaseDataSetBindingSource.Position = 0;
+            // 
+            // databaseDataSet1
+            // 
+            this.databaseDataSet1.DataSetName = "DatabaseDataSet1";
+            this.databaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lIABindingSource
+            // 
+            this.lIABindingSource.DataMember = "LIA";
+            this.lIABindingSource.DataSource = this.databaseDataSet1;
+            // 
+            // lIATableAdapter
+            // 
+            this.lIATableAdapter.ClearBeforeFill = true;
+            // 
             // PersonalForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 390);
+            this.ClientSize = new System.Drawing.Size(603, 319);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.TabellLabel);
             this.Controls.Add(this.TabellcomboBox);
             this.Controls.Add(this.dataGridViewTabells);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PersonalForm";
             this.Text = "PersonalForm";
+            this.Load += new System.EventHandler(this.PersonalForm_Load_1);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTabells)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lIABindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,5 +211,10 @@
         private System.Windows.Forms.ComboBox TabellcomboBox;
         private System.Windows.Forms.Label TabellLabel;
         private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.BindingSource databaseDataSetBindingSource;
+        private DatabaseDataSet databaseDataSet;
+        private DatabaseDataSet1 databaseDataSet1;
+        private System.Windows.Forms.BindingSource lIABindingSource;
+        private DatabaseDataSet1TableAdapters.LIATableAdapter lIATableAdapter;
     }
 }

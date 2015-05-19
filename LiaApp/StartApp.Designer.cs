@@ -54,16 +54,16 @@
             "Personal",
             "Elev"});
             this.comboBox1.Location = new System.Drawing.Point(236, 110);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(136, 21);
-            this.comboBox1.TabIndex = 5;
+            this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(236, 167);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
             this.textBox1.Size = new System.Drawing.Size(136, 20);
@@ -92,10 +92,10 @@
             // okbutton
             // 
             this.okbutton.Location = new System.Drawing.Point(268, 213);
-            this.okbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.okbutton.Margin = new System.Windows.Forms.Padding(2);
             this.okbutton.Name = "okbutton";
             this.okbutton.Size = new System.Drawing.Size(62, 24);
-            this.okbutton.TabIndex = 6;
+            this.okbutton.TabIndex = 1;
             this.okbutton.Text = "Logga in";
             this.okbutton.UseVisualStyleBackColor = true;
             this.okbutton.Click += new System.EventHandler(this.okbutton_Click);
@@ -114,6 +114,7 @@
             this.Controls.Add(this.label2);
             this.Name = "StartApp";
             this.Text = "LIA Inlogg";
+            this.Load += new System.EventHandler(this.StartApp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

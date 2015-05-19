@@ -7,15 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace LiaApp
 {
     public partial class PersonalForm : Form
     {
+        SqlDataAdapter da = DataAdapter.dataAd;
         public PersonalForm()
         {
             InitializeComponent();
         }
+
 
         private void createToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -51,8 +54,66 @@ namespace LiaApp
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            var StartApp = new StartApp();
+            StartApp.Closed += (s, args) => this.Close();
+            StartApp.Show();
+
+        }
+        private void PersonalForm_Load_1(object sender, EventArgs e)
+        {
+            DataSet ds = new DataSet();
+
+            using (SqlConnection conn = new SqlConnection(AzureCon.ConnectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    da.Fill(ds);
+
+                    TabellcomboBox.DataSource = ds.Tables[0].DefaultView;
+
+                    TabellcomboBox.DisplayMember = "ClassNamn";
+                    TabellcomboBox.ValueMember = "ClassNamn";
+
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
 
 
         }
+
+
+        private void TabellcomboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            string ChosenClass = TabellcomboBox.Text;
+
+            DataTable Classtable = AzureCon.PersonalFormQuery(ChosenClass);
+            dataGridViewTabells.DataSource = Classtable;
+
+
+        }
+
+        private void LogOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var StartApp = new StartApp();
+            StartApp.Closed += (s, args) => this.Close();
+            StartApp.Show();
+        }
+
+        private void ExitToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            var StartApp = new StartApp();
+            StartApp.Closed += (s, args) => this.Close();
+            StartApp.Close();
+        }
+
+
+
     }
 }

@@ -152,42 +152,54 @@ namespace LiaApp
         //SPARA ÄNDRINGAR
         private void EditSaveChangesButton_Click(object sender, EventArgs e)
         {
-            //Kolla vilken tabell i comboboxen som är markerad och uppdaterar db vid klick på knappen
-            string ChosenEdit = EditSelectTable.Text;
-            try
+            if (EditdataGridView.RowCount == 0)
             {
-                if (ChosenEdit == "Student")
-                    sAdapter.Update(sDs, "Student");
-
-                if (ChosenEdit == "Staff")
-                    sAdapter.Update(sDs, "Personal");
-                
-                if (ChosenEdit == "LIA")
-                    sAdapter.Update(sDs, "Lia");
-
-                if (ChosenEdit == "Company")
-                    sAdapter.Update(sDs, "Företag");
-
-                if (ChosenEdit == "Contact person")
-                    sAdapter.Update(sDs, "KontaktPerson");
-
-                if (ChosenEdit == "Class")
-                    sAdapter.Update(sDs, "Klass");
-                
-                MessageBox.Show("Database updated.");
+                MessageBox.Show("You must first load a database table.");
             }
-            catch (Exception err)
+            //Kolla vilken tabell i comboboxen som är markerad och uppdaterar db vid klick på knappen
+            else
             {
-                MessageBox.Show(err.Message);
+                string ChosenEdit = EditSelectTable.Text;
+                try
+                {
+                    if (ChosenEdit == "Student")
+                        sAdapter.Update(sDs, "Student");
 
+                    if (ChosenEdit == "Staff")
+                        sAdapter.Update(sDs, "Personal");
+
+                    if (ChosenEdit == "LIA")
+                        sAdapter.Update(sDs, "Lia");
+
+                    if (ChosenEdit == "Company")
+                        sAdapter.Update(sDs, "Företag");
+
+                    if (ChosenEdit == "Contact person")
+                        sAdapter.Update(sDs, "KontaktPerson");
+
+                    if (ChosenEdit == "Class")
+                        sAdapter.Update(sDs, "Klass");
+
+                    MessageBox.Show("Database updated.");
+                }
+
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message);
+
+                }
             }
         }
 
         //LADDA OM DATABASEN
         private void EditRevertChangesButton_Click(object sender, EventArgs e)
         {
+            if (EditdataGridView.RowCount == 0)
+            {
+
+            }
             //Om ändringar har gjorts
-            if (sDs.HasChanges())
+            else if (sDs.HasChanges())
             {
                 //Dialog om man vill fortsätta ladda om databasen utan att spara ändringar
                 var confirmResult = MessageBox.Show("Are you sure you want to reload the database?\nChanges you have made will be lost!",
@@ -255,6 +267,7 @@ namespace LiaApp
         //SPARA ÄNDRINGAR OCH STÄNG NER
         private void EditOKButton_Click(object sender, EventArgs e)
         {
+
             string ChosenEdit = EditSelectTable.Text;
             try
             {

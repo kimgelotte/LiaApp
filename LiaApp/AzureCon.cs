@@ -103,10 +103,10 @@ namespace LiaApp
             {
                 SqlCommand cmd = new SqlCommand("INSERT INTO PersonalVisits " +
                     "VALUES (@VisitId,@PersonalId,@Date,@IsDone);", conn);
-                cmd.Parameters.AddWithValue("VisitId", VisitId);
-                cmd.Parameters.AddWithValue("PersonalId", PersonalId);
-                cmd.Parameters.AddWithValue("Date", Date);
-                cmd.Parameters.AddWithValue("IsDone", IsDone);
+                cmd.Parameters.AddWithValue("@VisitId", VisitId);
+                cmd.Parameters.AddWithValue("@PersonalId", PersonalId);
+                cmd.Parameters.AddWithValue("@Date", Date);
+                cmd.Parameters.AddWithValue("@IsDone", IsDone);
 
                 dataA = new SqlDataAdapter(cmd);
                 int res = dataA.Fill(table);
@@ -156,6 +156,20 @@ namespace LiaApp
                 dataA = new SqlDataAdapter(cmd);
                 int res = dataA.Fill(table);
                 return table;
+            }
+        }
+
+        public static int CountBook()
+        {
+            DataTable table = new DataTable("Visitcounts");
+            SqlDataAdapter dataA = null;
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand("SELECT Visit_Id FROM PersonalVisits", conn);
+                dataA = new SqlDataAdapter(cmd);
+                int res = dataA.Fill(table);
+                return res;
             }
         }
     }

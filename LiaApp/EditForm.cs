@@ -294,7 +294,15 @@ namespace LiaApp
         private void EditCancelButton_Click(object sender, EventArgs e)
         {
             //Kollar om ändringar har gjorts
-            if (sDs.HasChanges())
+            if (EditdataGridView.RowCount == 0)
+            {
+                this.Hide();
+                var PersonalForm = new PersonalForm();
+                PersonalForm.Closed += (s, args) => this.Close();
+                PersonalForm.Show();
+            }
+
+            else if (sDs.HasChanges())
                 {
                 //Varningsruta om att ändringar kommer gå förlorade
                          var confirmResult = MessageBox.Show("Are you sure you want to close this window?\nChanges you have made will be lost!",

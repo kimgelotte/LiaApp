@@ -220,12 +220,11 @@
             // personalVisitsBindingSource
             // 
             this.personalVisitsBindingSource.DataMember = "PersonalVisits";
-            this.personalVisitsBindingSource.DataSource = this.databaseDataSet1;
+
             // 
             // databaseDataSet1
             // 
-            this.databaseDataSet1.DataSetName = "DatabaseDataSet1";
-            this.databaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
             // 
             // personalVisitsTableAdapter
             // 
@@ -233,9 +232,7 @@
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.PersonalVisitsTableAdapter = this.personalVisitsTableAdapter;
-            this.tableAdapterManager.UpdateOrder = LiaApp.DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+
             // 
             // BookingForm
             // 

@@ -43,14 +43,14 @@
             this.TabellLabel = new System.Windows.Forms.Label();
             this.databaseDataSet = new LiaApp.DatabaseDataSet();
             this.databaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.databaseDataSet1 = new LiaApp.DatabaseDataSet1();
+
             this.lIABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lIATableAdapter = new LiaApp.DatabaseDataSet1TableAdapters.LIATableAdapter();
+
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTabells)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.lIABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,17 +175,15 @@
             // 
             // databaseDataSet1
             // 
-            this.databaseDataSet1.DataSetName = "DatabaseDataSet1";
-            this.databaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
             // 
             // lIABindingSource
             // 
-            this.lIABindingSource.DataMember = "LIA";
-            this.lIABindingSource.DataSource = this.databaseDataSet1;
+
             // 
             // lIATableAdapter
             // 
-            this.lIATableAdapter.ClearBeforeFill = true;
+
             // 
             // PersonalForm
             // 
@@ -206,7 +204,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTabells)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lIABindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -226,9 +223,7 @@
         private System.Windows.Forms.Label TabellLabel;
         private System.Windows.Forms.BindingSource databaseDataSetBindingSource;
         private DatabaseDataSet databaseDataSet;
-        private DatabaseDataSet1 databaseDataSet1;
         private System.Windows.Forms.BindingSource lIABindingSource;
-        private DatabaseDataSet1TableAdapters.LIATableAdapter lIATableAdapter;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem LogoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;

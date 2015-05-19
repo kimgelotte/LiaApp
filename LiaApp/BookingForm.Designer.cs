@@ -145,7 +145,6 @@
             this.BookingcheckBox.TabIndex = 12;
             this.BookingcheckBox.Text = "Visit Done?";
             this.BookingcheckBox.UseVisualStyleBackColor = true;
-            this.BookingcheckBox.CheckedChanged += new System.EventHandler(this.BookingcheckBox_CheckedChanged);
             // 
             // BookingPersonallabel
             // 

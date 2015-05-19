@@ -117,14 +117,15 @@ namespace LiaApp
             }
         }
 
-        public static DataTable BookingNewMeeting(int VisitId, int PersonalId, DateTime Date, bool IsDone)
+        public static void BookingNewMeeting(int VisitId, int PersonalId, DateTime Date, bool IsDone)
         {
             DataTable table = new DataTable("newBooking");
             SqlDataAdapter dataA = null;
 
             using (SqlConnection conn = new SqlConnection(ConnectionString))
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO PersonalVisits " +
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("INSERT INTO PersonalVisits (Visit_Id, P_Id, VisitDate, Visit_Done)" +
                     "VALUES (@VisitId,@PersonalId,@Date,@IsDone);", conn);
                 cmd.Parameters.AddWithValue("@VisitId", VisitId);
                 cmd.Parameters.AddWithValue("@PersonalId", PersonalId);
@@ -133,7 +134,13 @@ namespace LiaApp
 
                 dataA = new SqlDataAdapter(cmd);
                 int res = dataA.Fill(table);
-                return table;
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch(SqlException e){
+                    MessageBox.Show(e.Message);
+                }
             }
         }
 
@@ -193,6 +200,22 @@ namespace LiaApp
                 dataA = new SqlDataAdapter(cmd);
                 int res = dataA.Fill(table);
                 return res;
+            }
+        }
+
+        public static DataTable FindClass(string klass)
+        {
+            DataTable table = new DataTable("dbTable");
+            SqlDataAdapter dataA = null;
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM @table", conn);
+                cmd.Parameters.AddWithValue("@table", klass);
+
+                dataA = new SqlDataAdapter(cmd);
+                int res = dataA.Fill(table);
+                return table;
             }
         }
     }

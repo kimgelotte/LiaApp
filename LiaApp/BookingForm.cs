@@ -60,16 +60,14 @@ namespace LiaApp
                 IsChecked = true;
 
             int count = AzureCon.CountBook();
-            AzureCon.BookingNewMeeting(++count, (int)comboBox1.SelectedValue, BookingdateTimePicker.Value, IsChecked);
+            count += 2;
+            AzureCon.BookingNewMeeting(count, (int)comboBox1.SelectedValue, BookingdateTimePicker.Value, IsChecked);
 
             MessageBox.Show("Booking Complete!");
-            BookinglistBox.Update();
+            BookinglistBox.Refresh();
         }
 
-        private void BookingcheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
+
 
         
     }

@@ -19,6 +19,7 @@ namespace LiaApp
         SqlCommandBuilder sBuilder;
         DataSet sDs;
         DataTable sTable;
+
         public EditForm()
         {
             InitializeComponent();
@@ -27,122 +28,57 @@ namespace LiaApp
         //HÄMTAR VALD TABELL IFRÅN DATABASEN
         private void EditSelectTable_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string query = "a";
+            string query2 = "a";
+
             string ChosenEdit = EditSelectTable.Text;
+
             if (ChosenEdit == "Student")
-                visaStudtab();
+            {
+                query = "SELECT * FROM Student";
+                query2 = "Student";
+            }
             if (ChosenEdit == "Staff")
-                visaPerstab();
+            {
+                query = "SELECT * FROM Personal";
+                query2 = "Personal";
+            }
             if (ChosenEdit == "LIA")
-                visaLiatab();
+            {
+                query = "SELECT * FROM LIA";
+                query2 = "Lia";
+            }
             if (ChosenEdit == "Company")
-                visaComptab();
+            {
+                query = "SELECT * FROM Företag";
+                query2 = "Företag";
+            }
             if (ChosenEdit == "Contact person")
-                visaConttab();
+            {
+                query = "SELECT * FROM KontaktPerson";
+                query2 = "KontaktPerson";
+            }
             if (ChosenEdit == "Class")
-                visaClasstab();
-        }
-        //STUDENT-TABELLEN
-        private void visaStudtab()
-        {
+            {
+                query = "SELECT * FROM Klass";
+                query2 = "Klass";
+            }
 
-            string sql = "SELECT * FROM Student";
+            string sql = query;
             SqlConnection connection = new SqlConnection(AzureCon.ConnectionString);
             connection.Open();
             sCommand = new SqlCommand(sql, connection);
             sAdapter = new SqlDataAdapter(sCommand);
             sBuilder = new SqlCommandBuilder(sAdapter);
             sDs = new DataSet();
-            sAdapter.Fill(sDs, "Student");
-            sTable = sDs.Tables["Student"];
+            sAdapter.Fill(sDs, query2);
+            sTable = sDs.Tables[query2];
             connection.Close();
-            EditdataGridView.DataSource = sDs.Tables["Student"];
+            EditdataGridView.DataSource = sDs.Tables[query2];
             EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        }
-        //PERSONAL-TABELLEN
-        private void visaPerstab()
-        {
 
-            string sql = "SELECT * FROM Personal";
-            SqlConnection connection = new SqlConnection(AzureCon.ConnectionString);
-            connection.Open();
-            sCommand = new SqlCommand(sql, connection);
-            sAdapter = new SqlDataAdapter(sCommand);
-            sBuilder = new SqlCommandBuilder(sAdapter);
-            sDs = new DataSet();
-            sAdapter.Fill(sDs, "Personal");
-            sTable = sDs.Tables["Personal"];
-            connection.Close();
-            EditdataGridView.DataSource = sDs.Tables["Personal"];
-            EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
-        //LIA-TABELLEN
-        private void visaLiatab()
-        {
 
-            string sql = "SELECT * FROM LIA";
-            SqlConnection connection = new SqlConnection(AzureCon.ConnectionString);
-            connection.Open();
-            sCommand = new SqlCommand(sql, connection);
-            sAdapter = new SqlDataAdapter(sCommand);
-            sBuilder = new SqlCommandBuilder(sAdapter);
-            sDs = new DataSet();
-            sAdapter.Fill(sDs, "Lia");
-            sTable = sDs.Tables["Lia"];
-            connection.Close();
-            EditdataGridView.DataSource = sDs.Tables["Lia"];
-            EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        }
-        //FÖRETAGS-TABELLEN
-        private void visaComptab()
-        {
-
-            string sql = "SELECT * FROM Företag";
-            SqlConnection connection = new SqlConnection(AzureCon.ConnectionString);
-            connection.Open();
-            sCommand = new SqlCommand(sql, connection);
-            sAdapter = new SqlDataAdapter(sCommand);
-            sBuilder = new SqlCommandBuilder(sAdapter);
-            sDs = new DataSet();
-            sAdapter.Fill(sDs, "Företag");
-            sTable = sDs.Tables["Företag"];
-            connection.Close();
-            EditdataGridView.DataSource = sDs.Tables["Företag"];
-            EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        }
-        //KONTAKTPERSON-TABELLEN
-        private void visaConttab()
-        {
-
-            string sql = "SELECT * FROM KontaktPerson";
-            SqlConnection connection = new SqlConnection(AzureCon.ConnectionString);
-            connection.Open();
-            sCommand = new SqlCommand(sql, connection);
-            sAdapter = new SqlDataAdapter(sCommand);
-            sBuilder = new SqlCommandBuilder(sAdapter);
-            sDs = new DataSet();
-            sAdapter.Fill(sDs, "KontaktPerson");
-            sTable = sDs.Tables["KontaktPerson"];
-            connection.Close();
-            EditdataGridView.DataSource = sDs.Tables["KontaktPerson"];
-            EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        }
-        //Klass-TABELLEN
-        private void visaClasstab()
-        {
-
-            string sql = "SELECT * FROM Klass";
-            SqlConnection connection = new SqlConnection(AzureCon.ConnectionString);
-            connection.Open();
-            sCommand = new SqlCommand(sql, connection);
-            sAdapter = new SqlDataAdapter(sCommand);
-            sBuilder = new SqlCommandBuilder(sAdapter);
-            sDs = new DataSet();
-            sAdapter.Fill(sDs, "Klass");
-            sTable = sDs.Tables["Klass"];
-            connection.Close();
-            EditdataGridView.DataSource = sDs.Tables["Klass"];
-            EditdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        }
 
         private void EditdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -210,6 +146,7 @@ namespace LiaApp
                     string ChosenEdit = EditSelectTable.Text;
                     try
                     {
+
                         //Tömmer datagrid och laddar in igen
                         if (ChosenEdit == "Student")
                         {
